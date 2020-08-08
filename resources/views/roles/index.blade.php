@@ -2,15 +2,13 @@
 
 @section('content')
     <section class="content-header">
-        <h1 class="pull-left">Notas</h1>
-        
-        @can('crear_notas')
-            <h1 class="pull-right">
-                <a class="btn btn-primary pull-right" style="margin-top: -10px;margin-bottom: 5px"
-                    href="{{ route('notas.create') }}">Add New</a>
-            </h1>
-        @endcan
-
+        <h1 class="pull-left">Roles</h1>
+        <h1 class="pull-right">
+            @can('crea_roles')
+            <a class="btn btn-primary pull-right" style="margin-top: -10px;margin-bottom: 5px" href="{{ route('roles.create') }}">Add New</a>     
+            @endcan
+           
+        </h1>
     </section>
     <div class="content">
         <div class="clearfix"></div>
@@ -20,11 +18,12 @@
         <div class="clearfix"></div>
         <div class="box box-primary">
             <div class="box-body">
-                @include('notas.table')
+                    @include('roles.table')
             </div>
         </div>
         <div class="text-center">
-
+        
         </div>
     </div>
 @endsection
+
