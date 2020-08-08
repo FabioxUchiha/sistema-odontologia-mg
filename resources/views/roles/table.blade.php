@@ -11,7 +11,7 @@
             @foreach ($roles as $role)
                 <tr>
                     <td>{{ $role->name }}</td>
-                    <td>{{ implode(', ', $role->permissions->pluck('name')->toArray()) }}</td>
+                    <td>{{ implode(", ", $role->permissions->pluck('name')->toArray()) }}</td>
                     <td>
                         {!! Form::open(['route' => ['roles.destroy', $role->id], 'method' => 'delete']) !!}
                         <div class='btn-group'>

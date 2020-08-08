@@ -22,9 +22,10 @@
                                 class="glyphicon glyphicon-eye-open"></i></a>
                             @endcan
                             @can('editar_usuarios')
+                            
+                            @endcan
                             <a href="{{ route('users.edit', [$user->id]) }}" class='btn btn-default btn-xs'><i
                                 class="glyphicon glyphicon-edit"></i></a>
-                            @endcan
                             @can('borrar_usuarios')
                             {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class'
                             => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}

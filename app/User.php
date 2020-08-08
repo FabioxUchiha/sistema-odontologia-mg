@@ -2,7 +2,6 @@
 
 namespace App;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Spatie\Permission\Traits\HasRoles;
@@ -40,11 +39,11 @@ class User extends Authenticatable
     ]; 
     public static $rules = [
         'name' => 'required',
-        'email' => 'required',
+        'email' => 'required|email',
         'password' => 'required|min:5',
     ];
     public static $updateRules = [
         'name' => 'required',
-        'email' => 'required',
+        'email' => 'required|email',
     ];
 }

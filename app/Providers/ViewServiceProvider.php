@@ -2,9 +2,8 @@
 
 namespace App\Providers;
 use Spatie\Permission\Models\Permission;
-use App\User;
-
 use Illuminate\Support\ServiceProvider;
+use Spatie\Permission\Models\Role;
 use View;
 
 class ViewServiceProvider extends ServiceProvider
@@ -31,8 +30,9 @@ class ViewServiceProvider extends ServiceProvider
             $view->with('permissionItems', $permissionItems);
         });
         View::composer(['users.fields'], function ($view) {
-            $userItems = User::pluck('name','name')->toArray();
-            $view->with('userItems', $userItems);
+            $roleItems = Role::pluck('name','name')->toArray();
+            $view->with('roleItems', $roleItems);
+
         });
         //
     }

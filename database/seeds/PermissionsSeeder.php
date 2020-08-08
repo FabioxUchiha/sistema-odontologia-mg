@@ -17,10 +17,9 @@ class PermissionsSeeder extends Seeder
     {
         //creacion de un arreglo de permisos para el super administrador
         $permissions_array = [];
-        array_push($permissions_array, $permission = Permission::create(['name' => 'crear_notas']));
-        array_push($permissions_array, $permission = Permission::create(['name' => 'editar_notas']));
-        array_push($permissions_array, $permission = Permission::create(['name' => 'borrar_notas']));
-        array_push($permissions_array, $permission = Permission::create(['name' => 'ver_notas']));
+        array_push($permissions_array, Permission::create(['name' => 'crear_notas']));
+        array_push($permissions_array, Permission::create(['name' => 'editar_notas']));
+        array_push($permissions_array, Permission::create(['name' => 'borrar_notas']));
 
         //persmisos para ver notas
         $verNotasPermission = Permission::create(['name' => 'ver_notas']);
