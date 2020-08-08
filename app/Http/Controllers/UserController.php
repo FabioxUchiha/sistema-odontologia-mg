@@ -58,10 +58,10 @@ class UserController extends AppBaseController
         $input = $request->all();
         $input['password'] = Hash::make($input['password']);
         $user = $this->userRepository->create($input);
-        $user->assingRole($request->role);
+        $user->assignRole($request->role);
 
         Flash::success('User saved successfully.');
- 
+
         return redirect(route('users.index'));
     }
 
@@ -82,7 +82,7 @@ class UserController extends AppBaseController
             return redirect(route('users.index'));
         }
 
-        return view('users.show')->with('user', $user);
+        return view('users.edit')->with('user', $user);
     }
 
     /**
@@ -125,13 +125,13 @@ class UserController extends AppBaseController
 
         if ($request['password']) {
             $request['password'] = Hash::make($request['password']);
-        }else {
+        } else {
             unset($request['password']);
         }
 
         $user = $this->userRepository->update($request->all(), $id);
         $user->roles()->detach();
-        $user->assingRole($request->role);
+        $user->assignRole($request->role);
 
         Flash::success('User updated successfully.');
 

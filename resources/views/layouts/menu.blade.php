@@ -3,9 +3,9 @@
     <a href="{{ route('notas.index') }}"><i class="fa fa-edit"></i><span>Notas</span></a>
 </li>
 @endcan
-@canany(['ver_users', 'borrar_users', 'crear_users','editar_users'])
+@canany(['ver_usuarios', 'borrar_usuarios', 'crear_usuarios','editar_usuarios'])
 <li class="{{ Request::is('users*') ? 'active' : '' }}">
-    <a href="{{ route('users.index') }}"><i class="fa fa-edit"></i><span>Users</span></a>
+    <a href="{{ route('users.index') }}"><i class="fa fa-edit"></i><span>Usuarios</span></a>
 </li>
 @endcan
 @canany(['ver_roles', 'borrar_roles', 'crear_roles','editar_roles'])

@@ -29,8 +29,6 @@ Route::group(['middleware' => ['permission:ver_usuarios|editar_usuarios|borrar_u
     Route::resource('users', 'UserController');
 });
 
-
-
 Route::group(['middleware' => ['permission:ver_roles|editar_roles|borrar_roles|crear_roles']], function () {
     Route::resource('roles', 'RoleController');
 });
