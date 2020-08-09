@@ -18,7 +18,7 @@
                         {!! Form::open(['route' => ['users.destroy', $user->id], 'method' => 'delete']) !!}
                         <div class='btn-group'>
                             @can('ver_usuarios')
-                                <a href="{{ route('user.show', [$user->id]) }}" class='btn btn-default btn-xs'><i
+                                <a href="{{ route('users.show', [$user->id]) }}" class='btn btn-default btn-xs'><i
                                 class="glyphicon glyphicon-eye-open"></i></a>
                             @endcan
                             @can('editar_usuarios')
