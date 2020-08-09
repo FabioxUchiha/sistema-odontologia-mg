@@ -35,12 +35,12 @@
 <body class="hold-transition login-page">
 <div class="login-box">
     <div class="login-logo">
-        <a href="{{ url('/home') }}"><b>InfyOm </b>Generator</a>
+        <a href="{{ url('/home') }}"><b>Odontologia </b>MG</a>
     </div>
 
     <!-- /.login-logo -->
     <div class="login-box-body">
-        <p class="login-box-msg">Reset your password</p>
+        <p class="login-box-msg">Restablecer su contraseña</p>
 
         <form method="post" action="{{ url('/password/reset') }}">
             @csrf
@@ -82,7 +82,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <button type="submit" class="btn btn-primary pull-right">
-                        <i class="fa fa-btn fa-refresh"></i>Reset Password
+                        <i class="fa fa-btn fa-refresh"></i>Restablecer la contraseña
                     </button>
                 </div>
             </div>

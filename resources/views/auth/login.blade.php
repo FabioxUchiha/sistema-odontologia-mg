@@ -35,12 +35,12 @@
 <body class="hold-transition login-page">
 <div class="login-box">
     <div class="login-logo">
-        <a href="{{ url('/home') }}"><b>InfyOm </b>Generator</a>
+        <a href="{{ url('/home') }}"><b>Odontologia </b>MG</a>
     </div>
 
     <!-- /.login-logo -->
     <div class="login-box-body">
-        <p class="login-box-msg">Sign in to start your session</p>
+        <p class="login-box-msg">Inicia sesión para comenzar</p>
 
         <form method="post" action="{{ url('/login') }}">
             @csrf
@@ -69,7 +69,7 @@
                 <div class="col-xs-8">
                     <div class="checkbox icheck">
                         <label>
-                            <input type="checkbox" name="remember"> Remember Me
+                            <input type="checkbox" name="remember"> Recuerdame
                         </label>
                     </div>
                 </div>
@@ -81,8 +81,8 @@
             </div>
         </form>
 
-        <a href="{{ url('/password/reset') }}">I forgot my password</a><br>
-        <a href="{{ url('/register') }}" class="text-center">Register a new membership</a>
+        <a href="{{ url('/password/reset') }}">Olvidé mi contraseña</a><br>
+        <a href="{{ url('/register') }}" class="text-center">Registrar una nueva cuenta</a>
 
     </div>
     <!-- /.login-box-body -->

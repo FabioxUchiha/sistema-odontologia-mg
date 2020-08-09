@@ -35,7 +35,7 @@
 
             <!-- Logo -->
             <a href="#" class="logo">
-                <b>InfyOm</b>
+                <b>Odontologia MG</b>
             </a>
 
             <!-- Header Navbar -->
@@ -125,14 +125,14 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Home</a></li>
+                    <li><a href="{{ url('/home') }}">Inicio</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
-                    <li><a href="{{ url('/login') }}">Login</a></li>
-                    <li><a href="{{ url('/register') }}">Register</a></li>
+                    <li><a href="{{ url('/login') }}">Iniciar sesión</a></li>
+                    <li><a href="{{ url('/register') }}">Registrarse</a></li>
                 </ul>
             </div>
         </div>
