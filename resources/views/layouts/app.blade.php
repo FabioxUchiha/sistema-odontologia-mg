@@ -34,7 +34,7 @@
         <header class="main-header">
 
             <!-- Logo -->
-            <a href="#" class="logo">
+            <a href="{{ url('/home') }}" class="logo">
                 <b>Odontologia MG</b>
             </a>
 
@@ -52,7 +52,7 @@
                             <!-- Menu Toggle Button -->
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <!-- The user image in the navbar-->
-                                <img src="http://infyom.com/images/logo/blue_logo_150x150.jpg"
+                                <img src="https://mdbootstrap.com/img/Photos/Others/background2.jpg"
                                      class="user-image" alt="User Image"/>
                                 <!-- hidden-xs hides the username on small devices so only the image appears. -->
                                 <span class="hidden-xs">{{ Auth::user()->name }}</span>
@@ -60,7 +60,7 @@
                             <ul class="dropdown-menu">
                                 <!-- The user image in the menu -->
                                 <li class="user-header">
-                                    <img src="http://infyom.com/images/logo/blue_logo_150x150.jpg"
+                                    <img src="https://mdbootstrap.com/img/Photos/Others/background2.jpg"
                                          class="img-circle" alt="User Image"/>
                                     <p>
                                         {{ Auth::user()->name }}
@@ -92,12 +92,12 @@
         <!-- Left side column. contains the logo and sidebar -->
         @include('layouts.sidebar')
         <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper">
+        <div class="content-wrapper" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/background2.jpg);">
             @yield('content')
         </div>
 
         <!-- Main Footer -->
-        <footer class="main-footer" style="max-height: 100px;text-align: center">
+        <footer class="main-footer" style="max-height: 100px;text-align: center; background-image: url(https://mdbootstrap.com/img/Photos/Others/background5.jpg);">
             <strong>Sistema para el consultorio <span style="color: dodgerblue">Odontologia Mg</span></strong>
         </footer>
 

@@ -6,10 +6,8 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel">
             <div class="pull-left image">
-                <!--<img src="../resources/images/bg.jpg" class="img-circle"
-                     alt="User Image"/>-->
-                     <br>
-                     <br>
+                <img src="https://mdbootstrap.com/img/Photos/Others/background2.jpg" class="img-circle"
+                     alt="User Image"/>
             </div>
             <div class="pull-left info">
                 @if (Auth::guest())
