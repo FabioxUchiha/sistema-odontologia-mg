@@ -6,12 +6,14 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel">
             <div class="pull-left image">
-                <img src="http://infyom.com/images/logo/blue_logo_150x150.jpg" class="img-circle"
-                     alt="User Image"/>
+                <!--<img src="../resources/images/bg.jpg" class="img-circle"
+                     alt="User Image"/>-->
+                     <br>
+                     <br>
             </div>
             <div class="pull-left info">
                 @if (Auth::guest())
-                <p>InfyOm</p>
+                <p>Odontologia MG</p>
                 @else
                     <p>{{ Auth::user()->name}}</p>
                 @endif
