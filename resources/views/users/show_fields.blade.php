@@ -27,4 +27,3 @@
     {!! Form::label('updated_at', 'Updated At:') !!}
     <p>{{ $user->updated_at }}</p>
 </div>
-
