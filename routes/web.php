@@ -19,7 +19,7 @@ Route::get('/', function () {
 
 Auth::routes(['verify' => true]);
 
-Route::get('/home', 'HomeController@index')->middleware('verified');
+Route::get('home', 'HomeController@index')->middleware('verified');
 
 Route::group(['middleware' => ['permission:ver_notas|editar_notas|borrar_notas|crear_notas']], function () {
     Route::resource('notas', 'notasController');

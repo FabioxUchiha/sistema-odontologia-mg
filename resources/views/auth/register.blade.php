@@ -36,7 +36,7 @@
 <body class="hold-transition register-page" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/background2.jpg);">
     <div class="register-box">
         <div class="register-logo">
-            <a href="{{ url('/home') }}"><b>Odontologia </b>MG</a>
+            <a href="{{ url('/') }}"><b>Odontologia </b>MG</a>
         </div>
 
         <div class="register-box-body">
