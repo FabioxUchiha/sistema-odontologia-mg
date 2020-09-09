@@ -6,7 +6,7 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel">
             <div class="pull-left image">
-                <img src="https://mdbootstrap.com/img/Photos/Others/background2.jpg" class="img-circle"
+                <img src="{{ asset('img/dientes.svg') }}" class="img-circle"
                      alt="User Image"/>
             </div>
             <div class="pull-left info">

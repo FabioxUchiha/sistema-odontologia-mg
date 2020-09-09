@@ -2,9 +2,9 @@
     <table class="table" id="roles-table">
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Permissions</th>
-                <th colspan="3">Action</th>
+                <th>Nombre</th>
+                <th>Permisos</th>
+                <th colspan="3">Acciones</th>
             </tr>
         </thead>
         <tbody>

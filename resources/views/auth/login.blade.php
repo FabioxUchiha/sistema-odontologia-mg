@@ -35,7 +35,7 @@
 <body class="hold-transition login-page" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/background2.jpg);">
 <div class="login-box">
     <div class="login-logo">
-        <a href="{{ url('/home') }}"><b>Odontologia </b>MG</a>
+        <a href="{{ url('/') }}"><b>Odontologia </b>MG</a>
     </div>
 
     <!-- /.login-logo -->

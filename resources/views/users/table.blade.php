@@ -2,10 +2,10 @@
     <table class="table" id="users-table">
         <thead>
             <tr>
-                <th>Name</th>
+                <th>Nombre</th>
                 <th>Email</th>
-                <th>Role</th>
-                <th colspan="3">Action</th>
+                <th>Rol</th>
+                <th colspan="3">Acciones</th>
             </tr>
         </thead>
         <tbody>
