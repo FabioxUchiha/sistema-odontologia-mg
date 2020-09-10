@@ -124,8 +124,6 @@
 
         <h5 class="text-center mx-auto font-weight-bold mb-4 pb-2 white-text">Fabio ivan castellanos silva</h5>
         <h5 class="text-center mx-auto font-weight-bold mb-4 pb-2 white-text">John sebastian suarez</h5>
-
-
     </section>
     <!--Section: Content-->
 

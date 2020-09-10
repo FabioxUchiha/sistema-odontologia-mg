@@ -32,3 +32,12 @@ Route::group(['middleware' => ['permission:ver_usuarios|editar_usuarios|borrar_u
 Route::group(['middleware' => ['permission:ver_roles|editar_roles|borrar_roles|crear_roles']], function () {
     Route::resource('roles', 'RoleController');
 });
+
+
+Route::resource('inventarios', 'InventarioController');
+
+Route::resource('contabilidads', 'ContabilidadController');
+
+Route::resource('contables', 'ContableController');
+
+Route::resource('ingresos', 'IngresosController');

@@ -1,0 +1,34 @@
+<div class="table-responsive">
+    <table class="table" id="ingresos-table">
+        <thead>
+            <tr>
+                <th>Fecha</th>
+        <th>Servicio</th>
+        <th>Detalle</th>
+        <th>Tipo</th>
+        <th>Precio</th>
+                <th colspan="3">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach($ingresos as $ingresos)
+            <tr>
+                <td>{{ $ingresos->fecha }}</td>
+            <td>{{ $ingresos->servicio }}</td>
+            <td>{{ $ingresos->detalle }}</td>
+            <td>{{ $ingresos->tipo }}</td>
+            <td>{{ $ingresos->precio }}</td>
+                <td>
+                    {!! Form::open(['route' => ['ingresos.destroy', $ingresos->id], 'method' => 'delete']) !!}
+                    <div class='btn-group'>
+                        <a href="{{ route('ingresos.show', [$ingresos->id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
+                        <a href="{{ route('ingresos.edit', [$ingresos->id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
+                        {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
+                    </div>
+                    {!! Form::close() !!}
+                </td>
+            </tr>
+        @endforeach
+        </tbody>
+    </table>
+</div>

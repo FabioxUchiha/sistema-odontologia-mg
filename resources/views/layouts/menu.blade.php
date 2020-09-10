@@ -13,3 +13,12 @@
     <a href="{{ route('roles.index') }}"><i class="fa fa-address-card"></i><span>Roles</span></a>
 </li>
 @endcan
+<li class="{{ Request::is('inventarios*') ? 'active' : '' }}">
+    <a href="{{ route('inventarios.index') }}"><i class="fa fa-edit"></i><span>Inventarios</span></a>
+</li>
+
+
+<li class="{{ Request::is('ingresos*') ? 'active' : '' }}">
+    <a href="{{ route('ingresos.index') }}"><i class="fa fa-edit"></i><span>Ingresos</span></a>
+</li>
+
