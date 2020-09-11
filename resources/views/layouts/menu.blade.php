@@ -15,7 +15,7 @@
 @endcan
 @canany(['ver_ingresos', 'borrar_ingresos', 'crear_ingresos','editar_ingresos'])
 <li class="{{ Request::is('ingresos*') ? 'active' : '' }}">
-    <a href="{{ route('ingresos.index') }}"><i class="fa fa-money"></i><span>Ingresos</span></a>
+    <a href="{{ route('ingresos.index') }}"><i class="fa fa-money"></i><span>Ingresos y Egresos</span></a>
 </li>
 @endcan
 @canany(['ver_notas', 'borrar_notas', 'crear_notas','editar_notas'])

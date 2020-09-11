@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\InventariosExport;
+use App\Http\Controllers\AppBaseController;
 use App\Http\Requests\CreateInventarioRequest;
 use App\Http\Requests\UpdateInventarioRequest;
 use App\Repositories\InventarioRepository;
-use App\Http\Controllers\AppBaseController;
-use Illuminate\Http\Request;
 use Flash;
+use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 use Response;
 
 class InventarioController extends AppBaseController

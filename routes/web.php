@@ -1,5 +1,6 @@
 <?php
 
+use App\Exports\InventariosExport;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,6 +37,10 @@ Route::group(['middleware' => ['permission:ver_roles|editar_roles|borrar_roles|c
 Route::group(['middleware' => ['permission:ver_inventarios|editar_inventarios|borrar_inventarios|crear_inventarios']], function () {
     Route::resource('inventarios', 'InventarioController');
 });
+
+Route::get('/', function(InventariosExport $inventariosExport){
+	return $inventariosExport->download('inventarios.xlsx');
+})->name('inventarios.export');
 
 Route::group(['middleware' => ['permission:ver_ingresos|editar_ingresos|borrar_ingresos|crear_ingresos']], function () {
     Route::resource('ingresos', 'IngresosController');
