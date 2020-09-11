@@ -33,11 +33,14 @@ Route::group(['middleware' => ['permission:ver_roles|editar_roles|borrar_roles|c
     Route::resource('roles', 'RoleController');
 });
 
+Route::group(['middleware' => ['permission:ver_inventarios|editar_inventarios|borrar_inventarios|crear_inventarios']], function () {
+    Route::resource('inventarios', 'InventarioController');
+});
 
-Route::resource('inventarios', 'InventarioController');
+Route::group(['middleware' => ['permission:ver_ingresos|editar_ingresos|borrar_ingresos|crear_ingresos']], function () {
+    Route::resource('ingresos', 'IngresosController');
+});
 
-Route::resource('contabilidads', 'ContabilidadController');
 
-Route::resource('contables', 'ContableController');
 
-Route::resource('ingresos', 'IngresosController');
+

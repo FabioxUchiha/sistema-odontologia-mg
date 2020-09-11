@@ -40,6 +40,6 @@
 
 <!-- Submit Field -->
 <div class="form-group col-sm-12">
-    {!! Form::submit('Guardar', ['class' => 'btn btn-primary']) !!}
+    {!! Form::submit('Guardar', ['class' => 'btn btn-info']) !!}
     <a href="{{ route('ingresos.index') }}" class="btn btn-default">Cancelar</a>
 </div>

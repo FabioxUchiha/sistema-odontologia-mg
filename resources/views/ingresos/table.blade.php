@@ -21,9 +21,15 @@
                 <td>
                     {!! Form::open(['route' => ['ingresos.destroy', $ingresos->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
+                         @can('ver_inventarios')
                         <a href="{{ route('ingresos.show', [$ingresos->id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
+                         @endcan
+                         @can('editar_inventarios')
                         <a href="{{ route('ingresos.edit', [$ingresos->id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
+                         @endcan
+                         @can('borrar_inventarios')
                         {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
+                         @endcan
                     </div>
                     {!! Form::close() !!}
                 </td>

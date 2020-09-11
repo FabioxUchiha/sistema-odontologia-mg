@@ -9,7 +9,7 @@
    <div class="content">
        @include('adminlte-templates::common.errors')
        <div class="box box-primary">
-           <div class="box-body">
+           <div class="box-body" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/background1.jpg);">
                <div class="row">
                    {!! Form::model($role, ['route' => ['roles.update', $role->id], 'method' => 'patch']) !!}
 

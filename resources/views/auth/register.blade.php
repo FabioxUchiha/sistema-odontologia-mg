@@ -33,9 +33,11 @@
     <![endif]-->
 </head>
 
-<body class="hold-transition register-page" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/background2.jpg);">
+<body class="hold-transition register-page" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/background1.jpg);">
     <div class="register-box">
         <div class="register-logo">
+            <img width="40px"
+             src="{{ asset('img/dientes.svg') }}">
             <a href="{{ url('/') }}"><b>Odontologia </b>MG</a>
         </div>
 
@@ -100,7 +102,7 @@
                     </div>
                     <!-- /.col -->
 
-                        <button type="submit" class="btn btn-block btn-primary btn-lg">Registrarse</button>
+                        <button type="submit" class="btn btn-block btn-info btn-lg">Registrarse</button>
 
                     <!-- /.col -->
                 </div>

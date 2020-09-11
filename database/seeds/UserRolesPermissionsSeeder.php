@@ -23,5 +23,17 @@ class UserRolesPermissionsSeeder extends Seeder
         Permission::create(['name' => 'editar_usuarios']);
         Permission::create(['name' => 'crear_usuarios']);
         Permission::create(['name' => 'borrar_usuarios']);
+
+        //inventarios
+        Permission::create(['name' => 'ver_inventarios']);
+        Permission::create(['name' => 'editar_inventarios']);
+        Permission::create(['name' => 'crear_inventarios']);
+        Permission::create(['name' => 'borrar_inventarios']);
+
+        //ingresos y egresos
+        Permission::create(['name' => 'ver_ingresos']);
+        Permission::create(['name' => 'editar_ingresos']);
+        Permission::create(['name' => 'crear_ingresos']);
+        Permission::create(['name' => 'borrar_ingresos']);
     }
 }

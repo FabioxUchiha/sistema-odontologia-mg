@@ -109,21 +109,23 @@
 
     <!--Section: Content-->
     <section class="dark-grey-text text-center"
-        style="background-image: url(https://mdbootstrap.com/img/Photos/Others/background2.jpg);">
+        style="background-image: url(https://mdbootstrap.com/img/Photos/Others/background1.jpg);">
         <br>
         <h3 class="text-center mx-auto font-weight-bold mb-4 pb-2 white-text">ODONTOLOGIA MG</h3>
 
         <h5 class="text-center mx-auto font-weight-bold mb-4 pb-2 white-text">SISTEMA DE INFORMACIÓN PARA EL CONTROL DE
             GANANCIAS</h5>
-
+        <div class="container">
         <img src="../resources/images/bg.jpg" class="img-fluid" alt="smaple image">
-
-        <br>
+        </div>
 
         <h5 class="text-center mx-auto font-weight-bold mb-4 pb-2 white-text">Desarrollado por:</h5>
 
         <h5 class="text-center mx-auto font-weight-bold mb-4 pb-2 white-text">Fabio ivan castellanos silva</h5>
         <h5 class="text-center mx-auto font-weight-bold mb-4 pb-2 white-text">John sebastian suarez</h5>
+        <footer class="main-footer" style="max-height: 100px;text-align: center; background-image: url();">
+            <strong style="color: white">Sistema para el consultorio <span style="color: white">Odontologia Mg | Copyriht @ 2020</span></strong>
+        </footer>
     </section>
     <!--Section: Content-->
 
