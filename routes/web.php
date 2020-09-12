@@ -38,7 +38,7 @@ Route::group(['middleware' => ['permission:ver_inventarios|editar_inventarios|bo
     Route::resource('inventarios', 'InventarioController');
 });
 
-Route::get('/', function(InventariosExport $inventariosExport){
+Route::get('/export', function(InventariosExport $inventariosExport){
 	return $inventariosExport->download('inventarios.xlsx');
 })->name('inventarios.export');
 
