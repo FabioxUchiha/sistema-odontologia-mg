@@ -99,7 +99,7 @@
 
         <!-- Main Footer -->
         <footer class="main-footer" style="max-height: 100px;text-align: center; background-image: url(https://mdbootstrap.com/img/Photos/Others/background5.jpg);">
-            <strong>Sistema para el consultorio <span style="color: dodgerblue">Odontologia Mg</span></strong>
+            <strong><span style="color: dodgerblue">Odontologia MG. | Copyriht @ 2020</span></strong>
         </footer>
 
     </div>
