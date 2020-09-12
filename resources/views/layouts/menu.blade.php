@@ -20,7 +20,7 @@
 @endcan
 @canany(['ver_insumos', 'borrar_insumos', 'crear_insumos','editar_insumos'])
 <li class="{{ Request::is('insumos*') ? 'active' : '' }}">
-    <a href="{{ route('insumos.index') }}"><i class="fa fa-edit"></i><span>Insumos</span></a>
+    <a href="{{ route('insumos.index') }}"><i class="fa fa-archive"></i><span>Insumos</span></a>
 </li>
 @endcan
 @canany(['ver_notas', 'borrar_notas', 'crear_notas','editar_notas'])
