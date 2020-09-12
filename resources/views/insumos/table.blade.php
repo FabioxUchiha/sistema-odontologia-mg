@@ -23,9 +23,15 @@
                 <td>
                     {!! Form::open(['route' => ['insumos.destroy', $insumos->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
+                        @can('ver_insumos')
                         <a href="{{ route('insumos.show', [$insumos->id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
+                        @endcan
+                        @can('editar_insumos')
                         <a href="{{ route('insumos.edit', [$insumos->id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
+                        @endcan
+                        @can('borrar_insumos')
                         {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Estas seguro?')"]) !!}
+                        @endcan
                     </div>
                     {!! Form::close() !!}
                 </td>
