@@ -116,7 +116,7 @@
         <h5 class="text-center mx-auto font-weight-bold mb-4 pb-2 white-text">SISTEMA DE INFORMACIÓN PARA EL CONTROL DE
             GANANCIAS</h5>
         <div class="container">
-        <img src="../resources/images/bg.jpg" class="img-fluid" alt="smaple image">
+        <img src="{{ asset('img/bg.jpg') }}" class="img-fluid" alt="smaple image">
         </div>
 
         <h5 class="text-center mx-auto font-weight-bold mb-4 pb-2 white-text">Desarrollado por:</h5>

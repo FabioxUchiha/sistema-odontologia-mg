@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+@can('editar_roles')
     <section class="content-header">
         <h1>
             Role
@@ -20,4 +21,5 @@
            </div>
        </div>
    </div>
+  @endcan
 @endsection

@@ -18,7 +18,32 @@
             <td>{{ $insumos->fecha_de_compra }}</td>
             <td>{{ $insumos->cantidad }}</td>
             <td>{{ $insumos->marca }}</td>
-            <td>{{ $insumos->fecha_de_vencimiento }}</td>
+            <td>{{ $insumos->fecha_de_vencimiento }}
+                        @if($insumos->fecha_de_vencimiento <= date('Y-m-d H:i:s'))
+                            <span class="badge">
+                                vencido
+                            </span>
+                        @else
+                                @if((date('Y')+1) < $insumos->fecha_de_vencimiento->format('Y'))
+                                {{ (date('12')) }}
+                            <span class="label label-success badge">
+                                vence
+                                {{$insumos->fecha_de_vencimiento->diffForHumans()}}
+                            </span>
+                                @elseif((date('6')) > $insumos->fecha_de_vencimiento->diffForHumans('m'))
+                            <span class="label label-danger badge">
+                                vence
+                                {{$insumos->fecha_de_vencimiento->diffForHumans()}}
+                            </span>
+                                @elseif((date('6')) <= $insumos->fecha_de_vencimiento->format('m'))
+                            <span class="label label-warning badge">
+                                vence
+                                {{$insumos->fecha_de_vencimiento->diffForHumans()}}
+                            </span>
+                                @endif
+                                {{-- {{ 'vence '.$insumos->fecha_de_vencimiento->diffForHumans() }} --}}
+                        @endif
+            </td>
             <td>{{ $insumos->presentacion }}</td>
                 <td>
                     {!! Form::open(['route' => ['insumos.destroy', $insumos->id], 'method' => 'delete']) !!}

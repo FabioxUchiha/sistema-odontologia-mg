@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+@can('editar_usuarios')
     <section class="content-header">
         <h1>
             User
@@ -20,4 +21,5 @@
            </div>
        </div>
    </div>
+  @endcan
 @endsection

@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+@can('ver_insumos')
     <section class="content-header">
         <h1>
             Insumos
@@ -16,4 +17,5 @@
             </div>
         </div>
     </div>
+@endcan
 @endsection

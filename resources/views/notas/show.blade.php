@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+@can('ver_notas')
     <section class="content-header">
         <h1>
             Notas
@@ -16,4 +17,5 @@
             </div>
         </div>
     </div>
+@endcan
 @endsection
