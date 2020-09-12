@@ -2,6 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
+    <link rel="icon" href="img/dientes.svg" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -113,8 +114,8 @@
         <br>
         <h3 class="text-center mx-auto font-weight-bold mb-4 pb-2 white-text">ODONTOLOGIA MG</h3>
 
-        <h5 class="text-center mx-auto font-weight-bold mb-4 pb-2 white-text">SISTEMA DE INFORMACIÓN PARA EL CONTROL DE
-            GANANCIAS</h5>
+        <h5 class="text-center mx-auto font-weight-bold mb-4 pb-2 white-text">APLICACIÓN WEB PARA EL CONTROL DE GANANCIAS Y MANEJO DE
+        INVENTARIO</h5>
         <div class="container">
         <img src="{{ asset('img/bg.jpg') }}" class="img-fluid" alt="smaple image">
         </div>
