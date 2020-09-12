@@ -10,11 +10,11 @@
     <!-- Google Fonts Roboto -->
     <link rel="stylesheet" href="{{ asset('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap') }}">
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="../resources/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('../resources/css/bootstrap.min.css') }}">
     <!-- Material Design Bootstrap -->
-    <link rel="stylesheet" href="../resources/css/mdb.min.css">
+    <link rel="stylesheet" href="{{ asset('../resources/css/mdb.min.css') }}">
     <!-- Your custom styles (optional) -->
-    <link rel="stylesheet" href="../resources/css/style.css">
+    <link rel="stylesheet" href="{{ asset('../resources/css/style.css') }}">
 
     <title>Odontologia Mg</title>
 
