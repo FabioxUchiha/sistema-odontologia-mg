@@ -34,7 +34,7 @@
 
                             @can('borrar_notas')
                                 {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class'
-                                => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
+                                => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Estas seguro?')"]) !!}
                             @endcan
                         </div>
                         {!! Form::close() !!}

@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
-use Spatie\Permission\Models\Role; 
+use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
 use App\User;
 
@@ -17,9 +17,39 @@ class PermissionsSeeder extends Seeder
     {
         //creacion de un arreglo de permisos para el super administrador
         $permissions_array = [];
+        //notas
         array_push($permissions_array, Permission::create(['name' => 'crear_notas']));
         array_push($permissions_array, Permission::create(['name' => 'editar_notas']));
         array_push($permissions_array, Permission::create(['name' => 'borrar_notas']));
+        //roles
+        array_push($permissions_array,Permission::create(['name' => 'ver_roles']));
+        array_push($permissions_array,Permission::create(['name' => 'editar_roles']));
+        array_push($permissions_array,Permission::create(['name' => 'crear_roles']));
+        array_push($permissions_array,Permission::create(['name' => 'borrar_roles']));
+
+        //usuarios
+        array_push($permissions_array,Permission::create(['name' => 'ver_usuarios']));
+        array_push($permissions_array,Permission::create(['name' => 'editar_usuarios']));
+        array_push($permissions_array,Permission::create(['name' => 'crear_usuarios']));
+        array_push($permissions_array,Permission::create(['name' => 'borrar_usuarios']));
+
+        //inventarios
+        array_push($permissions_array,Permission::create(['name' => 'ver_inventarios']));
+        array_push($permissions_array,Permission::create(['name' => 'editar_inventarios']));
+        array_push($permissions_array,Permission::create(['name' => 'crear_inventarios']));
+       array_push($permissions_array, Permission::create(['name' => 'borrar_inventarios']));
+
+        //ingresos y egresos
+        array_push($permissions_array,Permission::create(['name' => 'ver_ingresos']));
+        array_push($permissions_array,Permission::create(['name' => 'editar_ingresos']));
+        array_push($permissions_array,Permission::create(['name' => 'crear_ingresos']));
+        array_push($permissions_array,Permission::create(['name' => 'borrar_ingresos']));
+
+        //insumos
+        array_push($permissions_array,Permission::create(['name' => 'ver_insumos']));
+        array_push($permissions_array,Permission::create(['name' => 'editar_insumos']));
+        array_push($permissions_array,Permission::create(['name' => 'crear_insumos']));
+        array_push($permissions_array,Permission::create(['name' => 'borrar_insumos']));
 
         //persmisos para ver notas
         $verNotasPermission = Permission::create(['name' => 'ver_notas']);

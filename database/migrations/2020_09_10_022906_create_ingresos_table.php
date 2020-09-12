@@ -18,7 +18,7 @@ class CreateIngresosTable extends Migration
             $table->increments('id');
             $table->date('fecha');
             $table->string('servicio');
-            $table->string('detalle');
+            $table->string('detalle')->nullable();
             $table->string('tipo');
             $table->integer('precio');
             $table->timestamps();

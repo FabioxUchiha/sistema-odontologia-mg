@@ -46,6 +46,7 @@ Route::group(['middleware' => ['permission:ver_ingresos|editar_ingresos|borrar_i
     Route::resource('ingresos', 'IngresosController');
 });
 
-
-
+Route::group(['middleware' => ['permission:ver_insumos|editar_insumos|borrar_insumos|crear_insumos']], function () {
+    Route::resource('insumos', 'insumosController');
+});
 

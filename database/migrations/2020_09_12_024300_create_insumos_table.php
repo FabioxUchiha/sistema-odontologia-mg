@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateNotasTable extends Migration
+class CreateInsumosTable extends Migration
 {
 
     /**
@@ -14,13 +14,14 @@ class CreateNotasTable extends Migration
      */
     public function up()
     {
-        Schema::create('notas', function (Blueprint $table) {
+        Schema::create('insumos', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('documento');
             $table->string('nombre');
-            $table->bigInteger('telefono')->nullable();
-            $table->string('procedimiento')->nullable();
-            $table->string('observaciones')->nullable();
+            $table->date('fecha_de_compra');
+            $table->integer('cantidad');
+            $table->string('marca')->nullable();
+            $table->date('fecha_de_vencimiento');
+            $table->string('presentacion')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
@@ -33,6 +34,6 @@ class CreateNotasTable extends Migration
      */
     public function down()
     {
-        Schema::drop('notas');
+        Schema::drop('insumos');
     }
 }

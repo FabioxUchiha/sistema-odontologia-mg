@@ -21,7 +21,7 @@ class Ingresos extends Model
     use SoftDeletes;
 
     public $table = 'ingresos';
-    
+
 
     protected $dates = ['deleted_at'];
 
@@ -57,8 +57,9 @@ class Ingresos extends Model
     public static $rules = [
         'fecha' => 'required',
         'tipo' => 'required',
-        'precio' => 'required'
+        'precio' => 'required',
+        'servicio' => 'required'
     ];
 
-    
+
 }
