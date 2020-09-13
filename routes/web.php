@@ -50,3 +50,6 @@ Route::group(['middleware' => ['permission:ver_insumos|editar_insumos|borrar_ins
     Route::resource('insumos', 'insumosController');
 });
 
+Route::get('dashboard', 'DashboardController@index')->name('dashboard.index');
+
+
