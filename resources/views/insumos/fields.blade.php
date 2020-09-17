@@ -13,7 +13,7 @@
 @push('scripts')
     <script type="text/javascript">
         $('#fecha_de_compra').datetimepicker({
-            format: 'YYYY-MM-DD HH:mm:ss',
+            format: 'YYYY-MM-DD',
             useCurrent: true,
             sideBySide: true
         })
@@ -41,7 +41,7 @@
 @push('scripts')
     <script type="text/javascript">
         $('#fecha_de_vencimiento').datetimepicker({
-            format: 'YYYY-MM-DD HH:mm:ss',
+            format: 'YYYY-MM-DD',
             useCurrent: true,
             sideBySide: true
         })

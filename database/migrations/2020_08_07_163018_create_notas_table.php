@@ -16,7 +16,7 @@ class CreateNotasTable extends Migration
     {
         Schema::create('notas', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('documento');
+            $table->integer('documento')->unique();
             $table->string('nombre');
             $table->bigInteger('telefono')->nullable();
             $table->string('procedimiento')->nullable();

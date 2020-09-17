@@ -7,7 +7,7 @@
 @push('scripts')
     <script type="text/javascript">
         $('#fecha').datetimepicker({
-            format: 'YYYY-MM-DD HH:mm:ss',
+            format: 'YYYY-MM-DD',
             useCurrent: true,
             sideBySide: true
         })

@@ -18,6 +18,7 @@ class PermissionsSeeder extends Seeder
         //creacion de un arreglo de permisos para el super administrador
         $permissions_array = [];
         //notas
+        array_push($permissions_array, Permission::create(['name' => 'ver_notas']));
         array_push($permissions_array, Permission::create(['name' => 'crear_notas']));
         array_push($permissions_array, Permission::create(['name' => 'editar_notas']));
         array_push($permissions_array, Permission::create(['name' => 'borrar_notas']));
@@ -51,17 +52,9 @@ class PermissionsSeeder extends Seeder
         array_push($permissions_array,Permission::create(['name' => 'crear_insumos']));
         array_push($permissions_array,Permission::create(['name' => 'borrar_insumos']));
 
-        //persmisos para ver notas
-        $verNotasPermission = Permission::create(['name' => 'ver_notas']);
-        array_push($permissions_array, $verNotasPermission);
-
         //creacion de rol superAdminRole y asignacion del permiso para ver notas
         $superAdminRole = Role::create(['name' => 'super_administrador']);
         $superAdminRole->syncPermissions($permissions_array);
-
-        //creacion de rol verNotasRole y asignacion del permiso para ver notas
-        $verNotasRole = Role::create(['name' => 'ver_notas']);
-        $verNotasRole->givePermissionTo($verNotasPermission);
 
         //creacion de usuario userSuperAdmin
         $userSuperAdmin = User::create([
@@ -72,19 +65,5 @@ class PermissionsSeeder extends Seeder
         //asignacion de rol super_administrador
         $userSuperAdmin->assignRole('super_administrador');
 
-        //creacion de usuario userVerNotas
-        $userVerNotas = User::create([
-            'name' => 'test',
-            'email' => 'test@gmail.com',
-            'password' => Hash::make('admin'),
-        ]);
-        //asignacion de rol userVerNotas
-        $userVerNotas->assignRole('ver_notas');
-
-        User::create([
-            'name' => 'test2',
-            'email' => 'test2@gmail.com',
-            'password' => Hash::make('admin'),
-        ]);
     }
 }
