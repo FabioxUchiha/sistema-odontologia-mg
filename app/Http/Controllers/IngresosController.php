@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\AppBaseController;
 use App\Http\Requests\CreateIngresosRequest;
 use App\Http\Requests\UpdateIngresosRequest;
+use App\Models\Ingresos;
 use App\Repositories\IngresosRepository;
-use App\Http\Controllers\AppBaseController;
-use Illuminate\Http\Request;
+use Carbon\Carbon;
 use Flash;
+use Illuminate\Http\Request;
 use Response;
 
 class IngresosController extends AppBaseController
@@ -30,9 +32,15 @@ class IngresosController extends AppBaseController
     public function index(Request $request)
     {
         $ingresos = $this->ingresosRepository->all();
+        $ingresosDia = Ingresos::whereDate('fecha', '=', Carbon::now()->format('Y-m-d'))->get();
+        $total = 0;
 
-        return view('ingresos.index')
-            ->with('ingresos', $ingresos);
+        return view('ingresos.index', [
+            'ingresos' => $ingresos,
+            'ingresosDia' => $ingresosDia,
+            'total' => $total,
+        ]);
+
     }
 
     /**

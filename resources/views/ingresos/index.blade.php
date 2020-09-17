@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+<style>
+#suma{display:none;}
+</style>
     <section class="content-header">
         <h1 class="pull-left">Ingresos</h1>
         <h1 class="pull-right">
@@ -20,8 +23,15 @@
                     @include('ingresos.table')
             </div>
         </div>
-        <div class="text-center">
-
+        <div class="text-right">
+        <div id="suma">
+            @foreach($ingresosDia->all() as $diario)
+                {{ $total += $diario->precio }}
+            @endforeach
+        </div>
+            <button type="button" class="btn btn-primary">
+                Ingresos hoy <span class="badge badge-light">{{ $total }}</span>
+            </button>
         </div>
     </div>
 @endsection
