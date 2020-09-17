@@ -26,7 +26,12 @@
         <div class="text-right">
         <div id="suma">
             @foreach($ingresosDia->all() as $diario)
+            @if($diario->tipo == 'Ingreso')
                 {{ $total += $diario->precio }}
+            @endif
+            @if($diario->tipo == 'Egreso')
+                {{ $total -= $diario->precio }}
+            @endif
             @endforeach
         </div>
             <button type="button" class="btn btn-primary">
