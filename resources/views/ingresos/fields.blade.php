@@ -30,7 +30,7 @@
 <div class="form-group col-sm-6">
     {!! Form::label('tipo', 'Tipo:') !!}
     <select name="tipo" class="form-control">
-        <option>
+        <option type="text" value="">
             Seleccione...
         </option>
         <option type="text" value="Ingreso">

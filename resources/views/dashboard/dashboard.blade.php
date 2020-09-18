@@ -8,8 +8,10 @@
 	{{ $total += $ingreso->precio }}
 @endforeach
 </div>
-<button class="btn btn-warning">
-	ingresos del mes
-	{{ $total }}
-</button>
+<br>
+<div class="container">
+	<button type="button" class="btn btn-primary ">
+        Ingresos del mes <span class="badge badge-light">{{ $total }}</span>
+    </button>
+</div>
 @endsection
