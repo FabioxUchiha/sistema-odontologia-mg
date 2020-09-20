@@ -37,13 +37,13 @@
 <li>
   <a class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 		<i class="glyphicon glyphicon-th-list"></i>
-    Dropdown
+    Desplegables
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li><a href="#" class="text-black">Action</a></li>
-    <li><a href="#" class="text-black">Another action</a></li>
-    <li><a href="#" class="text-black">Something else here</a></li>
+    <li><a href="#" class="text-black">Inventarios</a></li>
+    <li><a href="#" class="text-black">Insumos</a></li>
+    <li><a href="#" class="text-black">ingresos y egresos</a></li>
     <li role="separator" class="divider"></li>
     <li><a href="#" class="text-black">Separated link</a></li>
   </ul>
