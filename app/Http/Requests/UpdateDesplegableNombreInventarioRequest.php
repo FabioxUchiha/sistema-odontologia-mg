@@ -2,8 +2,9 @@
 
 namespace App\Http\Requests;
 
-use Illuminate\Foundation\Http\FormRequest;
 use App\Models\DesplegableNombreInventario;
+use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class UpdateDesplegableNombreInventarioRequest extends FormRequest
 {
@@ -25,8 +26,11 @@ class UpdateDesplegableNombreInventarioRequest extends FormRequest
      */
     public function rules()
     {
-        $rules = DesplegableNombreInventario::$rules;
-        
+        $rules = [
+            'nombre' => ['required',
+             Rule::unique('desplegable_nombre_inventarios')->ignore( $this->route('desplegableNombreInventario') )
+         ]
+        ];
         return $rules;
     }
 }

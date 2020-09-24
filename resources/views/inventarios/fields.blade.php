@@ -1,7 +1,16 @@
 <!-- Nombre Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('nombre', 'Nombre:') !!}
-    {!! Form::text('nombre', null, ['class' => 'form-control']) !!}
+    <select name="nombre" class="form-control">
+        <option type="text" value="">
+            Seleccione...
+        </option>
+        @foreach($desplegable_nombre_inventario->all() as $item)
+            <option type="text" value="{{$item->nombre}}">
+                {{$item->nombre}}
+            </option>
+        @endforeach
+    </select>
 </div>
 
 <!-- Categoria Field -->

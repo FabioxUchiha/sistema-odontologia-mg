@@ -25,6 +25,9 @@ class CreateDesplegableNombreInventarioRequest extends FormRequest
      */
     public function rules()
     {
-        return DesplegableNombreInventario::$rules;
+        $rules = [
+            'nombre' => ['required', 'unique:desplegable_nombre_inventarios']
+        ];
+        return $rules;
     }
 }

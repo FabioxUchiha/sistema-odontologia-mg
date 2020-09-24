@@ -40,7 +40,6 @@
             Egreso
         </option>
     </select>
-    {{-- {!! Form::text('tipo', null, ['class' => 'form-control']) !!} --}}
 </div>
 
 <!-- Precio Field -->

@@ -6,6 +6,7 @@ use App\Exports\InventariosExport;
 use App\Http\Controllers\AppBaseController;
 use App\Http\Requests\CreateInventarioRequest;
 use App\Http\Requests\UpdateInventarioRequest;
+use App\Models\DesplegableNombreInventario;
 use App\Repositories\InventarioRepository;
 use Flash;
 use Illuminate\Http\Request;
@@ -33,8 +34,10 @@ class InventarioController extends AppBaseController
     {
         $inventarios = $this->inventarioRepository->all();
 
-        return view('inventarios.index')
-            ->with('inventarios', $inventarios);
+        return view('inventarios.index', [
+            'inventarios' => $inventarios
+        ]);
+
     }
 
     /**
@@ -44,7 +47,11 @@ class InventarioController extends AppBaseController
      */
     public function create()
     {
-        return view('inventarios.create');
+        $desplegable_nombre_inventario = DesplegableNombreInventario::all();
+
+        return view('inventarios.create', [
+            'desplegable_nombre_inventario' => $desplegable_nombre_inventario
+        ]);
     }
 
     /**

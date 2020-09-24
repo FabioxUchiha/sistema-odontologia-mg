@@ -41,7 +41,11 @@
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li><a href="#" class="text-black">Inventarios</a></li>
+    <li class="{{ Request::is('desplegableNombreInventarios*') ? 'active' : '' }}">
+    <a class="text-black"
+    href="{{ route('desplegableNombreInventarios.index') }}">
+      <span>Desplegable Nombre Inventarios</span></a>
+    </li>
     <li><a href="#" class="text-black">Insumos</a></li>
     <li><a href="#" class="text-black">ingresos y egresos</a></li>
     <li role="separator" class="divider"></li>
@@ -49,7 +53,5 @@
   </ul>
 
 </li>
-<li class="{{ Request::is('desplegableNombreInventarios*') ? 'active' : '' }}">
-    <a href="{{ route('desplegableNombreInventarios.index') }}"><i class="fa fa-edit"></i><span>Desplegable Nombre Inventarios</span></a>
-</li>
+
 
