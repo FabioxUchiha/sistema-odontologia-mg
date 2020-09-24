@@ -3,9 +3,9 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Spatie\Permission\Models\Role;
+use App\Models\DesplegableNombreInventario;
 
-class CreateRoleRequest extends FormRequest
+class CreateDesplegableNombreInventarioRequest extends FormRequest
 {
 
     /**
@@ -25,10 +25,6 @@ class CreateRoleRequest extends FormRequest
      */
     public function rules()
     {
-        $rules = [
-            'name' => ['required', 'unique:roles'],
-            'permissions' => 'required'
-        ];
-        return $rules;
+        return DesplegableNombreInventario::$rules;
     }
 }

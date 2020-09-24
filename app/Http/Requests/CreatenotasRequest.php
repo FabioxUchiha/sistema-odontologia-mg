@@ -25,6 +25,9 @@ class CreatenotasRequest extends FormRequest
      */
     public function rules()
     {
-        return notas::$rules;
+        $rules = [
+            'documento' => ['required', 'unique:notas']
+        ];
+        return $rules;
     }
 }

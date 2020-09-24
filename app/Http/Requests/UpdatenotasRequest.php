@@ -2,8 +2,9 @@
 
 namespace App\Http\Requests;
 
-use Illuminate\Foundation\Http\FormRequest;
 use App\Models\notas;
+use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class UpdatenotasRequest extends FormRequest
 {
@@ -25,8 +26,11 @@ class UpdatenotasRequest extends FormRequest
      */
     public function rules()
     {
-        $rules = notas::$rules;
-        
+        $rules = [
+            'documento' => ['required',
+             Rule::unique('notas')->ignore( $this->route('nota') )
+         ]
+        ];
         return $rules;
     }
 }

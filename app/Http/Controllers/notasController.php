@@ -58,7 +58,7 @@ class notasController extends AppBaseController
 
         $notas = $this->notasRepository->create($input);
 
-        Flash::success('Notas saved successfully.');
+        Flash::success('Nota guardada exitosamente.');
 
         return redirect(route('notas.index'));
     }
@@ -123,7 +123,7 @@ class notasController extends AppBaseController
 
         $notas = $this->notasRepository->update($request->all(), $id);
 
-        Flash::success('Notas updated successfully.');
+        Flash::success('Nota Actualizada exitosamente.');
 
         return redirect(route('notas.index'));
     }
@@ -142,14 +142,14 @@ class notasController extends AppBaseController
         $notas = $this->notasRepository->find($id);
 
         if (empty($notas)) {
-            Flash::error('Notas not found');
+            Flash::error('Nota no encontrada');
 
             return redirect(route('notas.index'));
         }
 
         $this->notasRepository->delete($id);
 
-        Flash::success('Notas deleted successfully.');
+        Flash::success('Nota eliminada con éxito.');
 
         return redirect(route('notas.index'));
     }

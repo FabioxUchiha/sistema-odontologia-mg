@@ -49,3 +49,7 @@
   </ul>
 
 </li>
+<li class="{{ Request::is('desplegableNombreInventarios*') ? 'active' : '' }}">
+    <a href="{{ route('desplegableNombreInventarios.index') }}"><i class="fa fa-edit"></i><span>Desplegable Nombre Inventarios</span></a>
+</li>
+
