@@ -102,6 +102,7 @@ class InventarioController extends AppBaseController
     public function edit($id)
     {
         $inventario = $this->inventarioRepository->find($id);
+        $desplegable_nombre_inventario = DesplegableNombreInventario::all();
 
         if (empty($inventario)) {
             Flash::error('Inventario not found');
@@ -109,7 +110,10 @@ class InventarioController extends AppBaseController
             return redirect(route('inventarios.index'));
         }
 
-        return view('inventarios.edit')->with('inventario', $inventario);
+        return view('inventarios.edit', [
+            'inventario' => $inventario,
+            'desplegable_nombre_inventario' => $desplegable_nombre_inventario
+        ]);
     }
 
     /**
