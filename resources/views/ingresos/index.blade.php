@@ -38,6 +38,11 @@
                 Ingresos hoy <span class="badge badge-light">{{ $total }}</span>
             </button>
         </div>
+        <br>
+        @can('crear_ingresos')
+               {{-- exportar ingresos y egresos --}}
+               <a class="btn btn-success pull-right" style="margin-top: -10px;margin-bottom: 5px" href="{{ route('ingresos.export') }}">Exportar a Excel</a>
+        @endcan
     </div>
 @endsection
 

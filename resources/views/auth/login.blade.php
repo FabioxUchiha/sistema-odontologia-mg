@@ -33,12 +33,13 @@
     <![endif]-->
 
 </head>
-<body class="hold-transition login-page"  style="background-image: url(https://mdbootstrap.com/img/Photos/Others/background1.jpg);">
+<body class="hold-transition login-page"  style="background-image: url(https://mdbootstrap.com/img/Photos/Others/background4.jpg);">
 <div class="login-box">
     <div class="login-logo">
         <img width="40px"
              src="{{ asset('img/dientes.svg') }}">
-        <a href="{{ url('/') }}"><b>Odontologia </b>MG</a>
+        <a style="color: white"
+        href="{{ url('/') }}"><b>Odontologia </b>MG</a>
     </div>
 
     <!-- /.login-logo -->
@@ -77,12 +78,12 @@
                     </div>
                 </div>
                 <!-- /.col -->
-                    <button type="submit" class="btn btn-block btn-info btn-lg">Registrarse</button>
+                    <button type="submit" class="btn btn-block btn-danger btn-lg">Registrarse</button>
                 <!-- /.col -->
             </div>
         </form>
 
-        <a href="{{ url('/password/reset') }}">Olvidé mi contraseña</a><br>
+        {{-- <a href="{{ url('/password/reset') }}">Olvidé mi contraseña</a><br> --}}
         <a href="{{ url('/register') }}" class="text-center">Registrar una nueva cuenta</a>
 
     </div>

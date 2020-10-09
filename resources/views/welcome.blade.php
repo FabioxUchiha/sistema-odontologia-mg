@@ -80,8 +80,8 @@
     </style>
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark indigo">
+<body style="background-image: url(https://mdbootstrap.com/img/Photos/Others/background4.jpg);">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
             aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -110,7 +110,7 @@
 
     <!--Section: Content-->
     <section class="dark-grey-text text-center"
-        style="background-image: url(https://mdbootstrap.com/img/Photos/Others/background1.jpg);">
+        style="background-image: url(https://mdbootstrap.com/img/Photos/Others/background4.jpg);">
         <br>
         <h3 class="text-center mx-auto font-weight-bold mb-4 pb-2 white-text">ODONTOLOGIA MG</h3>
 
