@@ -5,7 +5,7 @@
         <h1 class="pull-left">Insumos</h1>
         <h1 class="pull-right">
             @can('crear_insumos')
-           <a class="btn btn-info pull-right" style="margin-top: -10px;margin-bottom: 5px" href="{{ route('insumos.create') }}">Agregar nuevo insumo</a>
+           <a class="btn btn-danger pull-right" style="margin-top: -10px;margin-bottom: 5px" href="{{ route('insumos.create') }}">Agregar nuevo insumo</a>
             @endcan
         </h1>
     </section>
