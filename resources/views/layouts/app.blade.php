@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">
 </head>
 
-<body class="skin-purple sidebar-mini">
+<body class="skin-red sidebar-mini">
 @if (!Auth::guest())
     <div class="wrapper">
         <!-- Main Header -->
@@ -92,13 +92,13 @@
         <!-- Left side column. contains the logo and sidebar -->
         @include('layouts.sidebar')
         <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper" style="background-image: url(img/dentista.svg);">
+        <div class="content-wrapper" {{-- style="background-image: url(img/dentista.svg);" --}}>
             @yield('content')
         </div>
 
         <!-- Main Footer -->
         <footer class="main-footer" style="max-height: 100px;text-align: center; background-image: url(https://mdbootstrap.com/img/Photos/Others/background5.jpg);">
-            <strong><span style="color: dodgerblue">Odontologia MG. | Copyriht @ 2020</span></strong>
+            <strong><span style="color: black:50">Odontologia MG. | Copyriht @ 2020</span></strong>
         </footer>
 
     </div>
