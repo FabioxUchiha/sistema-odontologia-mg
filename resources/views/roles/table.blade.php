@@ -2,9 +2,9 @@
     <table class="table" id="roles-table">
         <thead>
             <tr>
-                <th>Nombre</th>
-                <th>Permisos</th>
-                <th colspan="3">Acciones</th>
+                <th class="col-md-2">Nombre</th>
+                <th class="col-md-8">Permisos</th>
+                <th colspan="3" class="col-md-2">Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -15,15 +15,15 @@
                     <td>
                         {!! Form::open(['route' => ['roles.destroy', $role->id], 'method' => 'delete']) !!}
                         <div class='btn-group'>
-                            @can('ver_roles')
+                            @can('ver roles')
                             <a href="{{ route('roles.show', [$role->id]) }}" class='btn btn-default btn-xs'>
                                 <i class="glyphicon glyphicon-eye-open"></i></a>
                             @endcan
-                            @can('editar_roles')
+                            @can('editar roles')
                             <a href="{{ route('roles.edit', [$role->id]) }}" class='btn btn-default btn-xs'>
                                 <i class="glyphicon glyphicon-edit"></i></a>
                             @endcan
-                            @can('borrar_roles')
+                            @can('borrar roles')
                             {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Estas seguro?')"]) !!}
                             @endcan
                         </div>

@@ -59,7 +59,7 @@ class RoleController extends AppBaseController
         $role = $this->roleRepository->create($input);
         $role->syncPermissions($request->permissions);
 
-        Flash::success('Role saved successfully.');
+        Flash::success('Role Guardado exitosamente.');
 
         return redirect(route('roles.index'));
     }
@@ -126,7 +126,7 @@ class RoleController extends AppBaseController
         $role = $this->roleRepository->update($input, $id);
         $role->permissions()->detach();
         $role->syncPermissions($request->permissions);
-        Flash::success('Role updated successfully.');
+        Flash::success('Role actualizado con éxito.');
 
         return redirect(route('roles.index'));
     }
@@ -152,7 +152,7 @@ class RoleController extends AppBaseController
 
         $this->roleRepository->delete($id);
 
-        Flash::success('Role deleted successfully.');
+        Flash::success('Role borrado exitosamente.');
 
         return redirect(route('roles.index'));
     }

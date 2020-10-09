@@ -58,7 +58,7 @@ class DesplegableNombreInventarioController extends AppBaseController
 
         $desplegableNombreInventario = $this->desplegableNombreInventarioRepository->create($input);
 
-        Flash::success('Desplegable Nombre Inventario saved successfully.');
+        Flash::success('Desplegable Nombre Inventario Guardado exitosamente.');
 
         return redirect(route('desplegableNombreInventarios.index'));
     }
@@ -123,7 +123,7 @@ class DesplegableNombreInventarioController extends AppBaseController
 
         $desplegableNombreInventario = $this->desplegableNombreInventarioRepository->update($request->all(), $id);
 
-        Flash::success('Desplegable Nombre Inventario updated successfully.');
+        Flash::success('Desplegable Nombre Inventario actualizado con éxito.');
 
         return redirect(route('desplegableNombreInventarios.index'));
     }
@@ -149,7 +149,7 @@ class DesplegableNombreInventarioController extends AppBaseController
 
         $this->desplegableNombreInventarioRepository->delete($id);
 
-        Flash::success('Desplegable Nombre Inventario deleted successfully.');
+        Flash::success('Desplegable Nombre Inventario borrado exitosamente.');
 
         return redirect(route('desplegableNombreInventarios.index'));
     }

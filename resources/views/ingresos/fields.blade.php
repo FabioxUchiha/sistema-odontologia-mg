@@ -31,7 +31,11 @@
     {!! Form::label('tipo', 'Tipo:') !!}
     <select name="tipo" class="form-control">
         <option type="text" value="">
+            @if($ingresos->tipo ?? '')
+            {{$ingresos->tipo}}
+            @else
             Seleccione...
+            @endif
         </option>
         <option type="text" value="Ingreso">
             Ingreso

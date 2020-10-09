@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-@can('editar_usuarios')
+@can('editar usuarios')
     <section class="content-header">
         <h1>
             User

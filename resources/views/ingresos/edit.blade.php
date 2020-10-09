@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-@can('editar_ingresos')
+@can('editar ingresos')
     <section class="content-header">
         <h1>
             Ingresos

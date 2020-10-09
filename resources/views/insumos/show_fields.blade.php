@@ -7,7 +7,7 @@
 <!-- Fecha De Compra Field -->
 <div class="form-group">
     {!! Form::label('fecha_de_compra', 'Fecha De Compra:') !!}
-    <p>{{ $insumos->fecha_de_compra }}</p>
+    <p>{{ $insumos->fecha_de_compra->format('Y/m/d') }}</p>
 </div>
 
 <!-- Cantidad Field -->
@@ -25,7 +25,7 @@
 <!-- Fecha De Vencimiento Field -->
 <div class="form-group">
     {!! Form::label('fecha_de_vencimiento', 'Fecha De Vencimiento:') !!}
-    <p>{{ $insumos->fecha_de_vencimiento }}</p>
+    <p>{{ $insumos->fecha_de_vencimiento->format('Y/m/d') }}</p>
 </div>
 
 <!-- Presentacion Field -->
@@ -34,15 +34,15 @@
     <p>{{ $insumos->presentacion }}</p>
 </div>
 
-<!-- Created At Field -->
+<!-- Creado el Field -->
 <div class="form-group">
-    {!! Form::label('created_at', 'Created At:') !!}
-    <p>{{ $insumos->created_at }}</p>
+    {!! Form::label('created_at', 'Creado el:') !!}
+    <p>{{ $insumos->created_at->format('Y/m/d') }}</p>
 </div>
 
-<!-- Updated At Field -->
+<!-- Actualizado el Field -->
 <div class="form-group">
-    {!! Form::label('updated_at', 'Updated At:') !!}
-    <p>{{ $insumos->updated_at }}</p>
+    {!! Form::label('updated_at', 'Actualizado el:') !!}
+    <p>{{ $insumos->updated_at->format('Y/m/d') }}</p>
 </div>
 

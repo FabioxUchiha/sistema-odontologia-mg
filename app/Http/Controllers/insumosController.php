@@ -58,7 +58,7 @@ class insumosController extends AppBaseController
 
         $insumos = $this->insumosRepository->create($input);
 
-        Flash::success('Insumos saved successfully.');
+        Flash::success('Insumos Guardado exitosamente.');
 
         return redirect(route('insumos.index'));
     }
@@ -123,7 +123,7 @@ class insumosController extends AppBaseController
 
         $insumos = $this->insumosRepository->update($request->all(), $id);
 
-        Flash::success('Insumos updated successfully.');
+        Flash::success('Insumos actualizado con éxito.');
 
         return redirect(route('insumos.index'));
     }
@@ -149,7 +149,7 @@ class insumosController extends AppBaseController
 
         $this->insumosRepository->delete($id);
 
-        Flash::success('Insumos deleted successfully.');
+        Flash::success('Insumos borrado exitosamente.');
 
         return redirect(route('insumos.index'));
     }

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-@can('crear_inventarios')
+@can('crear inventarios')
     <section class="content-header">
         <h1>
             Inventario

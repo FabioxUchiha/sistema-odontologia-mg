@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-@can('ver_usuarios')
+@can('ver usuarios')
     <section class="content-header">
         <h1>
             User

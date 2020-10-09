@@ -3,7 +3,11 @@
     {!! Form::label('nombre', 'Nombre:') !!}
     <select name="nombre" class="form-control">
         <option type="text" value="">
+            @if($inventario->nombre ?? '')
+            {{$inventario->nombre}}
+            @else
             Seleccione...
+            @endif
         </option>
         @foreach($desplegable_nombre_inventario->all() as $item)
             <option type="text" value="{{$item->nombre}}">

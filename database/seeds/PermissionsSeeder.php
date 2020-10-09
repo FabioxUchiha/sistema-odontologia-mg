@@ -23,34 +23,34 @@ class PermissionsSeeder extends Seeder
         array_push($permissions_array, Permission::create(['name' => 'editar notas']));
         array_push($permissions_array, Permission::create(['name' => 'borrar notas']));
         //roles
-        array_push($permissions_array,Permission::create(['name' => 'ver_roles']));
-        array_push($permissions_array,Permission::create(['name' => 'editar_roles']));
-        array_push($permissions_array,Permission::create(['name' => 'crear_roles']));
-        array_push($permissions_array,Permission::create(['name' => 'borrar_roles']));
+        array_push($permissions_array,Permission::create(['name' => 'ver roles']));
+        array_push($permissions_array,Permission::create(['name' => 'editar roles']));
+        array_push($permissions_array,Permission::create(['name' => 'crear roles']));
+        array_push($permissions_array,Permission::create(['name' => 'borrar roles']));
 
         //usuarios
-        array_push($permissions_array,Permission::create(['name' => 'ver_usuarios']));
-        array_push($permissions_array,Permission::create(['name' => 'editar_usuarios']));
-        array_push($permissions_array,Permission::create(['name' => 'crear_usuarios']));
-        array_push($permissions_array,Permission::create(['name' => 'borrar_usuarios']));
+        array_push($permissions_array,Permission::create(['name' => 'ver usuarios']));
+        array_push($permissions_array,Permission::create(['name' => 'editar usuarios']));
+        array_push($permissions_array,Permission::create(['name' => 'crear usuarios']));
+        array_push($permissions_array,Permission::create(['name' => 'borrar usuarios']));
 
         //inventarios
-        array_push($permissions_array,Permission::create(['name' => 'ver_inventarios']));
-        array_push($permissions_array,Permission::create(['name' => 'editar_inventarios']));
-        array_push($permissions_array,Permission::create(['name' => 'crear_inventarios']));
-       array_push($permissions_array, Permission::create(['name' => 'borrar_inventarios']));
+        array_push($permissions_array,Permission::create(['name' => 'ver inventarios']));
+        array_push($permissions_array,Permission::create(['name' => 'editar inventarios']));
+        array_push($permissions_array,Permission::create(['name' => 'crear inventarios']));
+       array_push($permissions_array, Permission::create(['name' => 'borrar inventarios']));
 
         //ingresos y egresos
-        array_push($permissions_array,Permission::create(['name' => 'ver_ingresos']));
-        array_push($permissions_array,Permission::create(['name' => 'editar_ingresos']));
-        array_push($permissions_array,Permission::create(['name' => 'crear_ingresos']));
-        array_push($permissions_array,Permission::create(['name' => 'borrar_ingresos']));
+        array_push($permissions_array,Permission::create(['name' => 'ver ingresos']));
+        array_push($permissions_array,Permission::create(['name' => 'editar ingresos']));
+        array_push($permissions_array,Permission::create(['name' => 'crear ingresos']));
+        array_push($permissions_array,Permission::create(['name' => 'borrar ingresos']));
 
         //insumos
-        array_push($permissions_array,Permission::create(['name' => 'ver_insumos']));
-        array_push($permissions_array,Permission::create(['name' => 'editar_insumos']));
-        array_push($permissions_array,Permission::create(['name' => 'crear_insumos']));
-        array_push($permissions_array,Permission::create(['name' => 'borrar_insumos']));
+        array_push($permissions_array,Permission::create(['name' => 'ver insumos']));
+        array_push($permissions_array,Permission::create(['name' => 'editar insumos']));
+        array_push($permissions_array,Permission::create(['name' => 'crear insumos']));
+        array_push($permissions_array,Permission::create(['name' => 'borrar insumos']));
 
         //creacion de rol superAdminRole y asignacion del permiso para ver notas
         $superAdminRole = Role::create(['name' => 'super_administrador']);

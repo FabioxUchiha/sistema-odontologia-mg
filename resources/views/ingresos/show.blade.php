@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-@can('ver_ingresos')
+@can('ver ingresos')
     <section class="content-header">
         <h1>
             Ingresos

@@ -28,13 +28,13 @@
     <p>{{ $notas->observaciones }}</p>
 </div>
 
-<!-- Created At Field -->
+<!-- Creado el Field -->
 <div class="form-group">
     {!! Form::label('created_at', 'Creado:') !!}
     <p>{{ $notas->created_at }}</p>
 </div>
 
-<!-- Updated At Field -->
+<!-- Actualizado el Field -->
 <div class="form-group">
     {!! Form::label('updated_at', 'Actualizado:') !!}
     <p>{{ $notas->updated_at }}</p>

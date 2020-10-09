@@ -10,13 +10,13 @@
     <p>{{implode(', ', $role->permissions->pluck('name')->toArray()) }}</p>
 </div>
 
-<!-- Created At Field -->
+<!-- Creado el Field -->
 <div class="form-group">
     {!! Form::label('created_at', 'Creado:') !!}
     <p>{{ $role->created_at }}</p>
 </div>
 
-<!-- Updated At Field -->
+<!-- Actualizado el Field -->
 <div class="form-group">
     {!! Form::label('updated_at', 'Actualizado:') !!}
     <p>{{ $role->updated_at }}</p>

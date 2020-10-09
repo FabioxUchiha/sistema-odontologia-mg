@@ -13,27 +13,27 @@ class UserRolesPermissionsSeeder extends Seeder
     public function run()
     {
         // //roles
-        // Permission::create(['name' => 'ver_roles']);
-        // Permission::create(['name' => 'editar_roles']);
-        // Permission::create(['name' => 'crear_roles']);
-        // Permission::create(['name' => 'borrar_roles']);
+        // Permission::create(['name' => 'ver roles']);
+        // Permission::create(['name' => 'editar roles']);
+        // Permission::create(['name' => 'crear roles']);
+        // Permission::create(['name' => 'borrar roles']);
 
         // //usuarios
-        // Permission::create(['name' => 'ver_usuarios']);
-        // Permission::create(['name' => 'editar_usuarios']);
-        // Permission::create(['name' => 'crear_usuarios']);
-        // Permission::create(['name' => 'borrar_usuarios']);
+        // Permission::create(['name' => 'ver usuarios']);
+        // Permission::create(['name' => 'editar usuarios']);
+        // Permission::create(['name' => 'crear usuarios']);
+        // Permission::create(['name' => 'borrar usuarios']);
 
         // //inventarios
-        // Permission::create(['name' => 'ver_inventarios']);
-        // Permission::create(['name' => 'editar_inventarios']);
-        // Permission::create(['name' => 'crear_inventarios']);
-        // Permission::create(['name' => 'borrar_inventarios']);
+        // Permission::create(['name' => 'ver inventarios']);
+        // Permission::create(['name' => 'editar inventarios']);
+        // Permission::create(['name' => 'crear inventarios']);
+        // Permission::create(['name' => 'borrar inventarios']);
 
         // //ingresos y egresos
-        // Permission::create(['name' => 'ver_ingresos']);
-        // Permission::create(['name' => 'editar_ingresos']);
-        // Permission::create(['name' => 'crear_ingresos']);
-        // Permission::create(['name' => 'borrar_ingresos']);
+        // Permission::create(['name' => 'ver ingresos']);
+        // Permission::create(['name' => 'editar ingresos']);
+        // Permission::create(['name' => 'crear ingresos']);
+        // Permission::create(['name' => 'borrar ingresos']);
     }
 }

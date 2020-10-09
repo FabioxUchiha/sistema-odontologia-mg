@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-@can('ver_roles')
+@can('ver roles')
     <section class="content-header">
         <h1>
             Role

@@ -7,7 +7,7 @@
     <section class="content-header">
         <h1 class="pull-left">Ingresos y Egresos</h1>
         <h1 class="pull-right">
-            @can('crear_inventarios')
+            @can('crear inventarios')
            <a class="btn btn-danger pull-right" style="margin-top: -1px;margin-bottom: 5px;margin-left: 5px" href="{{ route('ingresos.create') }}">Agregar Ingreso o Egreso</a>
             @endcan
         </h1>
@@ -34,12 +34,12 @@
             @endif
             @endforeach
         </div>
-            <button type="button" class="btn btn-primary">
+            <button type="button" class="btn btn-danger">
                 Ingresos hoy <span class="badge badge-light">{{ $total }}</span>
             </button>
         </div>
         <br>
-        @can('crear_ingresos')
+        @can('crear ingresos')
                {{-- exportar ingresos y egresos --}}
                <a class="btn btn-success pull-right" style="margin-top: -10px;margin-bottom: 5px" href="{{ route('ingresos.export') }}">Exportar a Excel</a>
         @endcan

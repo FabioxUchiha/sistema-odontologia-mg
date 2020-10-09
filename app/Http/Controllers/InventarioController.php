@@ -67,7 +67,7 @@ class InventarioController extends AppBaseController
 
         $inventario = $this->inventarioRepository->create($input);
 
-        Flash::success('Inventario saved successfully.');
+        Flash::success('Inventario Guardado exitosamente.');
 
         return redirect(route('inventarios.index'));
     }
@@ -136,7 +136,7 @@ class InventarioController extends AppBaseController
 
         $inventario = $this->inventarioRepository->update($request->all(), $id);
 
-        Flash::success('Inventario updated successfully.');
+        Flash::success('Inventario actualizado con éxito.');
 
         return redirect(route('inventarios.index'));
     }
@@ -162,7 +162,7 @@ class InventarioController extends AppBaseController
 
         $this->inventarioRepository->delete($id);
 
-        Flash::success('Inventario deleted successfully.');
+        Flash::success('Inventario borrado exitosamente.');
 
         return redirect(route('inventarios.index'));
     }

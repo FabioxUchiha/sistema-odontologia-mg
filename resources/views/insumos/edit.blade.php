@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-@can('editar_insumos')
+@can('editar insumos')
     <section class="content-header">
         <h1>
             Insumos
