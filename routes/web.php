@@ -58,3 +58,5 @@ Route::group(['middleware' => ['permission:ver insumos|editar insumos|borrar ins
 Route::get('dashboard', 'DashboardController@index')->name('dashboard.index');
 
 Route::resource('desplegableNombreInventarios', 'DesplegableNombreInventarioController');
+
+Route::resource('desplegableServicioIngresos', 'DesplegableServicioIngresoController');

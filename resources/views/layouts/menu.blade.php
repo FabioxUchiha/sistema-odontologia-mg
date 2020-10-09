@@ -46,8 +46,13 @@
   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
     <li class="{{ Request::is('desplegableNombreInventarios*') ? 'active' : '' }}">
     <a class="text-black"
-    href="{{ route('desplegableNombreInventarios.index') }}">
-      <span>Desplegable Nombre Inventarios</span></a>
+        href="{{ route('desplegableNombreInventarios.index') }}">
+        <span>Nombre Inventarios</span></a>
+    </li>
+    <li class="{{ Request::is('desplegableServicioIngresos*') ? 'active' : '' }}">
+        <a class="text-black"
+        href="{{ route('desplegableServicioIngresos.index') }}">
+        <span>Servicio Ingresos</span></a>
     </li>
     <li><a href="#" class="text-black">Insumos</a></li>
     <li><a href="#" class="text-black">ingresos y egresos</a></li>
@@ -57,5 +62,7 @@
   </ul>
 
 </li>
+
+
 
 
