@@ -22,17 +22,17 @@
                         {!! Form::open(['route' => ['notas.destroy', $notas->id], 'method' => 'delete']) !!}
                         <div class='btn-group'>
 
-                            @can('ver_notas')
+                            @can('ver notas')
                                 <a href="{{ route('notas.show', [$notas->id]) }}" class='btn btn-default btn-xs'><i
                                         class="glyphicon glyphicon-eye-open"></i></a>
                             @endcan
 
-                            @can('editar_notas')
+                            @can('editar notas')
                                 <a href="{{ route('notas.edit', [$notas->id]) }}" class='btn btn-default btn-xs'><i
                                         class="glyphicon glyphicon-edit"></i></a>
                             @endcan
 
-                            @can('borrar_notas')
+                            @can('borrar notas')
                                 {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class'
                                 => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Estas seguro?')"]) !!}
                             @endcan

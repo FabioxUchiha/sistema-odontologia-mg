@@ -4,7 +4,7 @@
     <section class="content-header">
         <h1 class="pull-left" >Notas</h1>
 
-        @can('crear_notas')
+        @can('crear notas')
             <h1 class="pull-right">
                 <a class="btn btn-info pull-right" style="margin-top: -10px;margin-bottom: 5px"
                     href="{{ route('notas.create') }}">Agregar nueva Nota</a>

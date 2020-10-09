@@ -13,7 +13,7 @@
         <tbody>
         @foreach($ingresos as $ingresos)
             <tr>
-                <td>{{ $ingresos->fecha }}</td>
+                <td>{{ $ingresos->fecha->format('Y/m/d') }}</td>
             <td>{{ $ingresos->servicio }}</td>
             <td>{{ $ingresos->detalle }}</td>
             <td>{{ $ingresos->tipo }}</td>

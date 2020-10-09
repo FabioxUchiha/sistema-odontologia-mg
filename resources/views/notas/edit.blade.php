@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-@can('editar_notas')
+@can('editar notas')
     <section class="content-header">
         <h1>
             Notas

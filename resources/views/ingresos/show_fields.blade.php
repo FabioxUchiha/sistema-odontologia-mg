@@ -1,7 +1,7 @@
 <!-- Fecha Field -->
 <div class="form-group">
     {!! Form::label('fecha', 'Fecha:') !!}
-    <p>{{ $ingresos->fecha }}</p>
+    <p>{{ $ingresos->fecha->format('Y/m/d') }}</p>
 </div>
 
 <!-- Servicio Field -->
@@ -30,13 +30,13 @@
 
 <!-- Created At Field -->
 <div class="form-group">
-    {!! Form::label('created_at', 'Created At:') !!}
-    <p>{{ $ingresos->created_at }}</p>
+    {!! Form::label('created_at', 'Creado el:') !!}
+    <p>{{ $ingresos->created_at->format('Y/m/d') }}</p>
 </div>
 
 <!-- Updated At Field -->
 <div class="form-group">
-    {!! Form::label('updated_at', 'Updated At:') !!}
-    <p>{{ $ingresos->updated_at }}</p>
+    {!! Form::label('updated_at', 'Editado el:') !!}
+    <p>{{ $ingresos->updated_at->format('Y/m/d') }}</p>
 </div>
 

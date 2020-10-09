@@ -32,7 +32,7 @@ class IngresosController extends AppBaseController
     public function index(Request $request)
     {
         $ingresos = $this->ingresosRepository->all();
-        $ingresosDia = Ingresos::whereDate('fecha', '=', Carbon::now()->format('Y-m-d'))->get();
+        $ingresosDia = Ingresos::whereDate('created_at', '=', Carbon::now()->format('Y-m-d'))->get();
         $total = 0;
 
         return view('ingresos.index', [

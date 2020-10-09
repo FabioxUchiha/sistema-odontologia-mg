@@ -3,8 +3,10 @@
 @section('content')
 <div class="container">
     <div class="row center-block">
-		{{-- <img class="img-responsive"
-		src="{{ asset('img/welcome.svg') }}"> --}}
+    	<br><br>
+		<img class="img-responsive center-block"
+		src="{{ asset('img/cepillado-de-dientes.svg') }}">
+		<br><br>
     </div>
 </div>
 @endsection

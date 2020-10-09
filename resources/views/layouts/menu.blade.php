@@ -24,20 +24,23 @@
     <a href="{{ route('insumos.index') }}"><i class="fa fa-archive"></i><span>Insumos</span></a>
 </li>
 @endcan
-@canany(['ver_notas', 'borrar_notas', 'crear_notas','editar_notas'])
+@canany(['ver notas', 'borrar notas', 'crear notas','editar notas'])
 <li class="{{ Request::is('notas*') ? 'active' : '' }}">
     <a href="{{ route('notas.index') }}"><i class="fa fa-clipboard"></i><span>Notas</span></a>
 </li>
 @endcan
-{{-- @canany(['ver_notas', 'borrar_notas', 'crear_notas','editar_notas']) --}}
+{{-- @canany(['ver notas', 'borrar notas', 'crear notas','editar notas']) --}}
 <li>
     <a href="{{ route('dashboard.index') }}"><i class="fa fa-tachometer"></i><span>Dashboard</span></a>
 </li>
 {{-- @endcan --}}
 <li>
+{{-- @canany(['ver notas', 'borrar notas', 'crear notas','editar notas']) --}}
   <a class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 		<i class="glyphicon glyphicon-th-list"></i>
+    <span>
     Desplegables
+    </span>
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
@@ -50,6 +53,7 @@
     <li><a href="#" class="text-black">ingresos y egresos</a></li>
     <li role="separator" class="divider"></li>
     <li><a href="#" class="text-black">Separated link</a></li>
+{{-- @endcan --}}
   </ul>
 
 </li>

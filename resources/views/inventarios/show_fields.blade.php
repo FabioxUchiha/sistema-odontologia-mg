@@ -30,13 +30,13 @@
 
 <!-- Created At Field -->
 <div class="form-group">
-    {!! Form::label('created_at', 'Created At:') !!}
-    <p>{{ $inventario->created_at }}</p>
+    {!! Form::label('created_at', 'Creado el:') !!}
+    <p>{{ $inventario->created_at->format('Y/m/d') }}</p>
 </div>
 
 <!-- Updated At Field -->
 <div class="form-group">
-    {!! Form::label('updated_at', 'Updated At:') !!}
-    <p>{{ $inventario->updated_at }}</p>
+    {!! Form::label('updated_at', 'Actualizado el:') !!}
+    <p>{{ $inventario->updated_at->format('Y/m/d') }}</p>
 </div>
 

@@ -3,10 +3,10 @@
         <thead>
             <tr>
                 <th>Nombre</th>
-        <th>Categoria</th>
-        <th>Marca</th>
-        <th>Cantidad</th>
-        <th>Unidad Medica</th>
+                <th>Categoria</th>
+                <th>Marca</th>
+                <th>Cantidad</th>
+                <th>Unidad Medica</th>
                 <th colspan="3">Acciones</th>
             </tr>
         </thead>
@@ -14,10 +14,10 @@
         @foreach($inventarios as $inventario)
             <tr>
                 <td>{{ $inventario->nombre }}</td>
-            <td>{{ $inventario->categoria }}</td>
-            <td>{{ $inventario->marca }}</td>
-            <td>{{ $inventario->cantidad }}</td>
-            <td>{{ $inventario->unidad_medica }}</td>
+                <td>{{ $inventario->categoria }}</td>
+                <td>{{ $inventario->marca }}</td>
+                <td>{{ $inventario->cantidad }}</td>
+                <td>{{ $inventario->unidad_medica }}</td>
                 <td>
                     {!! Form::open(['route' => ['inventarios.destroy', $inventario->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
