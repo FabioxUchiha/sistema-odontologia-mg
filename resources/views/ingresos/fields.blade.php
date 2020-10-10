@@ -17,7 +17,21 @@
 <!-- Servicio Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('servicio', 'Servicio:') !!}
-    {!! Form::text('servicio', null, ['class' => 'form-control']) !!}
+    <select name="servicio" class="form-control">
+        <option type="text" value="{{$ingresos->servicio ?? ''}}">
+            @if($ingresos->servicio ?? '')
+                {{$ingresos->servicio}}
+            @else
+                Seleccione...
+            @endif
+        </option>
+        @foreach($desplegable_servicio_ingresos->all() as $servicio)
+            <option type="text" value="{{$servicio->nombre}}">
+                {{$servicio->nombre}}
+            </option>
+        @endforeach
+    </select>
+    {{-- {!! Form::text('servicio', null, ['class' => 'form-control']) !!} --}}
 </div>
 
 <!-- Detalle Field -->
@@ -30,7 +44,7 @@
 <div class="form-group col-sm-6">
     {!! Form::label('tipo', 'Tipo:') !!}
     <select name="tipo" class="form-control">
-        <option type="text" value="">
+        <option type="text" value="{{$ingresos->tipo ?? ''}}">
             @if($ingresos->tipo ?? '')
             {{$ingresos->tipo}}
             @else

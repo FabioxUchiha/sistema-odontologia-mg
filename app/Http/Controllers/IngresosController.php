@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\AppBaseController;
 use App\Http\Requests\CreateIngresosRequest;
 use App\Http\Requests\UpdateIngresosRequest;
+use App\Models\DesplegableServicioIngreso;
 use App\Models\Ingresos;
 use App\Repositories\IngresosRepository;
 use Carbon\Carbon;
@@ -34,7 +35,6 @@ class IngresosController extends AppBaseController
         $ingresos = $this->ingresosRepository->all();
         $ingresosDia = Ingresos::whereDate('created_at', '=', Carbon::now()->format('Y-m-d'))->get();
         $total = 0;
-
         return view('ingresos.index', [
             'ingresos' => $ingresos,
             'ingresosDia' => $ingresosDia,
@@ -50,7 +50,10 @@ class IngresosController extends AppBaseController
      */
     public function create()
     {
-        return view('ingresos.create');
+        $desplegable_servicio_ingresos = DesplegableServicioIngreso::all();
+        return view('ingresos.create', [
+            'desplegable_servicio_ingresos' => $desplegable_servicio_ingresos,
+        ]);
     }
 
     /**
@@ -107,8 +110,11 @@ class IngresosController extends AppBaseController
 
             return redirect(route('ingresos.index'));
         }
-
-        return view('ingresos.edit')->with('ingresos', $ingresos);
+        $desplegable_servicio_ingresos = DesplegableServicioIngreso::all();
+        return view('ingresos.edit', [
+            'desplegable_servicio_ingresos' => $desplegable_servicio_ingresos,
+            'ingresos' => $ingresos,
+        ]);
     }
 
     /**
