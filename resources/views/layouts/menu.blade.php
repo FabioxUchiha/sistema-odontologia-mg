@@ -47,17 +47,15 @@
     <li class="{{ Request::is('desplegableNombreInventarios*') ? 'active' : '' }}">
     <a class="text-black"
         href="{{ route('desplegableNombreInventarios.index') }}">
-        <span>Nombre Inventarios</span></a>
+        <span>Nombre Instrumental</span></a>
     </li>
+    <li role="separator" class="divider"></li>
     <li class="{{ Request::is('desplegableServicioIngresos*') ? 'active' : '' }}">
         <a class="text-black"
         href="{{ route('desplegableServicioIngresos.index') }}">
-        <span>Servicio Ingresos</span></a>
+        <span>Nombre Servicios</span></a>
     </li>
-    <li><a href="#" class="text-black">Insumos</a></li>
-    <li><a href="#" class="text-black">ingresos y egresos</a></li>
     <li role="separator" class="divider"></li>
-    <li><a href="#" class="text-black">Separated link</a></li>
 {{-- @endcan --}}
   </ul>
 
