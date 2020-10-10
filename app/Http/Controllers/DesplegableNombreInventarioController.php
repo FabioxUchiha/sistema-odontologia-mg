@@ -29,7 +29,7 @@ class DesplegableNombreInventarioController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $desplegableNombreInventarios = $this->desplegableNombreInventarioRepository->all();
+        $desplegableNombreInventarios = $this->desplegableNombreInventarioRepository->paginate(10);
 
         return view('desplegable_nombre_inventarios.index')
             ->with('desplegableNombreInventarios', $desplegableNombreInventarios);

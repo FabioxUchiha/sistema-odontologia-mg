@@ -60,3 +60,5 @@ Route::get('dashboard', 'DashboardController@index')->name('dashboard.index');
 Route::resource('desplegableNombreInventarios', 'DesplegableNombreInventarioController');
 
 Route::resource('desplegableServicioIngresos', 'DesplegableServicioIngresoController');
+
+Route::resource('desplegableCategoriaInstrumentals', 'DesplegableCategoriaInstrumentalController');

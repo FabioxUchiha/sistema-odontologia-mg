@@ -64,3 +64,7 @@
 
 
 
+<li class="{{ Request::is('desplegableCategoriaInstrumentals*') ? 'active' : '' }}">
+    <a href="{{ route('desplegableCategoriaInstrumentals.index') }}"><i class="fa fa-edit"></i><span>Desplegable Categoria Instrumentals</span></a>
+</li>
+
