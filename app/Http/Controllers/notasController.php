@@ -29,7 +29,7 @@ class notasController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $notas = $this->notasRepository->all();
+        $notas = $this->notasRepository->paginate(10);
 
         return view('notas.index')
             ->with('notas', $notas);

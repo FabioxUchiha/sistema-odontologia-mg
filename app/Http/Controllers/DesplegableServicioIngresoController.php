@@ -29,7 +29,7 @@ class DesplegableServicioIngresoController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $desplegableServicioIngresos = $this->desplegableServicioIngresoRepository->all();
+        $desplegableServicioIngresos = $this->desplegableServicioIngresoRepository->paginate(10);
 
         return view('desplegable_servicio_ingresos.index')
             ->with('desplegableServicioIngresos', $desplegableServicioIngresos);

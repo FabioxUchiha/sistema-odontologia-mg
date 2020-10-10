@@ -29,7 +29,7 @@ class insumosController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $insumos = $this->insumosRepository->all();
+        $insumos = $this->insumosRepository->paginate(10);
 
         return view('insumos.index')
             ->with('insumos', $insumos);

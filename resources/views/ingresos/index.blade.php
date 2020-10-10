@@ -43,6 +43,9 @@
                {{-- exportar ingresos y egresos --}}
                <a class="btn btn-success pull-right" style="margin-top: -10px;margin-bottom: 5px" href="{{ route('ingresos.export') }}">Exportar a Excel</a>
         @endcan
+        <div class="text-center">
+            @include('adminlte-templates::common.paginate', ['records' => $ingresos])
+        </div>
     </div>
 @endsection
 

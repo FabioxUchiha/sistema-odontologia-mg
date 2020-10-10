@@ -21,7 +21,7 @@
             </div>
         </div>
         <div class="text-center">
-
+            @include('adminlte-templates::common.paginate', ['records' => $insumos])
         </div>
     </div>
 @endsection

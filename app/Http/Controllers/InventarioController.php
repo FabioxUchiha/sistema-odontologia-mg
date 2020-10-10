@@ -32,7 +32,7 @@ class InventarioController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $inventarios = $this->inventarioRepository->all();
+        $inventarios = $this->inventarioRepository->paginate(10);
 
         return view('inventarios.index', [
             'inventarios' => $inventarios
