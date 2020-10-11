@@ -2,7 +2,7 @@
 <div class="form-group col-sm-6">
     {!! Form::label('nombre', 'Nombre:') !!}
     <select name="nombre" class="form-control">
-        <option type="text" value="">
+        <option type="text" value="{{$inventario->nombre ?? ''}}">
             @if($inventario->nombre ?? '')
             {{$inventario->nombre}}
             @else
