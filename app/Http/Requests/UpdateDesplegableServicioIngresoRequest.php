@@ -2,8 +2,9 @@
 
 namespace App\Http\Requests;
 
-use Illuminate\Foundation\Http\FormRequest;
 use App\Models\DesplegableServicioIngreso;
+use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class UpdateDesplegableServicioIngresoRequest extends FormRequest
 {
@@ -25,8 +26,11 @@ class UpdateDesplegableServicioIngresoRequest extends FormRequest
      */
     public function rules()
     {
-        $rules = DesplegableServicioIngreso::$rules;
-        
+        $rules = [
+            'nombre' => ['required',
+            Rule::unique('desplegable_servicio_ingresos')->ignore( $this->route('desplegableServicioIngreso') )
+        ]
+        ];
         return $rules;
     }
 }

@@ -25,6 +25,9 @@ class CreateDesplegableMarcaInstrumentalRequest extends FormRequest
      */
     public function rules()
     {
-        return DesplegableMarcaInstrumental::$rules;
+        $rules = [
+            'nombre' => ['required', 'unique:desplegable_marca_instrumentals']
+        ];
+        return $rules;
     }
 }

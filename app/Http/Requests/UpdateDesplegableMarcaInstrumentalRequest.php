@@ -2,8 +2,9 @@
 
 namespace App\Http\Requests;
 
-use Illuminate\Foundation\Http\FormRequest;
 use App\Models\DesplegableMarcaInstrumental;
+use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class UpdateDesplegableMarcaInstrumentalRequest extends FormRequest
 {
@@ -25,8 +26,11 @@ class UpdateDesplegableMarcaInstrumentalRequest extends FormRequest
      */
     public function rules()
     {
-        $rules = DesplegableMarcaInstrumental::$rules;
-        
+        $rules = [
+            'nombre' => ['required',
+            Rule::unique('desplegable_marca_instrumentals')->ignore( $this->route('desplegableMarcaInstrumental') )
+        ]
+        ];
         return $rules;
     }
 }

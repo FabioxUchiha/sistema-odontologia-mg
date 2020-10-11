@@ -2,8 +2,9 @@
 
 namespace App\Http\Requests;
 
-use Illuminate\Foundation\Http\FormRequest;
 use App\Models\DesplegableCategoriaInstrumental;
+use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class UpdateDesplegableCategoriaInstrumentalRequest extends FormRequest
 {
@@ -25,8 +26,11 @@ class UpdateDesplegableCategoriaInstrumentalRequest extends FormRequest
      */
     public function rules()
     {
-        $rules = DesplegableCategoriaInstrumental::$rules;
-        
+        $rules = [
+            'nombre' => ['required',
+            Rule::unique('desplegable_categoria_instrumentals')->ignore( $this->route('desplegableCategoriaInstrumental') )
+        ]
+        ];
         return $rules;
     }
 }

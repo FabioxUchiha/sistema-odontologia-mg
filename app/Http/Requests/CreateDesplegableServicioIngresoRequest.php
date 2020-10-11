@@ -26,7 +26,7 @@ class CreateDesplegableServicioIngresoRequest extends FormRequest
     public function rules()
     {
         $rules = [
-            'nombre' => ['required', 'unique:desplegable_nombre_inventarios']
+            'nombre' => ['required', 'unique:desplegable_servicio_ingresos']
         ];
         return $rules;
     }
