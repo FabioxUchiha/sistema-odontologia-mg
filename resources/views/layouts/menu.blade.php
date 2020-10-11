@@ -34,6 +34,7 @@
     <a href="{{ route('notas.index') }}"><i class="fa fa-clipboard"></i><span>Notas</span></a>
 </li>
 @endcan
+
 {{-- @canany(['ver notas', 'borrar notas', 'crear notas','editar notas']) --}}
 <li>
     <a href="{{ route('dashboard.index') }}"><i class="fa fa-tachometer"></i><span>Dashboard</span></a>
