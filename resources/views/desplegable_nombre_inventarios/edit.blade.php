@@ -3,7 +3,7 @@
 @section('content')
     <section class="content-header">
         <h1>
-            Desplegable Nombre Inventario
+            Desplegable Nombre Instrumental Inventario
         </h1>
    </section>
    <div class="content">

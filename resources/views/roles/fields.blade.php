@@ -1,7 +1,11 @@
 <!-- Name Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('name', 'Nombre:') !!}
-    {!! Form::text('name', null, ['class' => 'form-control']) !!}
+    <input class="form-control"
+    type="text-transform:uppercase;"
+    onkeyup="javascript:this.value=this.value.toUpperCase();"
+    placeholder="Nombre..." type="text" name="name" required
+    value="{{ $role->name ?? '' }}">
 </div>
 
 <!-- Permissions Field -->

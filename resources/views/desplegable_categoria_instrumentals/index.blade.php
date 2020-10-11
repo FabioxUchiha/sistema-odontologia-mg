@@ -2,9 +2,9 @@
 
 @section('content')
     <section class="content-header">
-        <h1 class="pull-left">Desplegable Categoria Instrumentals</h1>
+        <h1 class="pull-left">Desplegable Categoria Instrumental</h1>
         <h1 class="pull-right">
-           <a class="btn btn-primary pull-right" style="margin-top: -10px;margin-bottom: 5px" href="{{ route('desplegableCategoriaInstrumentals.create') }}">Add New</a>
+           <a class="btn btn-danger pull-right" style="margin-top: -10px;margin-bottom: 5px" href="{{ route('desplegableCategoriaInstrumentals.create') }}">Agregar Nueva Categoria</a>
         </h1>
     </section>
     <div class="content">
@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="text-center">
-        
+
         @include('adminlte-templates::common.paginate', ['records' => $desplegableCategoriaInstrumentals])
 
         </div>

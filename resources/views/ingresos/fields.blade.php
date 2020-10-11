@@ -34,11 +34,6 @@
     {{-- {!! Form::text('servicio', null, ['class' => 'form-control']) !!} --}}
 </div>
 
-<!-- Detalle Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('detalle', 'Detalle:') !!}
-    {!! Form::text('detalle', null, ['class' => 'form-control']) !!}
-</div>
 
 <!-- Tipo Field -->
 <div class="form-group col-sm-6">
@@ -64,6 +59,12 @@
 <div class="form-group col-sm-6">
     {!! Form::label('precio', 'Precio:') !!}
     {!! Form::number('precio', null, ['class' => 'form-control']) !!}
+</div>
+
+<!-- Detalle Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('detalle', 'Detalle:') !!}
+    {!! Form::textarea('detalle', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Submit Field -->

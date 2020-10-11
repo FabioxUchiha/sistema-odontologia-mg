@@ -12,7 +12,6 @@
     onkeyup="javascript:this.value=this.value.toUpperCase();"
     placeholder="Nombre..." type="text" name="nombre" required
     value="{{ $notas->nombre ?? '' }}">
-    {{-- {!! Form::text('nombre', null, ['class' => 'form-control']) !!} --}}
 </div>
 
 <!-- Telefono Field -->
