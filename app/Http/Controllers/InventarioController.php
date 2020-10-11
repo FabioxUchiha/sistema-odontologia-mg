@@ -6,6 +6,8 @@ use App\Exports\InventariosExport;
 use App\Http\Controllers\AppBaseController;
 use App\Http\Requests\CreateInventarioRequest;
 use App\Http\Requests\UpdateInventarioRequest;
+use App\Models\DesplegableCategoriaInstrumental;
+use App\Models\DesplegableMarcaInstrumental;
 use App\Models\DesplegableNombreInventario;
 use App\Repositories\InventarioRepository;
 use Flash;
@@ -48,9 +50,13 @@ class InventarioController extends AppBaseController
     public function create()
     {
         $desplegable_nombre_inventario = DesplegableNombreInventario::all();
+        $desplegable_categoria_instrumental = DesplegableCategoriaInstrumental::all();
+        $desplegable_marca_instrumental = DesplegableMarcaInstrumental::all();
 
         return view('inventarios.create', [
-            'desplegable_nombre_inventario' => $desplegable_nombre_inventario
+            'desplegable_nombre_inventario' => $desplegable_nombre_inventario,
+            'desplegable_categoria_instrumental' => $desplegable_categoria_instrumental,
+            'desplegable_marca_instrumental' => $desplegable_marca_instrumental
         ]);
     }
 
@@ -103,6 +109,8 @@ class InventarioController extends AppBaseController
     {
         $inventario = $this->inventarioRepository->find($id);
         $desplegable_nombre_inventario = DesplegableNombreInventario::all();
+        $desplegable_categoria_instrumental = DesplegableCategoriaInstrumental::all();
+        $desplegable_marca_instrumental = DesplegableMarcaInstrumental::all();
 
         if (empty($inventario)) {
             Flash::error('Inventario not found');
@@ -112,7 +120,9 @@ class InventarioController extends AppBaseController
 
         return view('inventarios.edit', [
             'inventario' => $inventario,
-            'desplegable_nombre_inventario' => $desplegable_nombre_inventario
+            'desplegable_nombre_inventario' => $desplegable_nombre_inventario,
+            'desplegable_categoria_instrumental' => $desplegable_categoria_instrumental,
+            'desplegable_marca_instrumental' => $desplegable_marca_instrumental
         ]);
     }
 

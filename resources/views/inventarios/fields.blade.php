@@ -20,13 +20,39 @@
 <!-- Categoria Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('categoria', 'Categoria:') !!}
-    {!! Form::text('categoria', null, ['class' => 'form-control']) !!}
+    <select name="categoria" class="form-control">
+        <option type="text" value="{{$inventario->categoria ?? ''}}">
+            @if($inventario->categoria ?? '')
+            {{$inventario->categoria}}
+            @else
+            Seleccione...
+            @endif
+        </option>
+        @foreach($desplegable_categoria_instrumental->all() as $item)
+            <option type="text" value="{{$item->nombre}}">
+                {{$item->nombre}}
+            </option>
+        @endforeach
+    </select>
 </div>
 
 <!-- Marca Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('marca', 'Marca:') !!}
-    {!! Form::text('marca', null, ['class' => 'form-control']) !!}
+    <select name="marca" class="form-control">
+        <option type="text" value="{{$inventario->marca ?? ''}}">
+            @if($inventario->marca ?? '')
+            {{$inventario->marca}}
+            @else
+            Seleccione...
+            @endif
+        </option>
+        @foreach($desplegable_marca_instrumental->all() as $item)
+            <option type="text" value="{{$item->nombre}}">
+                {{$item->nombre}}
+            </option>
+        @endforeach
+    </select>
 </div>
 
 <!-- Cantidad Field -->
