@@ -14,14 +14,14 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property string $categoria
  * @property string $marca
  * @property integer $cantidad
- * @property string $unidad_medica
+ * @property string $estado_instrumental
  */
 class Inventario extends Model
 {
     use SoftDeletes;
 
     public $table = 'inventarios';
-    
+
 
     protected $dates = ['deleted_at'];
 
@@ -32,7 +32,7 @@ class Inventario extends Model
         'categoria',
         'marca',
         'cantidad',
-        'unidad_medica'
+        'estado_instrumental'
     ];
 
     /**
@@ -46,7 +46,7 @@ class Inventario extends Model
         'categoria' => 'string',
         'marca' => 'string',
         'cantidad' => 'integer',
-        'unidad_medica' => 'string'
+        'estado_instrumental' => 'string'
     ];
 
     /**
@@ -60,5 +60,5 @@ class Inventario extends Model
         'cantidad' => 'required'
     ];
 
-    
+
 }

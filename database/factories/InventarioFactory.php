@@ -12,7 +12,7 @@ $factory->define(Inventario::class, function (Faker $faker) {
         'categoria' => $faker->word,
         'marca' => $faker->word,
         'cantidad' => $faker->randomDigitNotNull,
-        'unidad_medica' => $faker->word,
+        'estado_instrumental' => $faker->word,
         'created_at' => $faker->date('Y-m-d H:i:s'),
         'updated_at' => $faker->date('Y-m-d H:i:s')
     ];

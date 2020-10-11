@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\DesplegableCategoriaInstrumental;
 use Illuminate\Database\Seeder;
 
 class DesplegableCategoriaInstrumentalSeeder extends Seeder

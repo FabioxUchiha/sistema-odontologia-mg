@@ -22,10 +22,10 @@
     <p>{{ $inventario->cantidad }}</p>
 </div>
 
-<!-- Unidad Medica Field -->
+<!-- Estado Instrumental Field -->
 <div class="form-group">
-    {!! Form::label('unidad_medica', 'Unidad Medica:') !!}
-    <p>{{ $inventario->unidad_medica }}</p>
+    {!! Form::label('estado_instrumental', 'Estado Instrumental:') !!}
+    <p>{{ $inventario->estado_instrumental }}</p>
 </div>
 
 <!-- Creado el Field -->

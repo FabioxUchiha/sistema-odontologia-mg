@@ -35,10 +35,10 @@
     {!! Form::number('cantidad', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Unidad Medica Field -->
+<!-- Estado Instrumental Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('unidad_medica', 'Unidad Medica:') !!}
-    {!! Form::text('unidad_medica', null, ['class' => 'form-control']) !!}
+    {!! Form::label('estado_instrumental', 'Estado Instrumental:') !!}
+    {!! Form::text('estado_instrumental', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Submit Field -->

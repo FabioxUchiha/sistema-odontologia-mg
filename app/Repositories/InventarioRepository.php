@@ -21,7 +21,7 @@ class InventarioRepository extends BaseRepository
         'categoria',
         'marca',
         'cantidad',
-        'unidad_medica'
+        'estado_instrumental'
     ];
 
     /**

@@ -6,7 +6,7 @@
                 <th>Categoria</th>
                 <th>Marca</th>
                 <th>Cantidad</th>
-                <th>Unidad Medica</th>
+                <th>Estado Instrumental</th>
                 <th colspan="3">Acciones</th>
             </tr>
         </thead>
@@ -17,7 +17,7 @@
                 <td>{{ $inventario->categoria }}</td>
                 <td>{{ $inventario->marca }}</td>
                 <td>{{ $inventario->cantidad }}</td>
-                <td>{{ $inventario->unidad_medica }}</td>
+                <td>{{ $inventario->estado_instrumental }}</td>
                 <td>
                     {!! Form::open(['route' => ['inventarios.destroy', $inventario->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>

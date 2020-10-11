@@ -60,7 +60,7 @@
         "inView": true
     },
     {
-        "name": "unidad_medica",
+        "name": "estado_instrumental",
         "dbType": "string",
         "htmlType": "text",
         "validations": "",

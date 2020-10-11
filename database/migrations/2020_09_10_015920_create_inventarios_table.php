@@ -20,7 +20,7 @@ class CreateInventariosTable extends Migration
             $table->string('categoria')->nullable();
             $table->string('marca');
             $table->integer('cantidad');
-            $table->string('unidad_medica')->nullable();
+            $table->string('estado_instrumental')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
