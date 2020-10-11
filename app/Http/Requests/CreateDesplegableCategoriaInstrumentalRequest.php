@@ -25,6 +25,9 @@ class CreateDesplegableCategoriaInstrumentalRequest extends FormRequest
      */
     public function rules()
     {
-        return DesplegableCategoriaInstrumental::$rules;
+        $rules = [
+            'nombre' => ['required', 'unique:desplegable_categoria_instrumentals']
+        ];
+        return $rules;
     }
 }
