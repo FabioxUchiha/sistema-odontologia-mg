@@ -7,7 +7,7 @@
                 <th>Telefono</th>
                 <th>Procedimiento</th>
                 <th>Observaciones</th>
-                <th colspan="3">Acciones</th>
+                <th colspan="3" class="col-md-1">Acciones</th>
             </tr>
         </thead>
         <tbody>
