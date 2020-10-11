@@ -25,7 +25,7 @@
 <!-- Observaciones Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('observaciones', 'Observaciones:') !!}
-    {!! Form::text('observaciones', null, ['class' => 'form-control']) !!}
+    {!! Form::textarea('observaciones', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Submit Field -->

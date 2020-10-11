@@ -57,22 +57,22 @@
         <span>Nombre Instrumental</span></a>
     </li>
 
-    <li class="{{ Request::is('desplegableServicioIngresos*') ? 'active' : '' }}">
-        <a class="text-black"
-        href="{{ route('desplegableServicioIngresos.index') }}">
-        <span>Nombre Servicios</span></a>
-    </li>
 
     <li class="{{ Request::is('desplegableCategoriaInstrumentals*') ? 'active' : '' }}">
         <a class="text-black"
         href="{{ route('desplegableCategoriaInstrumentals.index') }}">
-        <span>Desplegable Categoria Instrumentals</span></a>
+        <span>Categoria Instrumental</span></a>
     </li>
 
     <li class="{{ Request::is('desplegableMarcaInstrumentals*') ? 'active' : '' }}">
         <a class="text-black"
         href="{{ route('desplegableMarcaInstrumentals.index') }}">
-        <span>Desplegable Marca Instrumentals</span></a>
+        <span>Marca Instrumental</span></a>
+    </li>
+    <li class="{{ Request::is('desplegableServicioIngresos*') ? 'active' : '' }}">
+        <a class="text-black"
+        href="{{ route('desplegableServicioIngresos.index') }}">
+        <span>Nombre Servicios</span></a>
     </li>
 </ul>
     {{-- @endcan --}}
