@@ -31,7 +31,6 @@
             </option>
         @endforeach
     </select>
-    {{-- {!! Form::text('servicio', null, ['class' => 'form-control']) !!} --}}
 </div>
 
 

@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\AppBaseController;
 use App\Http\Requests\CreatenotasRequest;
 use App\Http\Requests\UpdatenotasRequest;
+use App\Models\DesplegableServicioIngreso;
 use App\Repositories\notasRepository;
-use App\Http\Controllers\AppBaseController;
-use Illuminate\Http\Request;
 use Flash;
+use Illuminate\Http\Request;
 use Response;
 
 class notasController extends AppBaseController
@@ -42,7 +43,10 @@ class notasController extends AppBaseController
      */
     public function create()
     {
-        return view('notas.create');
+        $desplegable_servicio_ingresos = DesplegableServicioIngreso::all();
+        return view('notas.create', [
+            'desplegable_servicio_ingresos' => $desplegable_servicio_ingresos,
+        ]);
     }
 
     /**
@@ -99,8 +103,11 @@ class notasController extends AppBaseController
 
             return redirect(route('notas.index'));
         }
-
-        return view('notas.edit')->with('notas', $notas);
+        $desplegable_servicio_ingresos = DesplegableServicioIngreso::all();
+        return view('notas.edit', [
+            'notas' => $notas,
+            'desplegable_servicio_ingresos' => $desplegable_servicio_ingresos,
+        ]);
     }
 
     /**

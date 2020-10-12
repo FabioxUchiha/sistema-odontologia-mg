@@ -4,7 +4,7 @@
 @can('ver usuarios')
     <section class="content-header">
         <h1>
-            User
+            Usuarios
         </h1>
     </section>
     <div class="content">

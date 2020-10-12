@@ -1,4 +1,4 @@
-<aside class="main-sidebar" id="sidebar-wrapper">
+<aside class="main-sidebar" id="sidebar-wrapper" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/background4.jpg);">
 
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">

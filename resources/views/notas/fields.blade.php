@@ -23,7 +23,20 @@
 <!-- Procedimiento Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('procedimiento', 'Procedimiento:') !!}
-    {!! Form::text('procedimiento', null, ['class' => 'form-control']) !!}
+    <select name="procedimiento" class="form-control">
+        <option type="text" value="{{$notas->procedimiento ?? ''}}">
+            @if($notas->procedimiento ?? '')
+                {{$notas->procedimiento}}
+            @else
+                Seleccione...
+            @endif
+        </option>
+        @foreach($desplegable_servicio_ingresos->all() as $procedimiento)
+            <option type="text" value="{{$procedimiento->nombre}}">
+                {{$procedimiento->nombre}}
+            </option>
+        @endforeach
+    </select>
 </div>
 
 <!-- Observaciones Field -->
@@ -34,6 +47,6 @@
 
 <!-- Submit Field -->
 <div class="form-group col-sm-12">
-    {!! Form::submit('Guardar', ['class' => 'btn btn-info']) !!}
+    {!! Form::submit('Guardar', ['class' => 'btn btn-danger']) !!}
     <a href="{{ route('notas.index') }}" class="btn btn-default">Cancelar</a>
 </div>
