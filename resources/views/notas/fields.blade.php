@@ -10,7 +10,7 @@
     <input class="form-control"
     type="text-transform:uppercase;"
     onkeyup="javascript:this.value=this.value.toUpperCase();"
-    placeholder="Nombre..." type="text" name="nombre" required
+    type="text" name="nombre" required
     value="{{ $notas->nombre ?? '' }}">
 </div>
 

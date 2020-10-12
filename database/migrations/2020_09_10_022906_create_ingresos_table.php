@@ -20,7 +20,7 @@ class CreateIngresosTable extends Migration
             $table->string('servicio');
             $table->string('detalle')->nullable();
             $table->string('tipo');
-            $table->integer('precio');
+            $table->bigInteger('precio');
             $table->timestamps();
             $table->softDeletes();
         });

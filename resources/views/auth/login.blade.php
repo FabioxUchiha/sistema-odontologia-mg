@@ -44,13 +44,13 @@
 
     <!-- /.login-logo -->
     <div class="login-box-body">
-        <p class="login-box-msg">Inicia sesión para comenzar</p>
+        <p class="login-box-msg"><strong>Inicia sesión para comenzar</strong></p>
 
         <form method="post" action="{{ url('/login') }}">
             @csrf
 
             <div class="form-group has-feedback {{ $errors->has('email') ? ' has-error' : '' }}">
-                <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Email">
+                <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Correo electronico">
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                 @if ($errors->has('email'))
                     <span class="help-block">
@@ -60,7 +60,7 @@
             </div>
 
             <div class="form-group has-feedback{{ $errors->has('password') ? ' has-error' : '' }}">
-                <input type="password" class="form-control" placeholder="Password" name="password">
+                <input type="password" class="form-control" placeholder="Contraseña" name="password">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                 @if ($errors->has('password'))
                     <span class="help-block">
@@ -69,22 +69,15 @@
                 @endif
 
             </div>
-            <div class="row">
-                <div class="col-xs-8">
-                    <div class="checkbox icheck">
-                        <label>
-                            <input type="checkbox" name="remember"> Recuerdame
-                        </label>
-                    </div>
-                </div>
+
                 <!-- /.col -->
-                    <button type="submit" class="btn btn-block btn-danger btn-lg">Registrarse</button>
+                    <button type="submit" class="btn btn-block btn-danger btn-lg">Ingresar</button>
                 <!-- /.col -->
+        <a href="{{ url('/register') }}" class="text-center"><strong>Registrar una nueva cuenta</strong></a>
             </div>
         </form>
 
         {{-- <a href="{{ url('/password/reset') }}">Olvidé mi contraseña</a><br> --}}
-        <a href="{{ url('/register') }}" class="text-center">Registrar una nueva cuenta</a>
 
     </div>
     <!-- /.login-box-body -->

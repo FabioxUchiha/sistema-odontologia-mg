@@ -44,7 +44,7 @@
         </div>
 
         <div class="register-box-body">
-            <p class="login-box-msg">Registrar una nueva cuenta</p>
+            <p class="login-box-msg"><strong>Registrar una nueva cuenta</strong></p>
 
             <form method="post" action="{{ url('/register') }}">
                 @csrf
@@ -111,7 +111,8 @@
             </form>
 
             <a href="{{ url('/login') }}" class="text-center">
-                Ya tengo una cuenta</a>
+                <strong>Ya tengo una cuenta</strong>
+            </a>
         </div>
         <!-- /.form-box -->
     </div>
