@@ -53,17 +53,17 @@ class PermissionsSeeder extends Seeder
         array_push($permissions_array,Permission::create(['name' => 'borrar insumos']));
 
         //creacion de rol superAdminRole y asignacion del permiso para ver notas
-        $superAdminRole = Role::create(['name' => 'super_administrador']);
+        $superAdminRole = Role::create(['name' => 'SUPER ADMINISTRADOR']);
         $superAdminRole->syncPermissions($permissions_array);
 
         //creacion de usuario userSuperAdmin
         $userSuperAdmin = User::create([
-            'name' => 'admin',
+            'name' => 'ADMINISTRADOR',
             'email' => 'admin@gmail.com',
             'password' => Hash::make('admin'),
         ]);
-        //asignacion de rol super_administrador
-        $userSuperAdmin->assignRole('super_administrador');
+        //asignacion de rol SUPER ADMINISTRADOR
+        $userSuperAdmin->assignRole('SUPER ADMINISTRADOR');
 
     }
 }

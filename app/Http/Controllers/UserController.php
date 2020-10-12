@@ -116,24 +116,27 @@ class UserController extends AppBaseController
     public function update($id, UpdateUserRequest $request)
     {
         $user = $this->userRepository->find($id);
-
         if (empty($user)) {
             Flash::error('Usuario no encontrado');
 
             return redirect(route('users.index'));
         }
+        if ($id > 1) {
 
-        if ($request['password']) {
-            $request['password'] = Hash::make($request['password']);
-        } else {
-            unset($request['password']);
+            if ($request['password']) {
+                $request['password'] = Hash::make($request['password']);
+            } else {
+                unset($request['password']);
+            }
+
+            $user = $this->userRepository->update($request->all(), $id);
+            $user->roles()->detach();
+            $user->assignRole($request->role);
+
+            Flash::success('Usuario actualizado correctamente.');
+        }else{
+            Flash::warning('Usuario administrador no se puede modificar.');
         }
-
-        $user = $this->userRepository->update($request->all(), $id);
-        $user->roles()->detach();
-        $user->assignRole($request->role);
-
-        Flash::success('Usuario actualizado correctamente.');
 
         return redirect(route('users.index'));
     }
@@ -156,10 +159,12 @@ class UserController extends AppBaseController
 
             return redirect(route('users.index'));
         }
-
+        if ($id > 1) {
         $this->userRepository->delete($id);
-
         Flash::success('Usuario eliminado exitosamente.');
+        }else{
+            Flash::warning('El usuario administrador no se puede borrar.');
+        }
 
         return redirect(route('users.index'));
     }

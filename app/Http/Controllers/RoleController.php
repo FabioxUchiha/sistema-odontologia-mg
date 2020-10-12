@@ -115,9 +115,10 @@ class RoleController extends AppBaseController
     public function update($id, UpdateRoleRequest $request)
     {
         $role = $this->roleRepository->find($id);
+        if ($id>1) {
 
         if (empty($role)) {
-            Flash::error('Role not found');
+            Flash::error('Rol no encontrado');
 
             return redirect(route('roles.index'));
         }
@@ -126,7 +127,10 @@ class RoleController extends AppBaseController
         $role = $this->roleRepository->update($input, $id);
         $role->permissions()->detach();
         $role->syncPermissions($request->permissions);
-        Flash::success('Role actualizado con éxito.');
+        Flash::success('Rol actualizado con éxito.');
+        }else{
+            Flash::warning('No se permite actualizar.');
+        }
 
         return redirect(route('roles.index'));
     }
@@ -150,9 +154,13 @@ class RoleController extends AppBaseController
             return redirect(route('roles.index'));
         }
 
-        $this->roleRepository->delete($id);
+        if ($id > 1) {
+            $this->roleRepository->delete($id);
+            Flash::success('Rol borrado exitosamente.');
+        }else{
+            Flash::warning('El rol SUPER ADMINISTRADOR no se puede eliminar');
+        }
 
-        Flash::success('Role borrado exitosamente.');
 
         return redirect(route('roles.index'));
     }
