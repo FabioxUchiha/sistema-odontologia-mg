@@ -16,7 +16,7 @@
 
 <!-- Password Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('password', 'Password:') !!}
+    {!! Form::label('password', 'Contraseña:') !!}
     {!! Form::password('password', ['class' => 'form-control', 'minlength' => 5]) !!}
 </div>
 
