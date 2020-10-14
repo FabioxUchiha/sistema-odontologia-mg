@@ -1,15 +1,21 @@
 /node_modules
 <<<<<<< HEAD
-# /vendor
+<<<<<<< HEAD
+=======
+>>>>>>> parent of db854da1... quitando archivos del gitnore
+/vendor
 /public/hot
 /public/storage
 /storage/*.key
+<<<<<<< HEAD
 =======
 /public/hot
 /public/storage
 /storage/*.key
 /vendor
 >>>>>>> parent of 65ed926... archivos del gitnore
+=======
+>>>>>>> parent of db854da1... quitando archivos del gitnore
 /.idea
 /.vscode
 /.vagrant
