@@ -59,7 +59,7 @@ class RoleController extends AppBaseController
         $role = $this->roleRepository->create($input);
         $role->syncPermissions($request->permissions);
 
-        Flash::success('Role Guardado exitosamente.');
+        Flash::success('Rol Guardado exitosamente.');
 
         return redirect(route('roles.index'));
     }
