@@ -20,6 +20,10 @@
                     @include('insumos.table')
             </div>
         </div>
+        @can('crear insumos')
+               {{-- exportar insmos --}}
+               <a class="btn btn-success pull-right" style="margin-top: -10px;margin-bottom: 5px" href="{{ route('insumos.export') }}">Exportar a Excel</a>
+        @endcan
         <div class="text-center">
             @include('adminlte-templates::common.paginate', ['records' => $insumos])
         </div>
