@@ -2,10 +2,10 @@
 
 return [
 
-    'retrieved' => ':model retrieved successfully.',
-    'saved'     => ':model saved successfully.',
-    'updated'   => ':model updated successfully.',
-    'deleted'   => ':model deleted successfully.',
-    'not_found' => ':model not found',
+    'retrieved' => ':model recuperado con éxito.',
+    'saved'     => ':model Guardado exitosamente.',
+    'updated'   => ':model Actualizado exitosamente.',
+    'deleted'   => ':model Borrado exitosamente.',
+    'not_found' => ':model no encontrado',
 
 ];

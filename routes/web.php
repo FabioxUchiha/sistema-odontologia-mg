@@ -69,3 +69,9 @@ Route::resource('desplegableServicioIngresos', 'DesplegableServicioIngresoContro
 Route::resource('desplegableCategoriaInstrumentals', 'DesplegableCategoriaInstrumentalController');
 
 Route::resource('desplegableMarcaInstrumentals', 'DesplegableMarcaInstrumentalController');
+
+Route::resource('desplegableNombreInsumos', 'DesplegableNombreInsumosController');
+
+Route::resource('desplegableMarcaInsumos', 'DesplegableMarcaInsumosController');
+
+Route::resource('desplegablePresentacionInsumos', 'DesplegablePresentacionInsumosController');

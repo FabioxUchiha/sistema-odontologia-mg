@@ -75,10 +75,29 @@
         href="{{ route('desplegableServicioIngresos.index') }}">
         <span>Nombre Servicios</span></a>
     </li>
+    <li class="{{ Request::is('desplegableNombreInsumos*') ? 'active' : '' }}">
+    <a class="text-black"
+    href="{{ route('desplegableNombreInsumos.index') }}">
+    <span>Nombre Insumos</span></a>
+    </li>
+
+    <li class="{{ Request::is('desplegableMarcaInsumos*') ? 'active' : '' }}">
+        <a class="text-black"
+        href="{{ route('desplegableMarcaInsumos.index') }}">
+        <span>Marca Insumos</span></a>
+    </li>
+
+    <li class="{{ Request::is('desplegablePresentacionInsumos*') ? 'active' : '' }}">
+        <a class="text-black"
+        href="{{ route('desplegablePresentacionInsumos.index') }}">
+        <span>Presentacion Insumos</span></a>
+    </li>
 </ul>
     {{-- @endcan --}}
 
 </li>
+
+
 
 
 
