@@ -44,11 +44,6 @@
             SIN DOCUMENTO
         </option>
     </select>
-    {{-- <input class="form-control"
-    type="text-transform:uppercase;"
-    onkeyup="javascript:this.value=this.value.toUpperCase();"
-    type="text" name="tipo_documento" required
-    value="{{ $notas->tipo_documento ?? '' }}"> --}}
 </div>
 
 <!-- Telefono Field -->
