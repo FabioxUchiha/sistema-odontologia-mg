@@ -21,7 +21,7 @@ class notas extends Model
     use SoftDeletes;
 
     public $table = 'notas';
-    
+
 
     protected $dates = ['deleted_at'];
 
@@ -30,6 +30,7 @@ class notas extends Model
     public $fillable = [
         'documento',
         'nombre',
+        'tipo_documento',
         'telefono',
         'procedimiento',
         'observaciones'
@@ -44,6 +45,7 @@ class notas extends Model
         'id' => 'integer',
         'documento' => 'integer',
         'nombre' => 'string',
+        'tipo_documento' => 'string',
         'procedimiento' => 'string',
         'observaciones' => 'string'
     ];
@@ -55,8 +57,9 @@ class notas extends Model
      */
     public static $rules = [
         'documento' => 'required',
-        'nombre' => 'required'
+        'nombre' => 'required',
+        'tipo_documento' => 'required'
     ];
 
-    
+
 }

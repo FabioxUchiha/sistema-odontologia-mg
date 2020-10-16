@@ -22,7 +22,7 @@ class insumos extends Model
     use SoftDeletes;
 
     public $table = 'insumos';
-    
+
 
     protected $dates = ['deleted_at'];
 
@@ -34,7 +34,8 @@ class insumos extends Model
         'cantidad',
         'marca',
         'fecha_de_vencimiento',
-        'presentacion'
+        'presentacion',
+        'lote'
     ];
 
     /**
@@ -49,7 +50,8 @@ class insumos extends Model
         'cantidad' => 'integer',
         'marca' => 'string',
         'fecha_de_vencimiento' => 'date',
-        'presentacion' => 'string'
+        'presentacion' => 'string',
+        'lote' => 'string'
     ];
 
     /**
@@ -64,5 +66,5 @@ class insumos extends Model
         'fecha_de_vencimiento' => 'required'
     ];
 
-    
+
 }

@@ -16,5 +16,8 @@ class DatabaseSeeder extends Seeder
         $this->call(DesplegableNombreInventarioSeeder::class);
         $this->call(DesplegableServicioIngresoSeeder::class);
         $this->call(DesplegableCategoriaInstrumentalSeeder::class);
+        $this->call(DesplegableMarcaInstrumentalSeeder::class);
+        $this->call(DesplegableNombreInsumosSeeder::class);
+        $this->call(DesplegableMarcaInsumosSeeder::class);
     }
 }

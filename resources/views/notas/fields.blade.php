@@ -14,6 +14,16 @@
     value="{{ $notas->nombre ?? '' }}">
 </div>
 
+<!-- Tipo de documento Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('tipo_documento', 'Tipo de documento:') !!}
+    <input class="form-control"
+    type="text-transform:uppercase;"
+    onkeyup="javascript:this.value=this.value.toUpperCase();"
+    type="text" name="tipo_documento" required
+    value="{{ $notas->tipo_documento ?? '' }}">
+</div>
+
 <!-- Telefono Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('telefono', 'Telefono:') !!}

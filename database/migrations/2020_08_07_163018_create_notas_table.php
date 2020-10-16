@@ -18,6 +18,7 @@ class CreateNotasTable extends Migration
             $table->increments('id');
             $table->bigInteger('documento')->unique();
             $table->string('nombre');
+            $table->string('tipo_documento');
             $table->bigInteger('telefono')->nullable();
             $table->string('procedimiento')->nullable();
             $table->string('observaciones')->nullable();

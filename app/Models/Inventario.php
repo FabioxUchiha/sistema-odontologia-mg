@@ -32,7 +32,8 @@ class Inventario extends Model
         'categoria',
         'marca',
         'cantidad',
-        'estado_instrumental'
+        'estado_instrumental',
+        'lote'
     ];
 
     /**
@@ -46,7 +47,8 @@ class Inventario extends Model
         'categoria' => 'string',
         'marca' => 'string',
         'cantidad' => 'integer',
-        'estado_instrumental' => 'string'
+        'estado_instrumental' => 'string',
+        'lote' => 'string'
     ];
 
     /**

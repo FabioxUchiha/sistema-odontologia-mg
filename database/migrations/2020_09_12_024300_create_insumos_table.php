@@ -22,6 +22,7 @@ class CreateInsumosTable extends Migration
             $table->string('marca')->nullable();
             $table->date('fecha_de_vencimiento');
             $table->string('presentacion')->nullable();
+            $table->string('lote')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

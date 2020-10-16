@@ -4,6 +4,7 @@
             <tr>
                 <th>Documento</th>
                 <th>Nombre</th>
+                <th>Tipo de documento</th>
                 <th>Telefono</th>
                 <th>Procedimiento</th>
                 <th>Observaciones</th>
@@ -15,6 +16,7 @@
                 <tr>
                     <td>{{ $notas->documento }}</td>
                     <td>{{ $notas->nombre }}</td>
+                    <td>{{ $notas->tipo_documento }}</td>
                     <td>{{ $notas->telefono }}</td>
                     <td>{{ $notas->procedimiento }}</td>
                     <td>{{ $notas->observaciones }}</td>

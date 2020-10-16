@@ -8,7 +8,8 @@
                 <th>Marca</th>
                 <th>Fecha De Vencimiento</th>
                 <th>Presentacion</th>
-                <th colspan="3">Acciones</th>
+                <th>Lote</th>
+                <th colspan="3" class="col-md-1">Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -44,6 +45,7 @@
                             @endif
                 </td>
                 <td>{{ $insumos->presentacion }}</td>
+                <td>{{ $insumos->lote }}</td>
                 <td>
                     {!! Form::open(['route' => ['insumos.destroy', $insumos->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>

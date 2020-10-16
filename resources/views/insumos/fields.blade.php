@@ -93,6 +93,16 @@
     </select>
 </div>
 
+<!-- Lote Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('lote', 'Lote:') !!}
+    <input class="form-control"
+    type="text-transform:uppercase;"
+    onkeyup="javascript:this.value=this.value.toUpperCase();"
+    type="text" name="lote"
+    value="{{ $insumos->lote ?? '' }}">
+</div>
+
 <!-- Submit Field -->
 <div class="form-group col-sm-12">
     {!! Form::submit('Guardar', ['class' => 'btn btn-danger']) !!}
