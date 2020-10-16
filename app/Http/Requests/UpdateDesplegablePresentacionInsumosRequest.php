@@ -2,8 +2,9 @@
 
 namespace App\Http\Requests;
 
-use Illuminate\Foundation\Http\FormRequest;
 use App\Models\DesplegablePresentacionInsumos;
+use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class UpdateDesplegablePresentacionInsumosRequest extends FormRequest
 {
@@ -25,8 +26,11 @@ class UpdateDesplegablePresentacionInsumosRequest extends FormRequest
      */
     public function rules()
     {
-        $rules = DesplegablePresentacionInsumos::$rules;
-        
+        $rules = [
+            'nombre' => ['required',
+             Rule::unique('desplegable_presentacion_insumos')->ignore( $this->route('DesplegablePresentacionInsumos') )
+         ]
+        ];
         return $rules;
     }
 }

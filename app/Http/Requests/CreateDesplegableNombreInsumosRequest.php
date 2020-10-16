@@ -25,6 +25,9 @@ class CreateDesplegableNombreInsumosRequest extends FormRequest
      */
     public function rules()
     {
-        return DesplegableNombreInsumos::$rules;
+        $rules = [
+            'nombre' => ['required', 'unique:desplegable_nombre_insumos']
+        ];
+        return $rules;
     }
 }

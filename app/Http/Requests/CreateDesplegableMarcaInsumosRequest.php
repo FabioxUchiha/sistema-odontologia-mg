@@ -25,6 +25,9 @@ class CreateDesplegableMarcaInsumosRequest extends FormRequest
      */
     public function rules()
     {
-        return DesplegableMarcaInsumos::$rules;
+        $rules = [
+            'nombre' => ['required', 'unique:desplegable_marca_insumos']
+        ];
+        return $rules;
     }
 }

@@ -25,6 +25,9 @@ class CreateDesplegablePresentacionInsumosRequest extends FormRequest
      */
     public function rules()
     {
-        return DesplegablePresentacionInsumos::$rules;
+        $rules = [
+            'nombre' => ['required', 'unique:desplegable_presentacion_insumos']
+        ];
+        return $rules;
     }
 }

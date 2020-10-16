@@ -2,8 +2,9 @@
 
 namespace App\Http\Requests;
 
-use Illuminate\Foundation\Http\FormRequest;
 use App\Models\DesplegableMarcaInsumos;
+use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class UpdateDesplegableMarcaInsumosRequest extends FormRequest
 {
@@ -25,8 +26,11 @@ class UpdateDesplegableMarcaInsumosRequest extends FormRequest
      */
     public function rules()
     {
-        $rules = DesplegableMarcaInsumos::$rules;
-        
+        $rules = [
+            'nombre' => ['required',
+             Rule::unique('desplegable_marca_insumos')->ignore( $this->route('DesplegableMarcaInsumo') )
+         ]
+        ];
         return $rules;
     }
 }
