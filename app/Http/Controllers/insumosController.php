@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\AppBaseController;
 use App\Http\Requests\CreateinsumosRequest;
 use App\Http\Requests\UpdateinsumosRequest;
+use App\Models\DesplegableMarcaInsumos;
+use App\Models\DesplegableNombreInsumos;
+use App\Models\DesplegablePresentacionInsumos;
 use App\Repositories\insumosRepository;
-use App\Http\Controllers\AppBaseController;
-use Illuminate\Http\Request;
 use Flash;
+use Illuminate\Http\Request;
 use Response;
 
 class insumosController extends AppBaseController
@@ -42,7 +45,14 @@ class insumosController extends AppBaseController
      */
     public function create()
     {
-        return view('insumos.create');
+        $desplegableNombreInsumos = DesplegableNombreInsumos::all();
+        $desplegableMarcaInsumos = DesplegableMarcaInsumos::all();
+        $desplegablePresentacionInsumos = DesplegablePresentacionInsumos::all();
+        return view('insumos.create', [
+            'desplegableNombreInsumos' => $desplegableNombreInsumos,
+            'desplegableMarcaInsumos' => $desplegableMarcaInsumos,
+            'desplegablePresentacionInsumos' => $desplegablePresentacionInsumos,
+        ]);
     }
 
     /**
@@ -99,8 +109,15 @@ class insumosController extends AppBaseController
 
             return redirect(route('insumos.index'));
         }
-
-        return view('insumos.edit')->with('insumos', $insumos);
+        $desplegableNombreInsumos = DesplegableNombreInsumos::all();
+        $desplegableMarcaInsumos = DesplegableMarcaInsumos::all();
+        $desplegablePresentacionInsumos = DesplegablePresentacionInsumos::all();
+        return view('insumos.edit', [
+            'insumos' => $insumos,
+            'desplegableNombreInsumos' => $desplegableNombreInsumos,
+            'desplegableMarcaInsumos' => $desplegableMarcaInsumos,
+            'desplegablePresentacionInsumos' => $desplegablePresentacionInsumos,
+        ]);
     }
 
     /**

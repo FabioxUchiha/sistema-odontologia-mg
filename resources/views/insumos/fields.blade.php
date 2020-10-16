@@ -1,7 +1,20 @@
 <!-- Nombre Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('nombre', 'Nombre:') !!}
-    {!! Form::text('nombre', null, ['class' => 'form-control']) !!}
+     <select name="nombre" class="form-control">
+        <option type="text" value="{{$insumos->nombre ?? ''}}">
+            @if($insumos->nombre ?? '')
+            {{$insumos->nombre}}
+            @else
+            Seleccione...
+            @endif
+        </option>
+        @foreach($desplegableNombreInsumos->all() as $item)
+            <option type="text" value="{{$item->nombre}}">
+                {{$item->nombre}}
+            </option>
+        @endforeach
+    </select>
 </div>
 
 <!-- Fecha De Compra Field -->
@@ -29,7 +42,20 @@
 <!-- Marca Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('marca', 'Marca:') !!}
-    {!! Form::text('marca', null, ['class' => 'form-control']) !!}
+    <select name="marca" class="form-control">
+        <option type="text" value="{{$insumos->marca ?? ''}}">
+            @if($insumos->marca ?? '')
+            {{$insumos->marca}}
+            @else
+            Seleccione...
+            @endif
+        </option>
+        @foreach($desplegableMarcaInsumos->all() as $item)
+            <option type="text" value="{{$item->nombre}}">
+                {{$item->nombre}}
+            </option>
+        @endforeach
+    </select>
 </div>
 
 <!-- Fecha De Vencimiento Field -->
@@ -51,7 +77,20 @@
 <!-- Presentacion Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('presentacion', 'Presentacion:') !!}
-    {!! Form::text('presentacion', null, ['class' => 'form-control']) !!}
+    <select name="presentacion" class="form-control">
+        <option type="text" value="{{$insumos->presentacion ?? ''}}">
+            @if($insumos->presentacion ?? '')
+            {{$insumos->presentacion}}
+            @else
+            Seleccione...
+            @endif
+        </option>
+        @foreach($desplegablePresentacionInsumos->all() as $item)
+            <option type="text" value="{{$item->nombre}}">
+                {{$item->nombre}}
+            </option>
+        @endforeach
+    </select>
 </div>
 
 <!-- Submit Field -->
