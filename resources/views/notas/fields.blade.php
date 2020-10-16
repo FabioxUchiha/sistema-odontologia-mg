@@ -17,11 +17,38 @@
 <!-- Tipo de documento Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('tipo_documento', 'Tipo de documento:') !!}
-    <input class="form-control"
+    <select name="tipo_documento" class="form-control">
+        <option type="text" value="{{$notas->tipo_documento ?? ''}}">
+            @if($notas->tipo_documento ?? '')
+                {{$notas->tipo_documento}}
+            @else
+                Seleccione...
+            @endif
+        </option>
+        <option type="text" value="CC">
+            CC
+        </option>
+        <option type="text" value="TI">
+            TI
+        </option>
+        <option type="text" value="PEP">
+            PEP
+        </option>
+        <option type="text" value="PA">
+            PA
+        </option>
+        <option type="text" value="CE">
+            CE
+        </option>
+        <option type="text" value="SIN DOCUMENTO">
+            SIN DOCUMENTO
+        </option>
+    </select>
+    {{-- <input class="form-control"
     type="text-transform:uppercase;"
     onkeyup="javascript:this.value=this.value.toUpperCase();"
     type="text" name="tipo_documento" required
-    value="{{ $notas->tipo_documento ?? '' }}">
+    value="{{ $notas->tipo_documento ?? '' }}"> --}}
 </div>
 
 <!-- Telefono Field -->
