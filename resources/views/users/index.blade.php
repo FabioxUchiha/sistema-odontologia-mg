@@ -5,7 +5,7 @@
         <h1 class="pull-left">Usuarios</h1>
         <h1 class="pull-right">
             @can('crear usuarios')
-                <a class="btn btn-danger pull-right" style="margin-top: -10px;margin-bottom: 5px"
+                <a class="btn btn-danger pull-right" style="margin-top: -1px;margin-bottom: 5px"
                     href="{{ route('users.create') }}">Agregar Nuevo Usuario</a>
             @endcan
 

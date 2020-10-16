@@ -5,7 +5,7 @@
         <h1 class="pull-left">Inventarios</h1>
         <h1 class="pull-right">
             @can('crear inventarios')
-           <a class="btn btn-danger pull-right" style="margin-top: -10px;margin-bottom: 5px" href="{{ route('inventarios.create') }}">Agregar Nuevo Producto</a>
+           <a class="btn btn-danger pull-right" style="margin-top: -1px;margin-bottom: 5px" href="{{ route('inventarios.create') }}">Agregar Nuevo Producto</a>
             @endcan
         </h1>
     </section>

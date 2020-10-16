@@ -4,7 +4,7 @@
     <section class="content-header">
         <h1 class="pull-left">Desplegable Categoria Instrumental</h1>
         <h1 class="pull-right">
-           <a class="btn btn-danger pull-right" style="margin-top: -10px;margin-bottom: 5px" href="{{ route('desplegableCategoriaInstrumentals.create') }}">Agregar Nueva Categoria</a>
+           <a class="btn btn-danger pull-right" style="margin-top: -1px;margin-bottom: 5px" href="{{ route('desplegableCategoriaInstrumentals.create') }}">Agregar Nueva Categoria</a>
         </h1>
     </section>
     <div class="content">

@@ -4,7 +4,7 @@
     <section class="content-header">
         <h1 class="pull-left">Desplegable Servicio o Procedimiento</h1>
         <h1 class="pull-right">
-           <a class="btn btn-danger pull-right" style="margin-top: -10px;margin-bottom: 5px" href="{{ route('desplegableServicioIngresos.create') }}">Agregar Nuevo Servicio</a>
+           <a class="btn btn-danger pull-right" style="margin-top: -1px;margin-bottom: 5px" href="{{ route('desplegableServicioIngresos.create') }}">Agregar Nuevo Servicio</a>
         </h1>
     </section>
     <div class="content">
