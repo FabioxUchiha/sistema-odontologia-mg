@@ -3,17 +3,17 @@
 namespace App\Exports;
 
 use App\Models\Ingresos;
+use Illuminate\Contracts\View\View;
 use Maatwebsite\Excel\Concerns\Exportable;
-use Maatwebsite\Excel\Concerns\FromCollection;
+use Maatwebsite\Excel\Concerns\FromView;
 
-class IngresosExport implements FromCollection
+class IngresosExport implements FromView
 {
 		use Exportable;
-    /**
-    * @return \Illuminate\Support\Collection
-    */
-    public function collection()
-    {
-        return Ingresos::all();
+
+    public function view(): View{
+    	return view('exports.ingresos', [
+    		'ingresos' => Ingresos::all()
+    	]);
     }
 }

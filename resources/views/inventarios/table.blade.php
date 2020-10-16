@@ -7,7 +7,6 @@
                 <th>Marca</th>
                 <th>Cantidad</th>
                 <th>Estado Instrumental</th>
-                <th>Lote</th>
                 <th colspan="3">Acciones</th>
             </tr>
         </thead>
@@ -19,7 +18,6 @@
                 <td>{{ $inventario->marca }}</td>
                 <td>{{ $inventario->cantidad }}</td>
                 <td>{{ $inventario->estado_instrumental }}</td>
-                <td>{{ $inventario->lote }}</td>
                 <td>
                     {!! Form::open(['route' => ['inventarios.destroy', $inventario->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
