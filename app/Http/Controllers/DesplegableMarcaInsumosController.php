@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\AppBaseController;
 use App\Http\Requests\CreateDesplegableMarcaInsumosRequest;
 use App\Http\Requests\UpdateDesplegableMarcaInsumosRequest;
+use App\Models\DesplegableMarcaInsumos;
 use App\Repositories\DesplegableMarcaInsumosRepository;
-use App\Http\Controllers\AppBaseController;
-use Illuminate\Http\Request;
 use Flash;
+use Illuminate\Http\Request;
 use Response;
 
 class DesplegableMarcaInsumosController extends AppBaseController
@@ -29,7 +30,8 @@ class DesplegableMarcaInsumosController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $desplegableMarcaInsumos = $this->desplegableMarcaInsumosRepository->paginate(10);
+        $nombre = $request->get('buscarpor');
+        $desplegableMarcaInsumos = DesplegableMarcaInsumos::where('nombre','like',"%$nombre%")->paginate(10);
 
         return view('desplegable_marca_insumos.index')
             ->with('desplegableMarcaInsumos', $desplegableMarcaInsumos);

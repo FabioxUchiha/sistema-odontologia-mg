@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\AppBaseController;
 use App\Http\Requests\CreateDesplegableCategoriaInstrumentalRequest;
 use App\Http\Requests\UpdateDesplegableCategoriaInstrumentalRequest;
+use App\Models\DesplegableCategoriaInstrumental;
 use App\Repositories\DesplegableCategoriaInstrumentalRepository;
-use App\Http\Controllers\AppBaseController;
-use Illuminate\Http\Request;
 use Flash;
+use Illuminate\Http\Request;
 use Response;
 
 class DesplegableCategoriaInstrumentalController extends AppBaseController
@@ -29,7 +30,8 @@ class DesplegableCategoriaInstrumentalController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $desplegableCategoriaInstrumentals = $this->desplegableCategoriaInstrumentalRepository->paginate(10);
+        $nombre = $request->get('buscarpor');
+        $desplegableCategoriaInstrumentals = DesplegableCategoriaInstrumental::where('nombre','like',"%$nombre%")->paginate(10);
 
         return view('desplegable_categoria_instrumentals.index')
             ->with('desplegableCategoriaInstrumentals', $desplegableCategoriaInstrumentals);

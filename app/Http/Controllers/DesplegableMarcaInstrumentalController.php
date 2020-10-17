@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\AppBaseController;
 use App\Http\Requests\CreateDesplegableMarcaInstrumentalRequest;
 use App\Http\Requests\UpdateDesplegableMarcaInstrumentalRequest;
+use App\Models\DesplegableMarcaInstrumental;
 use App\Repositories\DesplegableMarcaInstrumentalRepository;
-use App\Http\Controllers\AppBaseController;
-use Illuminate\Http\Request;
 use Flash;
+use Illuminate\Http\Request;
 use Response;
 
 class DesplegableMarcaInstrumentalController extends AppBaseController
@@ -29,7 +30,8 @@ class DesplegableMarcaInstrumentalController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $desplegableMarcaInstrumentals = $this->desplegableMarcaInstrumentalRepository->paginate(10);
+        $nombre = $request->get('buscarpor');
+        $desplegableMarcaInstrumentals = DesplegableMarcaInstrumental::where('nombre','like',"%$nombre%")->paginate(10);
 
         return view('desplegable_marca_instrumentals.index')
             ->with('desplegableMarcaInstrumentals', $desplegableMarcaInstrumentals);

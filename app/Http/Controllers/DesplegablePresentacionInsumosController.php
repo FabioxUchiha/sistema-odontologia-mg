@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\AppBaseController;
 use App\Http\Requests\CreateDesplegablePresentacionInsumosRequest;
 use App\Http\Requests\UpdateDesplegablePresentacionInsumosRequest;
+use App\Models\DesplegablePresentacionInsumos;
 use App\Repositories\DesplegablePresentacionInsumosRepository;
-use App\Http\Controllers\AppBaseController;
-use Illuminate\Http\Request;
 use Flash;
+use Illuminate\Http\Request;
 use Response;
 
 class DesplegablePresentacionInsumosController extends AppBaseController
@@ -29,7 +30,8 @@ class DesplegablePresentacionInsumosController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $desplegablePresentacionInsumos = $this->desplegablePresentacionInsumosRepository->paginate(10);
+        $nombre = $request->get('buscarpor');
+        $desplegablePresentacionInsumos = DesplegablePresentacionInsumos::where('nombre','like',"%$nombre%")->paginate(10);
 
         return view('desplegable_presentacion_insumos.index')
             ->with('desplegablePresentacionInsumos', $desplegablePresentacionInsumos);
