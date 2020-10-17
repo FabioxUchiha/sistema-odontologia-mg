@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\AppBaseController;
 use App\Http\Requests\CreateDesplegableNombreInventarioRequest;
 use App\Http\Requests\UpdateDesplegableNombreInventarioRequest;
+use App\Models\DesplegableNombreInventario;
 use App\Repositories\DesplegableNombreInventarioRepository;
-use App\Http\Controllers\AppBaseController;
-use Illuminate\Http\Request;
 use Flash;
+use Illuminate\Http\Request;
 use Response;
 
 class DesplegableNombreInventarioController extends AppBaseController
@@ -29,7 +30,8 @@ class DesplegableNombreInventarioController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $desplegableNombreInventarios = $this->desplegableNombreInventarioRepository->paginate(10);
+        $nombre = $request->get('buscarpor');
+        $desplegableNombreInventarios = DesplegableNombreInventario::where('nombre','like',"%$nombre%")->paginate(10);
 
         return view('desplegable_nombre_inventarios.index')
             ->with('desplegableNombreInventarios', $desplegableNombreInventarios);
