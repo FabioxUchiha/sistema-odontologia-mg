@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\AppBaseController;
 use App\Http\Requests\CreateDesplegableServicioIngresoRequest;
 use App\Http\Requests\UpdateDesplegableServicioIngresoRequest;
+use App\Models\DesplegableServicioIngreso;
 use App\Repositories\DesplegableServicioIngresoRepository;
-use App\Http\Controllers\AppBaseController;
-use Illuminate\Http\Request;
 use Flash;
+use Illuminate\Http\Request;
 use Response;
 
 class DesplegableServicioIngresoController extends AppBaseController
@@ -29,7 +30,8 @@ class DesplegableServicioIngresoController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $desplegableServicioIngresos = $this->desplegableServicioIngresoRepository->paginate(10);
+        $nombre = $request->get('buscarpor');
+        $desplegableServicioIngresos = DesplegableServicioIngreso::where('nombre','like',"%$nombre%")->paginate(10);
 
         return view('desplegable_servicio_ingresos.index')
             ->with('desplegableServicioIngresos', $desplegableServicioIngresos);
