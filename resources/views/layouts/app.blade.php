@@ -71,7 +71,7 @@
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
                                     <div class="text-center">
-                                        <a href="{{ url('/logout') }}" class="btn btn-danger btn-flat"
+                                        <a href="{{ url('/logout') }}" class="btn btn-danger"
                                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                             Cerrar sesion
                                         </a>
