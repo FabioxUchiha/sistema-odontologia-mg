@@ -41,8 +41,8 @@
 </li>
 {{-- @endcan --}}
 
+<li>
 @canany(['ver desplegables', 'borrar desplegables', 'crear desplegables','editar desplegables'])
-    <li>
         <a class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
             <i class="glyphicon glyphicon-th-list"></i>
               <span>
