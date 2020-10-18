@@ -41,59 +41,59 @@
 </li>
 {{-- @endcan --}}
 
-    {{-- @canany(['ver notas', 'borrar notas', 'crear notas','editar notas']) --}}
-<li>
-    <a class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-        <i class="glyphicon glyphicon-th-list"></i>
-          <span>
-            Desplegables
-            </span>
-        <span class="caret"></span>
-    </a>
-<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+@canany(['ver desplegables', 'borrar desplegables', 'crear desplegables','editar desplegables'])
+    <li>
+        <a class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <i class="glyphicon glyphicon-th-list"></i>
+              <span>
+                Desplegables
+                </span>
+            <span class="caret"></span>
+        </a>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
 
-    <li class="{{ Request::is('desplegableNombreInventarios*') ? 'active' : '' }}">
-        <a class="text-black"
-        href="{{ route('desplegableNombreInventarios.index') }}">
-        <span>Nombre Instrumental</span></a>
-    </li>
+        <li class="{{ Request::is('desplegableNombreInventarios*') ? 'active' : '' }}">
+            <a class="text-black"
+            href="{{ route('desplegableNombreInventarios.index') }}">
+            <span>Nombre Instrumental</span></a>
+        </li>
 
 
-    <li class="{{ Request::is('desplegableCategoriaInstrumentals*') ? 'active' : '' }}">
-        <a class="text-black"
-        href="{{ route('desplegableCategoriaInstrumentals.index') }}">
-        <span>Categoria Instrumental</span></a>
-    </li>
+        <li class="{{ Request::is('desplegableCategoriaInstrumentals*') ? 'active' : '' }}">
+            <a class="text-black"
+            href="{{ route('desplegableCategoriaInstrumentals.index') }}">
+            <span>Categoria Instrumental</span></a>
+        </li>
 
-    <li class="{{ Request::is('desplegableMarcaInstrumentals*') ? 'active' : '' }}">
+        <li class="{{ Request::is('desplegableMarcaInstrumentals*') ? 'active' : '' }}">
+            <a class="text-black"
+            href="{{ route('desplegableMarcaInstrumentals.index') }}">
+            <span>Marca Instrumental</span></a>
+        </li>
+        <li class="{{ Request::is('desplegableServicioIngresos*') ? 'active' : '' }}">
+            <a class="text-black"
+            href="{{ route('desplegableServicioIngresos.index') }}">
+            <span>Nombre Servicios</span></a>
+        </li>
+        <li class="{{ Request::is('desplegableNombreInsumos*') ? 'active' : '' }}">
         <a class="text-black"
-        href="{{ route('desplegableMarcaInstrumentals.index') }}">
-        <span>Marca Instrumental</span></a>
-    </li>
-    <li class="{{ Request::is('desplegableServicioIngresos*') ? 'active' : '' }}">
-        <a class="text-black"
-        href="{{ route('desplegableServicioIngresos.index') }}">
-        <span>Nombre Servicios</span></a>
-    </li>
-    <li class="{{ Request::is('desplegableNombreInsumos*') ? 'active' : '' }}">
-    <a class="text-black"
-    href="{{ route('desplegableNombreInsumos.index') }}">
-    <span>Nombre Insumos</span></a>
-    </li>
+        href="{{ route('desplegableNombreInsumos.index') }}">
+        <span>Nombre Insumos</span></a>
+        </li>
 
-    <li class="{{ Request::is('desplegableMarcaInsumos*') ? 'active' : '' }}">
-        <a class="text-black"
-        href="{{ route('desplegableMarcaInsumos.index') }}">
-        <span>Marca Insumos</span></a>
-    </li>
+        <li class="{{ Request::is('desplegableMarcaInsumos*') ? 'active' : '' }}">
+            <a class="text-black"
+            href="{{ route('desplegableMarcaInsumos.index') }}">
+            <span>Marca Insumos</span></a>
+        </li>
 
-    <li class="{{ Request::is('desplegablePresentacionInsumos*') ? 'active' : '' }}">
-        <a class="text-black"
-        href="{{ route('desplegablePresentacionInsumos.index') }}">
-        <span>Presentacion Insumos</span></a>
-    </li>
-</ul>
-    {{-- @endcan --}}
+        <li class="{{ Request::is('desplegablePresentacionInsumos*') ? 'active' : '' }}">
+            <a class="text-black"
+            href="{{ route('desplegablePresentacionInsumos.index') }}">
+            <span>Presentacion Insumos</span></a>
+        </li>
+    </ul>
+@endcan
 
 </li>
 

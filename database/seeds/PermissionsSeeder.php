@@ -52,6 +52,12 @@ class PermissionsSeeder extends Seeder
         array_push($permissions_array,Permission::create(['name' => 'crear insumos']));
         array_push($permissions_array,Permission::create(['name' => 'borrar insumos']));
 
+        //desplegables
+        array_push($permissions_array,Permission::create(['name' => 'ver desplegables']));
+        array_push($permissions_array,Permission::create(['name' => 'editar desplegables']));
+        array_push($permissions_array,Permission::create(['name' => 'crear desplegables']));
+        array_push($permissions_array,Permission::create(['name' => 'borrar desplegables']));
+
         //creacion de rol superAdminRole y asignacion del permiso para ver notas
         $superAdminRole = Role::create(['name' => 'SUPER ADMINISTRADOR']);
         $superAdminRole->syncPermissions($permissions_array);
