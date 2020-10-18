@@ -53,14 +53,13 @@ Route::get('dashboard', 'DashboardController@index')->name('dashboard.index');
 
 Route::group(['middleware' => ['permission:ver desplegables|editar desplegables|borrar desplegables|crear desplegables']], function () {
     Route::resource('desplegableNombreInventarios', 'DesplegableNombreInventarioController');
-});
-
     Route::resource('desplegableServicioIngresos', 'DesplegableServicioIngresoController');
     Route::resource('desplegableCategoriaInstrumentals', 'DesplegableCategoriaInstrumentalController');
     Route::resource('desplegableMarcaInstrumentals', 'DesplegableMarcaInstrumentalController');
     Route::resource('desplegableNombreInsumos', 'DesplegableNombreInsumosController');
     Route::resource('desplegableMarcaInsumos', 'DesplegableMarcaInsumosController');
     Route::resource('desplegablePresentacionInsumos', 'DesplegablePresentacionInsumosController');
+});
 
 
 
