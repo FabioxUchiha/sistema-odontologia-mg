@@ -4,7 +4,9 @@
     <section class="content-header">
         <h1 class="pull-left">Desplegable Marca Insumos</h1>
         <h1 class="pull-right">
-           <a class="btn btn-danger pull-right" style="margin-top: -1px;margin-bottom: 5px" href="{{ route('desplegableMarcaInsumos.create') }}">Agregar Nuevo</a>
+            @can('ver desplegables')
+                <a class="btn btn-danger pull-right" style="margin-top: -1px;margin-bottom: 5px" href="{{ route('desplegableMarcaInsumos.create') }}">Agregar Nuevo</a>
+            @endcan
         </h1>
     </section>
     <div class="content">

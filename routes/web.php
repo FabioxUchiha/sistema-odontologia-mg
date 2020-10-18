@@ -49,8 +49,6 @@ Route::group(['middleware' => ['permission:ver insumos|editar insumos|borrar ins
     Route::resource('insumos', 'insumosController');
 });
 
-Route::get('dashboard', 'DashboardController@index')->name('dashboard.index');
-
 Route::group(['middleware' => ['permission:ver desplegables|editar desplegables|borrar desplegables|crear desplegables']], function () {
     Route::resource('desplegableNombreInventarios', 'DesplegableNombreInventarioController');
     Route::resource('desplegableServicioIngresos', 'DesplegableServicioIngresoController');
@@ -61,6 +59,7 @@ Route::group(['middleware' => ['permission:ver desplegables|editar desplegables|
     Route::resource('desplegablePresentacionInsumos', 'DesplegablePresentacionInsumosController');
 });
 
+Route::get('dashboard', 'DashboardController@index')->name('dashboard.index');
 
 
 

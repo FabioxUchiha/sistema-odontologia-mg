@@ -13,9 +13,15 @@
                 <td>
                     {!! Form::open(['route' => ['desplegableServicioIngresos.destroy', $desplegableServicioIngreso->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
-                        <a href="{{ route('desplegableServicioIngresos.show', [$desplegableServicioIngreso->id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
-                        <a href="{{ route('desplegableServicioIngresos.edit', [$desplegableServicioIngreso->id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
-                        {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('¿Estas seguro?')"]) !!}
+                        @can('ver desplegables')
+                            <a href="{{ route('desplegableServicioIngresos.show', [$desplegableServicioIngreso->id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
+                        @endcan
+                        @can('editar desplegables')
+                            <a href="{{ route('desplegableServicioIngresos.edit', [$desplegableServicioIngreso->id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
+                        @endcan
+                        @can('borrar desplegables')
+                            {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('¿Estas seguro?')"]) !!}
+                        @endcan
                     </div>
                     {!! Form::close() !!}
                 </td>
