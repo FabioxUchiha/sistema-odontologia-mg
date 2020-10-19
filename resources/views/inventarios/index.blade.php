@@ -17,6 +17,21 @@
         <div class="clearfix"></div>
         <div class="box box-primary">
             <div class="box-body">
+                <nav class="">
+                    <form class="form-inline">
+                        <input
+                        class="form-control mr-sm-2 shadow"
+                        name="buscarpornombre" type="search" placeholder="Buscar por nombre">
+                        <input
+                        class="form-control mr-sm-2 shadow"
+                        name="buscarporcategoria" type="search" placeholder="Buscar por categoria">
+                        <input
+                        class="form-control mr-sm-2 shadow"
+                        name="buscarpormarca" type="search" placeholder="Buscar por marca">
+                        <button class="btn btn-danger my-2 my-sm-0" type="submit">
+                        Buscar</button>
+                    </form>
+                </nav>
                     @include('inventarios.table')
             </div>
         </div>

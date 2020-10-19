@@ -9,6 +9,7 @@ use App\Http\Requests\UpdateInventarioRequest;
 use App\Models\DesplegableCategoriaInstrumental;
 use App\Models\DesplegableMarcaInstrumental;
 use App\Models\DesplegableNombreInventario;
+use App\Models\Inventario;
 use App\Repositories\InventarioRepository;
 use Flash;
 use Illuminate\Http\Request;
@@ -34,7 +35,10 @@ class InventarioController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $inventarios = $this->inventarioRepository->paginate(10);
+        $nombre = $request->get('buscarpornombre');
+        $categoria = $request->get('buscarporcategoria');
+        $marca = $request->get('buscarpormarca');
+        $inventarios = Inventario::nombre($nombre)->categoria($categoria)->marca($marca)->paginate(10);
 
         return view('inventarios.index', [
             'inventarios' => $inventarios

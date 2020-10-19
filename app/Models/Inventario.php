@@ -62,5 +62,22 @@ class Inventario extends Model
         'cantidad' => 'required'
     ];
 
+    public function scopeNombre($query, $nombre){
+        if ($nombre) {
+            return $query->where('nombre','like',"%$nombre%");
+        }
+    }
+
+    public function scopeCategoria($query, $categoria){
+        if ($categoria) {
+            return $query->where('categoria','like',"%$categoria%");
+        }
+    }
+
+    public function scopeMarca($query, $marca){
+        if ($marca) {
+            return $query->where('marca','like',"%$marca%");
+        }
+    }
 
 }

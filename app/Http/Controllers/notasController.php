@@ -6,6 +6,7 @@ use App\Http\Controllers\AppBaseController;
 use App\Http\Requests\CreatenotasRequest;
 use App\Http\Requests\UpdatenotasRequest;
 use App\Models\DesplegableServicioIngreso;
+use App\Models\notas;
 use App\Repositories\notasRepository;
 use Flash;
 use Illuminate\Http\Request;
@@ -30,7 +31,9 @@ class notasController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $notas = $this->notasRepository->paginate(10);
+        $documento = $request->get('buscarpor');
+        $nombre = $request->get('buscarpornombre');
+        $notas = notas::documento($documento)->nombre($nombre)->paginate(10);
 
         return view('notas.index')
             ->with('notas', $notas);

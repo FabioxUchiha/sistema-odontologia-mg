@@ -20,6 +20,18 @@
         <div class="clearfix"></div>
         <div class="box box-primary">
             <div class="box-body">
+                <nav class="">
+                    <form class="form-inline">
+                        <input
+                        class="form-control mr-sm-2 shadow"
+                        name="buscarporservicio" type="search" placeholder="Buscar por servicio">
+                        <input
+                        class="form-control mr-sm-2 shadow"
+                        name="buscarportipo" type="search" placeholder="Buscar por tipo">
+                        <button class="btn btn-danger my-2 my-sm-0" type="submit">
+                        Buscar</button>
+                    </form>
+                </nav>
                     @include('ingresos.table')
             </div>
         </div>

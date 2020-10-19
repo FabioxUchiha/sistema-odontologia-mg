@@ -61,5 +61,16 @@ class Ingresos extends Model
         'servicio' => 'required'
     ];
 
+    public function scopeServicio($query, $servicio){
+        if ($servicio) {
+            return $query->where('servicio','like',"%$servicio%");
+        }
+    }
+
+    public function scopeTipo($query, $tipo){
+        if ($tipo) {
+            return $query->where('tipo','like',"%$tipo%");
+        }
+    }
 
 }

@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\scopeDocumento;
 use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -61,5 +62,16 @@ class notas extends Model
         'tipo_documento' => 'required'
     ];
 
+    public function scopeNombre($query, $nombre){
+        if ($nombre) {
+            return $query->where('nombre','like',"%$nombre%");
+        }
+    }
+
+    public function scopeDocumento($query, $documento){
+        if ($documento) {
+            return $query->where('documento','like',"%$documento%");
+        }
+    }
 
 }

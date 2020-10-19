@@ -66,5 +66,16 @@ class insumos extends Model
         'fecha_de_vencimiento' => 'required'
     ];
 
+    public function scopeNombre($query, $nombre){
+        if ($nombre) {
+            return $query->where('nombre','like',"%$nombre%");
+        }
+    }
+
+    public function scopeMarca($query, $marca){
+        if ($marca) {
+            return $query->where('marca','like',"%$marca%");
+        }
+    }
 
 }

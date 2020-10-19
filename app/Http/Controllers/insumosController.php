@@ -8,6 +8,7 @@ use App\Http\Requests\UpdateinsumosRequest;
 use App\Models\DesplegableMarcaInsumos;
 use App\Models\DesplegableNombreInsumos;
 use App\Models\DesplegablePresentacionInsumos;
+use App\Models\insumos;
 use App\Repositories\insumosRepository;
 use Flash;
 use Illuminate\Http\Request;
@@ -32,7 +33,9 @@ class insumosController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $insumos = $this->insumosRepository->paginate(10);
+        $nombre = $request->get('buscarpor');
+        $marca = $request->get('buscarpormarca');
+        $insumos = insumos::nombre($nombre)->marca($marca)->paginate(10);
 
         return view('insumos.index')
             ->with('insumos', $insumos);
