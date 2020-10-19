@@ -36,9 +36,9 @@
 @endcan
 
 {{-- @canany(['ver notas', 'borrar notas', 'crear notas','editar notas']) --}}
-<li>
+{{-- <li>
     <a href="{{ route('dashboard.index') }}"><i class="fa fa-tachometer"></i><span>Dashboard</span></a>
-</li>
+</li> --}}
 {{-- @endcan --}}
 
 @canany(['ver desplegables', 'borrar desplegables', 'crear desplegables','editar desplegables'])
