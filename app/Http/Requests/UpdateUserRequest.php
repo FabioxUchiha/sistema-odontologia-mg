@@ -26,6 +26,7 @@ class UpdateUserRequest extends FormRequest
     public function rules()
     {
         $rules = [
+            'name' => ['required', 'regex:/^[\pL\s\-]+$/u'],
             'email' => ['required',
             Rule::unique('users')->ignore( $this->route('user') )
         ]
