@@ -17,7 +17,7 @@
     <!-- Your custom styles (optional) -->
     <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
 
-    <title>Odontologia Mg</title>
+    <title>Odontología Mg</title>
 
     <!-- Styles -->
     <style>
@@ -95,7 +95,7 @@
                         @else
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">Iniciar sesion </a>
+                            <a class="nav-link" href="{{ route('login') }}">Iniciar sesión </a>
                         </li>
                         <li class="nav-item">
                             @if (Route::has('register'))
@@ -112,7 +112,7 @@
     <section class="dark-grey-text text-center"
         style="background-image: url(https://mdbootstrap.com/img/Photos/Others/background4.jpg);">
         <br>
-        <h3 class="text-center mx-auto font-weight-bold mb-4 pb-2 white-text">ODONTOLOGIA MG</h3>
+        <h3 class="text-center mx-auto font-weight-bold mb-4 pb-2 white-text">ODONTOLOGÍA MG</h3>
 
         <h5 class="text-center mx-auto font-weight-bold mb-4 pb-2 white-text">APLICACIÓN WEB PARA EL CONTROL DE GANANCIAS Y MANEJO DE
         INVENTARIO</h5>
@@ -122,10 +122,10 @@
 
         <h5 class="text-center mx-auto font-weight-bold mb-4 pb-2 white-text">Desarrollado por:</h5>
 
-        <h5 class="text-center mx-auto font-weight-bold mb-4 pb-2 white-text">Fabio ivan castellanos silva</h5>
-        <h5 class="text-center mx-auto font-weight-bold mb-4 pb-2 white-text">John sebastian suarez</h5>
+        <h5 class="text-center mx-auto font-weight-bold mb-4 pb-2 white-text">Fabio Iván Castellanos Silva</h5>
+        <h5 class="text-center mx-auto font-weight-bold mb-4 pb-2 white-text">John Sebastián Suárez</h5>
         <footer class="main-footer" style="max-height: 100px;text-align: center; background-image: url();">
-            <strong style="color: white">Sistema para el consultorio <span style="color: white">Odontologia Mg | Copyriht @ 2020</span></strong>
+            <strong style="color: white">Sistema para el consultorio <span style="color: white">Odontología Mg | Copyriht @ 2020</span></strong>
         </footer>
     </section>
     <!--Section: Content-->

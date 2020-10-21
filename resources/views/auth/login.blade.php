@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ config('app.name') }}</title>
+    <title>Odontología M.G</title>
 
     <link rel="icon" href="img/dientes.svg" type="image/x-icon">
     <!-- Tell the browser to be responsive to screen width -->
@@ -39,7 +39,7 @@
         <img width="40px"
              src="{{ asset('img/dientes.svg') }}">
         <a style="color: white"
-        href="{{ url('/') }}"><b>Odontologia </b>MG</a>
+        href="{{ url('/') }}"><b>Odontología </b>MG</a>
     </div>
 
     <!-- /.login-logo -->
@@ -50,7 +50,7 @@
             @csrf
 
             <div class="form-group has-feedback {{ $errors->has('email') ? ' has-error' : '' }}">
-                <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Correo electronico">
+                <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Correo electrónico">
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                 @if ($errors->has('email'))
                     <span class="help-block">
