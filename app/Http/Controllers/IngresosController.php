@@ -35,7 +35,11 @@ class IngresosController extends AppBaseController
         $fecha = $request->get('buscarporfecha');
         $servicio = $request->get('buscarporservicio');
         $tipo = $request->get('buscarportipo');
+        $ing = Ingresos::all();
         $ingresos = Ingresos::servicio($servicio)->tipo($tipo)->fecha($fecha)->paginate(10);
+        if (count($ingresos) < 1 && count($ing) > 0 ) {
+            Flash::warning('No se ha encontado resultados de la busqueda');
+        }
         $ingresosDia = Ingresos::whereDate('fecha', '=', Carbon::now()->format('Y-m-d'))->get();
         $total = 0;
         return view('ingresos.index', [

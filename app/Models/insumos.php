@@ -72,6 +72,12 @@ class insumos extends Model
         }
     }
 
+    public function scopeFecha($query, $fecha){
+        if ($fecha) {
+            return $query->where('fecha_de_compra','like',"%$fecha%");
+        }
+    }
+
     public function scopeMarca($query, $marca){
         if ($marca) {
             return $query->where('marca','like',"%$marca%");

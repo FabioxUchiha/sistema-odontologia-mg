@@ -34,9 +34,13 @@ class insumosController extends AppBaseController
     public function index(Request $request)
     {
         $nombre = $request->get('buscarpor');
+        $fecha = $request->get('buscarporfecha');
         $marca = $request->get('buscarpormarca');
-        $insumos = insumos::nombre($nombre)->marca($marca)->paginate(10);
-
+        $ins = Insumos::all();
+        $insumos = insumos::nombre($nombre)->marca($marca)->fecha($fecha)->paginate(10);
+        if (count($insumos) < 1 && count($ins) > 0 ) {
+            Flash::warning('No se ha encontado resultados de la busqueda');
+        }
         return view('insumos.index')
             ->with('insumos', $insumos);
     }

@@ -33,7 +33,11 @@ class notasController extends AppBaseController
     {
         $documento = $request->get('buscarpor');
         $nombre = $request->get('buscarpornombre');
+        $not = notas::all();
         $notas = notas::documento($documento)->nombre($nombre)->paginate(10);
+        if (count($notas) < 1 && count($not) > 0 ) {
+            Flash::warning('No se ha encontado resultados de la busqueda');
+        }
 
         return view('notas.index')
             ->with('notas', $notas);

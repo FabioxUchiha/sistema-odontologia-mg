@@ -38,8 +38,11 @@ class InventarioController extends AppBaseController
         $nombre = $request->get('buscarpornombre');
         $categoria = $request->get('buscarporcategoria');
         $marca = $request->get('buscarpormarca');
+        $inv = Inventario::all();
         $inventarios = Inventario::nombre($nombre)->categoria($categoria)->marca($marca)->paginate(10);
-
+        if (count($inventarios) < 1 && count($inv) > 0 ) {
+            Flash::warning('No se ha encontado resultados de la busqueda');
+        }
         return view('inventarios.index', [
             'inventarios' => $inventarios
         ]);

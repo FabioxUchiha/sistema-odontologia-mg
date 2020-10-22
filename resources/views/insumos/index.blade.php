@@ -24,7 +24,10 @@
                         name="buscarpor" type="search" placeholder="Buscar por nombre">
                         <input
                         class="form-control mr-sm-2 shadow"
-                        name="buscarpormarca" type="search" placeholder="Buscar por marca">
+                        name="buscarporfecha" type="date" placeholder="Buscar por fecha de compra">
+                        <input
+                        class="form-control mr-sm-2 shadow"
+                        name="buscarpormarca" type="search" placeholder="Buscar por proveedor">
                         <button class="btn btn-danger my-2 my-sm-0" type="submit">
                         Buscar</button>
                     </form>
