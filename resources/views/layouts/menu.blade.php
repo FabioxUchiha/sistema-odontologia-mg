@@ -62,7 +62,7 @@
         <li class="{{ Request::is('desplegableCategoriaInstrumentals*') ? 'active' : '' }}">
             <a class="text-black"
             href="{{ route('desplegableCategoriaInstrumentals.index') }}">
-            <span>Categoria Instrumental</span></a>
+            <span>Categoría Instrumental</span></a>
         </li>
 
         <li class="{{ Request::is('desplegableMarcaInstrumentals*') ? 'active' : '' }}">
@@ -84,13 +84,13 @@
         <li class="{{ Request::is('desplegableMarcaInsumos*') ? 'active' : '' }}">
             <a class="text-black"
             href="{{ route('desplegableMarcaInsumos.index') }}">
-            <span>Marca Insumos</span></a>
+            <span>Proveedor Insumos</span></a>
         </li>
 
         <li class="{{ Request::is('desplegablePresentacionInsumos*') ? 'active' : '' }}">
             <a class="text-black"
             href="{{ route('desplegablePresentacionInsumos.index') }}">
-            <span>Presentacion Insumos</span></a>
+            <span>Presentación Insumos</span></a>
         </li>
     </ul>
 </li>

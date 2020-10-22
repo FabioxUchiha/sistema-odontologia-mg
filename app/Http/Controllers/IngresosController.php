@@ -32,9 +32,10 @@ class IngresosController extends AppBaseController
      */
     public function index(Request $request)
     {
+        $fecha = $request->get('buscarporfecha');
         $servicio = $request->get('buscarporservicio');
         $tipo = $request->get('buscarportipo');
-        $ingresos = Ingresos::servicio($servicio)->tipo($tipo)->paginate(10);
+        $ingresos = Ingresos::servicio($servicio)->tipo($tipo)->fecha($fecha)->paginate(10);
         $ingresosDia = Ingresos::whereDate('fecha', '=', Carbon::now()->format('Y-m-d'))->get();
         $total = 0;
         return view('ingresos.index', [

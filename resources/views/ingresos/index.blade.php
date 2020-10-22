@@ -24,6 +24,9 @@
                     <form class="form-inline">
                         <input
                         class="form-control mr-sm-2 shadow"
+                        name="buscarporfecha" type="date" placeholder="Buscar por fecha">
+                        <input
+                        class="form-control mr-sm-2 shadow"
                         name="buscarporservicio" type="search" placeholder="Buscar por servicio">
                         <input
                         class="form-control mr-sm-2 shadow"

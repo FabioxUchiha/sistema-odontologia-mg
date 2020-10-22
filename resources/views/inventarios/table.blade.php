@@ -3,7 +3,7 @@
         <thead>
             <tr>
                 <th>Nombre</th>
-                <th>Categoria</th>
+                <th>Categoría</th>
                 <th>Marca</th>
                 <th>Cantidad</th>
                 <th>Estado Instrumental</th>

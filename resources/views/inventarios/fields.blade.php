@@ -19,7 +19,7 @@
 
 <!-- Categoria Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('categoria', 'Categoria:') !!}
+    {!! Form::label('categoria', 'Categoría:') !!}
     <select name="categoria" class="form-control">
         <option type="text" value="{{$inventario->categoria ?? ''}}">
             @if($inventario->categoria ?? '')

@@ -60,7 +60,7 @@ class DesplegableMarcaInsumosController extends AppBaseController
 
         $desplegableMarcaInsumos = $this->desplegableMarcaInsumosRepository->create($input);
 
-        Flash::success('Desplegable Marca Insumos Guardado exitosamente.');
+        Flash::success('Desplegable Proveedor Insumos Guardado exitosamente.');
 
         return redirect(route('desplegableMarcaInsumos.index'));
     }
@@ -77,7 +77,7 @@ class DesplegableMarcaInsumosController extends AppBaseController
         $desplegableMarcaInsumos = $this->desplegableMarcaInsumosRepository->find($id);
 
         if (empty($desplegableMarcaInsumos)) {
-            Flash::error('Desplegable Marca Insumos not found');
+            Flash::error('Desplegable Proveedor Insumos not found');
 
             return redirect(route('desplegableMarcaInsumos.index'));
         }
@@ -97,7 +97,7 @@ class DesplegableMarcaInsumosController extends AppBaseController
         $desplegableMarcaInsumos = $this->desplegableMarcaInsumosRepository->find($id);
 
         if (empty($desplegableMarcaInsumos)) {
-            Flash::error('Desplegable Marca Insumos not found');
+            Flash::error('Desplegable Proveedor Insumos not found');
 
             return redirect(route('desplegableMarcaInsumos.index'));
         }
@@ -118,14 +118,14 @@ class DesplegableMarcaInsumosController extends AppBaseController
         $desplegableMarcaInsumos = $this->desplegableMarcaInsumosRepository->find($id);
 
         if (empty($desplegableMarcaInsumos)) {
-            Flash::error('Desplegable Marca Insumos not found');
+            Flash::error('Desplegable Proveedor Insumos not found');
 
             return redirect(route('desplegableMarcaInsumos.index'));
         }
 
         $desplegableMarcaInsumos = $this->desplegableMarcaInsumosRepository->update($request->all(), $id);
 
-        Flash::success('Desplegable Marca Insumos Actualizado exitosamente.');
+        Flash::success('Desplegable Proveedor Insumos Actualizado exitosamente.');
 
         return redirect(route('desplegableMarcaInsumos.index'));
     }
@@ -144,14 +144,14 @@ class DesplegableMarcaInsumosController extends AppBaseController
         $desplegableMarcaInsumos = $this->desplegableMarcaInsumosRepository->find($id);
 
         if (empty($desplegableMarcaInsumos)) {
-            Flash::error('Desplegable Marca Insumos not found');
+            Flash::error('Desplegable Proveedor Insumos not found');
 
             return redirect(route('desplegableMarcaInsumos.index'));
         }
 
         $this->desplegableMarcaInsumosRepository->delete($id);
 
-        Flash::success('Desplegable Marca Insumos Borrado exitosamente.');
+        Flash::success('Desplegable Proveedor Insumos Borrado exitosamente.');
 
         return redirect(route('desplegableMarcaInsumos.index'));
     }

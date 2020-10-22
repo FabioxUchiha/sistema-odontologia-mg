@@ -61,6 +61,12 @@ class Ingresos extends Model
         'servicio' => 'required'
     ];
 
+    public function scopeFecha($query, $fecha){
+        if ($fecha) {
+            return $query->where('fecha','like',"%$fecha%");
+        }
+    }
+
     public function scopeServicio($query, $servicio){
         if ($servicio) {
             return $query->where('servicio','like',"%$servicio%");

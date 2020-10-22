@@ -2,7 +2,7 @@
 
 @section('content')
     <section class="content-header">
-        <h1 class="pull-left">Desplegable Categoria Instrumental</h1>
+        <h1 class="pull-left">Desplegable Categoría Instrumental</h1>
         <h1 class="pull-right">
             @can('crear desplegables')
                 <a class="btn btn-danger pull-right" style="margin-top: -1px;margin-bottom: 5px" href="{{ route('desplegableCategoriaInstrumentals.create') }}">Agregar Nueva Categoria</a>

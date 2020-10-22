@@ -5,7 +5,7 @@
                 <th>Documento</th>
                 <th>Nombre</th>
                 <th>Tipo de documento</th>
-                <th>Telefono</th>
+                <th>Teléfono</th>
                 <th>Procedimiento</th>
                 <th>Observaciones</th>
                 <th colspan="3" class="col-md-1">Acciones</th>

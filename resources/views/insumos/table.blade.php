@@ -5,9 +5,9 @@
                 <th>Nombre</th>
                 <th>Fecha De Compra</th>
                 <th>Cantidad</th>
-                <th>Marca</th>
+                <th>Proveedor</th>
                 <th>Fecha De Vencimiento</th>
-                <th>Presentacion</th>
+                <th>Presentación</th>
                 <th>Lote</th>
                 <th colspan="3" class="col-md-1">Acciones</th>
             </tr>

@@ -76,7 +76,7 @@
 
 <!-- Presentacion Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('presentacion', 'Presentacion:') !!}
+    {!! Form::label('presentacion', 'Presentación:') !!}
     <select name="presentacion" class="form-control">
         <option type="text" value="{{$insumos->presentacion ?? ''}}">
             @if($insumos->presentacion ?? '')

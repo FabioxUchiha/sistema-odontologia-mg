@@ -3,7 +3,7 @@
 @section('content')
     <section class="content-header">
         <h1>
-            Desplegable Marca Insumos
+            Desplegable Proveedor Insumos
         </h1>
     </section>
     <div class="content">

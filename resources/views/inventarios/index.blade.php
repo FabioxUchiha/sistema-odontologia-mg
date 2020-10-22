@@ -24,7 +24,7 @@
                         name="buscarpornombre" type="search" placeholder="Buscar por nombre">
                         <input
                         class="form-control mr-sm-2 shadow"
-                        name="buscarporcategoria" type="search" placeholder="Buscar por categoria">
+                        name="buscarporcategoria" type="search" placeholder="Buscar por categoría">
                         <input
                         class="form-control mr-sm-2 shadow"
                         name="buscarpormarca" type="search" placeholder="Buscar por marca">

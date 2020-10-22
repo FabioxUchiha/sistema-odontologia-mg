@@ -2,7 +2,7 @@
 
 @section('content')
     <section class="content-header">
-        <h1 class="pull-left">Desplegable Marca Insumos</h1>
+        <h1 class="pull-left">Desplegable Proveedor Insumos</h1>
         <h1 class="pull-right">
             @can('crear desplegables')
                 <a class="btn btn-danger pull-right" style="margin-top: -1px;margin-bottom: 5px" href="{{ route('desplegableMarcaInsumos.create') }}">Agregar Nuevo</a>
