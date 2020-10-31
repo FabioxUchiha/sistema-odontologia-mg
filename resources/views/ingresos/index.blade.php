@@ -24,7 +24,7 @@
                     <form class="form-inline">
                         <input
                         class="form-control mr-sm-2 shadow"
-                        name="buscarporfecha" type="text" placeholder="MM/DD/YYYY"
+                        name="buscarporfecha" type="text" placeholder="Buscar por fecha"
                         onfocus="(this.type='date')"
                         onblur="(this.type='text')" min="1990-01-01" max="2053-12-31">
                         <input
