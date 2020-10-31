@@ -24,7 +24,7 @@
                     <form class="form-inline">
                         <input
                         class="form-control mr-sm-2 shadow"
-                        name="buscarporfecha" type="date" placeholder="Buscar por fecha">
+                        name="buscarporfecha" type="date" placeholder="Buscar por fecha" min="2013-01-01" max="2013-12-31" value="<?php echo date("Y-m-d");?>">
                         <input
                         class="form-control mr-sm-2 shadow"
                         name="buscarporservicio" type="search" placeholder="Buscar por servicio">
