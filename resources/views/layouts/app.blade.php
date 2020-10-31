@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <link rel="icon" href="img/dientes.svg" type="image/x-icon">
     <title>ODONTOLOGIA MG</title>
-    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <!-- Bootstrap 3.3.7 -->
@@ -95,7 +96,7 @@
         </div>
 
         <!-- Main Footer -->
-        <footer class="main-footer" style="max-height: 100px;text-align: center; background-image: url(https://mdbootstrap.com/img/Photos/Others/background5.jpg);">
+        <footer class="main-footer" style="max-height: 100px;text-align: center; background-image: url();">
             <strong><span style="color: black:50">Odontologia MG. | Copyriht @ 2020</span></strong>
         </footer>
 
@@ -148,7 +149,6 @@
     @endif
 
     <!-- jQuery 3.1.1 -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
