@@ -27,8 +27,8 @@ class UpdateinsumosRequest extends FormRequest
     {
         $rules = [
             'nombre' => ['required'],
-            'fecha' => ['required'],
-            'cantidad' => ['required', 'numeric', 'min:50'],
+            'fecha_de_compra' => ['required'],
+            'cantidad' => ['required', 'numeric', 'min:1'],
             'fecha_de_vencimiento' => ['required']
         ];
         return $rules;
