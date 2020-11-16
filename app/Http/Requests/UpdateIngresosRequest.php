@@ -25,8 +25,12 @@ class UpdateIngresosRequest extends FormRequest
      */
     public function rules()
     {
-        $rules = Ingresos::$rules;
-        
+        $rules = [
+            'fecha' => ['required'],
+            'tipo' => ['required'],
+            'precio' => ['required', 'numeric', 'min:50'],
+            'servicio' => ['required']
+        ];
         return $rules;
     }
 }

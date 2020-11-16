@@ -25,6 +25,12 @@ class CreateinsumosRequest extends FormRequest
      */
     public function rules()
     {
-        return insumos::$rules;
+         $rules = [
+            'nombre' => ['required'],
+            'fecha' => ['required'],
+            'cantidad' => ['required', 'numeric', 'min:50'],
+            'fecha_de_vencimiento' => ['required']
+        ];
+        return $rules;
     }
 }

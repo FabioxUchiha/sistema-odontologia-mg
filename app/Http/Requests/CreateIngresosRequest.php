@@ -25,6 +25,12 @@ class CreateIngresosRequest extends FormRequest
      */
     public function rules()
     {
-        return Ingresos::$rules;
+        $rules = [
+            'fecha' => ['required'],
+            'tipo' => ['required'],
+            'precio' => ['required', 'numeric', 'min:50'],
+            'servicio' => ['required']
+        ];
+        return $rules;
     }
 }

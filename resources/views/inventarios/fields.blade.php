@@ -58,7 +58,7 @@
 <!-- Cantidad Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('cantidad', 'Cantidad:') !!}
-    {!! Form::number('cantidad', null, ['class' => 'form-control']) !!}
+    {!! Form::number('cantidad', null, ['class' => 'form-control', 'min' => 1, 'pattern'=>'^[1-9]\d*$']) !!}
 </div>
 
 <!-- Estado Instrumental Field -->
@@ -72,3 +72,4 @@
     {!! Form::submit('Guardar', ['class' => 'btn btn-danger']) !!}
     <a href="{{ route('inventarios.index') }}" class="btn btn-default">Cancelar</a>
 </div>
+

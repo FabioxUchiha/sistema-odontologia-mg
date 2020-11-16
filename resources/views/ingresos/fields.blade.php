@@ -57,7 +57,7 @@
 <!-- Precio Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('precio', 'Precio:') !!}
-    {!! Form::number('precio', null, ['class' => 'form-control']) !!}
+    {!! Form::number('precio', null, ['class' => 'form-control', 'min' => 1, 'pattern'=>'^[1-9]\d*$']) !!}
 </div>
 
 <!-- Detalle Field -->

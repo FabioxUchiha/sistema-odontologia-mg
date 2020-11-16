@@ -25,8 +25,11 @@ class UpdateInventarioRequest extends FormRequest
      */
     public function rules()
     {
-        $rules = Inventario::$rules;
-        
+        $rules = [
+            'nombre' => ['required'],
+            'marca' => ['required'],
+            'cantidad' => ['required', 'numeric', 'min:1']
+        ];
         return $rules;
     }
 }
