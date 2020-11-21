@@ -66,11 +66,11 @@
                                     </p>
                                 </li>
                                 <!-- Menu Footer-->
-                                <li class="user-footer">
+                                <li class="user-footer" style="background-color: #dd4b39">
                                     <div class="text-center">
                                         <a href="{{ url('/logout') }}" class="btn btn-default btn-flat"
                                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                            Cerrar sesion
+                                            Cerrar sesión
                                         </a>
                                         <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
                                             @csrf
