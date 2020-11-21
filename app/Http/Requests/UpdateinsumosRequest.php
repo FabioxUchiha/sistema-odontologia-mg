@@ -29,7 +29,8 @@ class UpdateinsumosRequest extends FormRequest
             'nombre' => ['required'],
             'fecha_de_compra' => ['required'],
             'cantidad' => ['required', 'numeric', 'min:1'],
-            'fecha_de_vencimiento' => ['required']
+            'fecha_de_vencimiento' => ['required'],
+            'presentacion' => ['required']
         ];
         return $rules;
     }
