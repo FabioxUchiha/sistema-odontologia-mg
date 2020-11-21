@@ -31,12 +31,12 @@
 <!-- Creado el Field -->
 <div class="form-group">
     {!! Form::label('created_at', 'Creado el:') !!}
-    <p>{{ $inventario->created_at->format('Y/m/d') }}</p>
+    <p>{{ $inventario->created_at }}</p>
 </div>
 
 <!-- Actualizado el Field -->
 <div class="form-group">
     {!! Form::label('updated_at', 'Actualizado el:') !!}
-    <p>{{ $inventario->updated_at->format('Y/m/d') }}</p>
+    <p>{{ $inventario->updated_at }}</p>
 </div>
 
