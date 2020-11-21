@@ -5,7 +5,7 @@
                 <th>Nombre</th>
                 <th>Categoría</th>
                 <th>Marca</th>
-                <th>Cantidad</th>
+                <th>Cantidad en unidades</th>
                 <th>Estado Instrumental</th>
                 <th colspan="3">Acciones</th>
             </tr>
@@ -28,7 +28,7 @@
                         <a href="{{ route('inventarios.edit', [$inventario->id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
                         @endcan
                         @can('borrar inventarios')
-                        {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Estas seguro?')"]) !!}
+                        {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('¿Está seguro de eliminar el registro?')"]) !!}
                         @endcan
                     </div>
                     {!! Form::close() !!}

@@ -56,7 +56,7 @@
 
 <!-- Precio Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('precio', 'Precio:') !!}
+    {!! Form::label('precio', 'Precio en pesos colombianos:') !!}
     {!! Form::number('precio', null, ['class' => 'form-control', 'min' => 1, 'pattern'=>'^[1-9]\d*$']) !!}
 </div>
 
