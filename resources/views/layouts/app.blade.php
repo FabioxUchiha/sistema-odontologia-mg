@@ -66,9 +66,9 @@
                                     </p>
                                 </li>
                                 <!-- Menu Footer-->
-                                <li class="user-footer" style="background-color: #dd4b39">
+                                <li class="user-footer">
                                     <div class="text-center">
-                                        <a href="{{ url('/logout') }}" class="btn btn-default btn-flat"
+                                        <a href="{{ url('/logout') }}" class="btn btn-default btn-flat" style="background-color: #dd4b39; color: #fff"
                                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                             Cerrar sesión
                                         </a>
