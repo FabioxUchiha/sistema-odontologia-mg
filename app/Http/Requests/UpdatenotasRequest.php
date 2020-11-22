@@ -27,9 +27,13 @@ class UpdatenotasRequest extends FormRequest
     public function rules()
     {
         $rules = [
-            'documento' => ['required',
-             Rule::unique('notas')->ignore( $this->route('nota') )
-         ]
+            'documento' => ['required', 'numeric', 'min:1',
+                Rule::unique('notas')->ignore( $this->route('nota') )],
+            'nombre' => ['required', 'regex:/^[\pL\s\-]+$/u'],
+            'tipo_documento' => ['required'],
+            'procedimiento' => ['required'],
+            'observaciones' => ['required'],
+            'telefono' => ['numeric', 'min:1']
         ];
         return $rules;
     }

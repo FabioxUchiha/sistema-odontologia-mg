@@ -27,7 +27,11 @@ class CreatenotasRequest extends FormRequest
     {
         $rules = [
             'documento' => ['required', 'unique:notas'],
-            'nombre' => ['required']
+            'nombre' => ['required', 'regex:/^[\pL\s\-]+$/u'],
+            'tipo_documento' => ['required', 'numeric', 'min:1'],
+            'procedimiento' => ['required'],
+            'observaciones' => ['required'],
+            'telefono' => ['numeric', 'min:1']
         ];
         return $rules;
     }

@@ -1,7 +1,7 @@
 <!-- Documento Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('documento', 'Documento:') !!}
-    {!! Form::number('documento', null, ['class' => 'form-control']) !!}
+    {!! Form::number('documento', null, ['class' => 'form-control', 'min' => 1, 'pattern'=>'^[1-9]\d*$', 'required']) !!}
 </div>
 
 <!-- Nombre Field -->
@@ -11,13 +11,15 @@
     type="text-transform:uppercase;"
     onkeyup="javascript:this.value=this.value.toUpperCase();"
     type="text" name="nombre" required
+    pattern="^[A-Za-z ]+$"
+    title="El nombre de usuario solo debe contener letras"
     value="{{ $notas->nombre ?? '' }}">
 </div>
 
 <!-- Tipo de documento Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('tipo_documento', 'Tipo de documento:') !!}
-    <select name="tipo_documento" class="form-control">
+    <select name="tipo_documento" required class="form-control">
         <option type="text" value="{{$notas->tipo_documento ?? ''}}">
             @if($notas->tipo_documento ?? '')
                 {{$notas->tipo_documento}}
@@ -49,13 +51,13 @@
 <!-- Telefono Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('telefono', 'Teléfono:') !!}
-    {!! Form::number('telefono', null, ['class' => 'form-control']) !!}
+    {!! Form::number('telefono', null, ['class' => 'form-control', 'pattern'=>'[0-9]{7,10}']) !!}
 </div>
 
 <!-- Procedimiento Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('procedimiento', 'Procedimiento:') !!}
-    <select name="procedimiento" class="form-control">
+    <select name="procedimiento" class="form-control" required>
         <option type="text" value="{{$notas->procedimiento ?? ''}}">
             @if($notas->procedimiento ?? '')
                 {{$notas->procedimiento}}
@@ -74,7 +76,7 @@
 <!-- Observaciones Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('observaciones', 'Observaciones:') !!}
-    {!! Form::textarea('observaciones', null, ['class' => 'form-control']) !!}
+    {!! Form::textarea('observaciones', null, ['class' => 'form-control', 'required']) !!}
 </div>
 
 <!-- Submit Field -->
