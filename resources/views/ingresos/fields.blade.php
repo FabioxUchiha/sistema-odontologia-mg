@@ -5,12 +5,25 @@
 </div>
 
 @push('scripts')
-    <script type="text/javascript">
-        $('#fecha').datetimepicker({
-            format: 'YYYY-MM-DD',
-            useCurrent: true,
-            sideBySide: true
-        })
+<script type="text/javascript">
+    hoyFecha();
+    $('#fecha').datetimepicker({
+        format: 'YYYY-MM-DD',
+        useCurrent: true,
+        sideBySide: true,
+        minDate:'-2020/01/01',
+        maxDate:`+${fechaActual}`
+    })
+    function hoyFecha(){
+        var hoy = new Date();
+        var dd = hoy.getDate();
+        var mm = hoy.getMonth()+1;
+        var yyyy = hoy.getFullYear();
+
+        fechaActual = yyyy+'/'+mm+'/'+dd;
+        return yyyy+'/'+mm+'/'+dd;
+    }
+
     </script>
 @endpush
 

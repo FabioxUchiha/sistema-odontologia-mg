@@ -26,7 +26,7 @@
                         class="form-control mr-sm-2 shadow"
                         name="buscarporfecha" type="text" placeholder="Buscar por fecha"
                         onfocus="(this.type='date')"
-                        onblur="(this.type='text')" min="1990-01-01" max="2053-12-31">
+                        onblur="(this.type='text')" min="2020-01-01" max="2053-12-31">
                         <input
                         class="form-control mr-sm-2 shadow"
                         name="buscarporservicio" type="search" placeholder="Buscar por servicio">
