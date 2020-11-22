@@ -25,18 +25,30 @@
 
 @push('scripts')
     <script type="text/javascript">
+        hoyFecha();
         $('#fecha_de_compra').datetimepicker({
             format: 'YYYY-MM-DD',
             useCurrent: true,
-            sideBySide: true
+            sideBySide: true,
+            maxDate:`+${fechaActual}`
         })
+        function hoyFecha(){
+        var hoy = new Date();
+        var dd = hoy.getDate()+1;
+        var mm = (hoy.getMonth()+1);
+        var yyyy = hoy.getFullYear();
+
+        fechaActual = yyyy+'/'+mm+'/'+dd;
+        return yyyy+'/'+mm+'/'+dd;
+    }
+
     </script>
 @endpush
 
 <!-- Cantidad Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('cantidad', 'Cantidad:') !!}
-    {!! Form::number('cantidad', null, ['class' => 'form-control', 'min' => 1, 'pattern'=>'^[1-9]\d*$']) !!} 
+    {!! Form::number('cantidad', null, ['class' => 'form-control', 'min' => 1, 'pattern'=>'^[1-9]\d*$']) !!}
 </div>
 
 <!-- Marca Field -->
