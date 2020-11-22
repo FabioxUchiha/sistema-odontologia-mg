@@ -7,7 +7,6 @@
 @push('scripts')
 <script type="text/javascript">
     hoyFecha();
-    console.log(fechaActual)
     $('#fecha').datetimepicker({
         format: 'YYYY-MM-DD',
         useCurrent: true,
