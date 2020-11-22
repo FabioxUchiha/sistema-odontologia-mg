@@ -8,6 +8,8 @@
         <th>Fecha de vencimiento</th>
         <th>Presentacion</th>
         <th>Lote</th>
+        <th>Fecha de creación</th>
+        <th>Fecha de modificación</th>
     </tr>
     </thead>
     <tbody>
@@ -20,6 +22,8 @@
             <td>{{ $insumo->fecha_de_vencimiento }}</td>
             <td>{{ $insumo->presentacion }}</td>
             <td>{{ $insumo->lote }}</td>
+            <td>{{ $insumo->created_at }}</td>
+            <td>{{ $insumo->updated_at }}</td>
         </tr>
     @endforeach
     </tbody>

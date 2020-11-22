@@ -1,11 +1,13 @@
 <table>
     <thead>
     <tr>
-        <th>Fecha</th>
+        <th>Fecha de servicio</th>
         <th>Servicio</th>
         <th>Detalle</th>
         <th>Tipo</th>
         <th>Precio</th>
+        <th>Fecha de creación</th>
+        <th>Fecha de modificación</th>
     </tr>
     </thead>
     <tbody>
@@ -16,6 +18,8 @@
             <td>{{ $ingreso->detalle }}</td>
             <td>{{ $ingreso->tipo }}</td>
             <td>{{ $ingreso->precio }}</td>
+            <td>{{ $ingreso->created_at }}</td>
+            <td>{{ $ingreso->updated_at }}</td>
         </tr>
     @endforeach
     </tbody>
