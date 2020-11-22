@@ -7,7 +7,7 @@
         <th>Detalle</th>
         <th>Tipo</th>
         <th>Precio</th>
-                <th colspan="3">Acciones</th>
+                <th colspan="3" class="col-md-1 col-sm-2">Acciones</th>
             </tr>
         </thead>
         <tbody>
