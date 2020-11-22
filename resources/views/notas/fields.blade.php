@@ -11,7 +11,7 @@
     type="text-transform:uppercase;"
     onkeyup="javascript:this.value=this.value.toUpperCase();"
     type="text" name="nombre" required
-    pattern="^[A-Za-z ]+$"
+    pattern="^[A-Za-záéíóúÁÉÍÓÚ ]+$"
     title="El nombre de usuario solo debe contener letras"
     value="{{ $notas->nombre ?? '' }}">
 </div>
