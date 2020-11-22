@@ -28,6 +28,7 @@ class CreateUserRequest extends FormRequest
         $rules = [
             'name' => ['required', 'regex:/^[\pL\s\-]+$/u'],
             'email' => ['required', 'unique:users'],
+            'password' => ['required']
         ];
         return $rules;
     }
