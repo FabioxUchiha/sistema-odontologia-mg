@@ -878,6 +878,7 @@ class ComposerStaticInit8add59040a456de6c5df29d627c03dc0
         'DesplegableMarcaInsumosSeeder' => __DIR__ . '/../..' . '/database/seeds/DesplegableMarcaInsumosSeeder.php',
         'DesplegableNombreInsumosSeeder' => __DIR__ . '/../..' . '/database/seeds/DesplegableNombreInsumosSeeder.php',
         'DesplegableNombreInventarioSeeder' => __DIR__ . '/../..' . '/database/seeds/DesplegableNombreInventarioSeeder.php',
+        'DesplegablePresentacionInsumosSeeder' => __DIR__ . '/../..' . '/database/seeds/DesplegablePresentacionInsumosSeeder.php',
         'DesplegableServicioIngresoSeeder' => __DIR__ . '/../..' . '/database/seeds/DesplegableServicioIngresoSeeder.php',
         'DivisionByZeroError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/DivisionByZeroError.php',
         'Doctrine\\Common\\Cache\\ApcCache' => __DIR__ . '/..' . '/doctrine/cache/lib/Doctrine/Common/Cache/ApcCache.php',

@@ -240,6 +240,7 @@ return array(
     'DesplegableMarcaInsumosSeeder' => $baseDir . '/database/seeds/DesplegableMarcaInsumosSeeder.php',
     'DesplegableNombreInsumosSeeder' => $baseDir . '/database/seeds/DesplegableNombreInsumosSeeder.php',
     'DesplegableNombreInventarioSeeder' => $baseDir . '/database/seeds/DesplegableNombreInventarioSeeder.php',
+    'DesplegablePresentacionInsumosSeeder' => $baseDir . '/database/seeds/DesplegablePresentacionInsumosSeeder.php',
     'DesplegableServicioIngresoSeeder' => $baseDir . '/database/seeds/DesplegableServicioIngresoSeeder.php',
     'DivisionByZeroError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/DivisionByZeroError.php',
     'Doctrine\\Common\\Cache\\ApcCache' => $vendorDir . '/doctrine/cache/lib/Doctrine/Common/Cache/ApcCache.php',
