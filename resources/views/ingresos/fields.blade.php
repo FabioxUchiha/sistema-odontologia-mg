@@ -1,7 +1,7 @@
 <!-- Fecha Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('fecha', 'Fecha:') !!}
-    {!! Form::text('fecha', null, ['class' => 'form-control','id'=>'fecha']) !!}
+    {!! Form::text('fecha', null, ['class' => 'form-control','id'=>'fecha', 'required']) !!}
 </div>
 
 @push('scripts')
@@ -30,7 +30,7 @@
 <!-- Servicio Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('servicio', 'Servicio:') !!}
-    <select name="servicio" class="form-control">
+    <select name="servicio" class="form-control" required>
         <option type="text" value="{{$ingresos->servicio ?? ''}}">
             @if($ingresos->servicio ?? '')
                 {{$ingresos->servicio}}
@@ -50,7 +50,7 @@
 <!-- Tipo Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('tipo', 'Tipo:') !!}
-    <select name="tipo" class="form-control">
+    <select name="tipo" class="form-control" required>
         <option type="text" value="{{$ingresos->tipo ?? ''}}">
             @if($ingresos->tipo ?? '')
             {{$ingresos->tipo}}
@@ -70,7 +70,7 @@
 <!-- Precio Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('precio', 'Precio en pesos colombianos:') !!}
-    {!! Form::number('precio', null, ['class' => 'form-control', 'min' => 1, 'pattern'=>'^[1-9]\d*$', 'placeholder' => 'Ingrese el valor sin puntos ni comas']) !!}
+    {!! Form::number('precio', null, ['class' => 'form-control', 'min' => 1, 'required', 'pattern'=>'^[1-9]\d*$', 'placeholder' => 'Ingrese el valor sin puntos ni comas']) !!}
 </div>
 
 <!-- Detalle Field -->
