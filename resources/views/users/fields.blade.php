@@ -5,19 +5,21 @@
     type="text-transform:uppercase;"
     onkeyup="javascript:this.value=this.value.toUpperCase();"
     type="text" name="name" required
+    pattern="^[A-Za-záéíóúÁÉÍÓÚ ]+$"
+    title="El nombre de usuario solo debe contener letras"
     value="{{ $user->name ?? '' }}">
 </div>
 
 <!-- Email Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('email', 'Email:') !!}
-    {!! Form::email('email', null, ['class' => 'form-control']) !!}
+    {!! Form::email('email', null, ['class' => 'form-control', 'required']) !!}
 </div>
 
 <!-- Password Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('password', 'Contraseña:') !!}
-    {!! Form::password('password', ['class' => 'form-control', 'minlength' => 5]) !!}
+    {!! Form::password('password', ['class' => 'form-control']) !!}
 </div>
 
 <!-- Role Field -->
