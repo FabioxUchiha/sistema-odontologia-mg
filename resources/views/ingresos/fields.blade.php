@@ -7,6 +7,7 @@
 @push('scripts')
 <script type="text/javascript">
     hoyFecha();
+    console.log(fechaActual)
     $('#fecha').datetimepicker({
         format: 'YYYY-MM-DD',
         useCurrent: true,
@@ -16,8 +17,8 @@
     })
     function hoyFecha(){
         var hoy = new Date();
-        var dd = hoy.getDate();
-        var mm = hoy.getMonth()+1;
+        var dd = hoy.getDate()+1;
+        var mm = (hoy.getMonth()+1);
         var yyyy = hoy.getFullYear();
 
         fechaActual = yyyy+'/'+mm+'/'+dd;
