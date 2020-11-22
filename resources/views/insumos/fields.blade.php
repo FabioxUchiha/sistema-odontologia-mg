@@ -1,7 +1,7 @@
 <!-- Nombre Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('nombre', 'Nombre:') !!}
-     <select name="nombre" class="form-control">
+     <select name="nombre" class="form-control" required>
         <option type="text" value="{{$insumos->nombre ?? ''}}">
             @if($insumos->nombre ?? '')
             {{$insumos->nombre}}
@@ -20,7 +20,7 @@
 <!-- Fecha De Compra Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('fecha_de_compra', 'Fecha De Compra:') !!}
-    {!! Form::text('fecha_de_compra', null, ['class' => 'form-control','id'=>'fecha_de_compra']) !!}
+    {!! Form::text('fecha_de_compra', null, ['class' => 'form-control','id'=>'fecha_de_compra', 'required']) !!}
 </div>
 
 @push('scripts')
@@ -48,12 +48,12 @@
 <!-- Cantidad Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('cantidad', 'Cantidad:') !!}
-    {!! Form::number('cantidad', null, ['class' => 'form-control', 'min' => 1, 'pattern'=>'^[1-9]\d*$']) !!}
+    {!! Form::number('cantidad', null, ['class' => 'form-control', 'min' => 1, 'required', 'pattern'=>'^[1-9]\d*$']) !!}
 </div>
 
-<!-- Marca Field -->
+<!-- Proveedor Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('marca', 'Marca:') !!}
+    {!! Form::label('marca', 'Proveedor:') !!}
     <select name="marca" class="form-control">
         <option type="text" value="{{$insumos->marca ?? ''}}">
             @if($insumos->marca ?? '')
@@ -73,7 +73,7 @@
 <!-- Fecha De Vencimiento Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('fecha_de_vencimiento', 'Fecha De Vencimiento:') !!}
-    {!! Form::text('fecha_de_vencimiento', null, ['class' => 'form-control','id'=>'fecha_de_vencimiento']) !!}
+    {!! Form::text('fecha_de_vencimiento', null, ['class' => 'form-control','id'=>'fecha_de_vencimiento', 'required']) !!}
 </div>
 
 @push('scripts')
@@ -89,7 +89,7 @@
 <!-- Presentacion Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('presentacion', 'Presentación:') !!}
-    <select name="presentacion" class="form-control">
+    <select name="presentacion" class="form-control" required>
         <option type="text" value="{{$insumos->presentacion ?? ''}}">
             @if($insumos->presentacion ?? '')
             {{$insumos->presentacion}}
