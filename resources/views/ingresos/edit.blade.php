@@ -4,7 +4,7 @@
 @can('editar ingresos')
     <section class="content-header">
         <h1>
-            Ingresos
+            Ingresos y Egresos
         </h1>
    </section>
    <div class="content">
