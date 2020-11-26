@@ -1,7 +1,7 @@
 <!-- Documento Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('documento', 'Documento:') !!}
-    {!! Form::number('documento', null, ['class' => 'form-control', 'min' => 1, 'pattern'=>'^[1-9]\d*$', 'required']) !!}
+    {!! Form::number('documento', null, ['class' => 'form-control', 'pattern'=>'^[1-9]\d*$', 'required']) !!}
 </div>
 
 <!-- Nombre Field -->
@@ -51,7 +51,7 @@
 <!-- Telefono Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('telefono', 'Teléfono:') !!}
-    {!! Form::number('telefono', null, ['class' => 'form-control', 'pattern'=>'[0-9]{7,10}', 'min' => 1]) !!}
+    {!! Form::number('telefono', null, ['class' => 'form-control', 'pattern'=>'[0-9]{7,10}']) !!}
 </div>
 
 <!-- Procedimiento Field -->

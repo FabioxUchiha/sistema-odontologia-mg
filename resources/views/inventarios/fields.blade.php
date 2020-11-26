@@ -1,7 +1,7 @@
 <!-- Nombre Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('nombre', 'Nombre:') !!}
-    <select name="nombre" class="form-control">
+    <select name="nombre" class="form-control" required>
         <option type="text" value="{{$inventario->nombre ?? ''}}">
             @if($inventario->nombre ?? '')
             {{$inventario->nombre}}
@@ -39,7 +39,7 @@
 <!-- Marca Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('marca', 'Marca:') !!}
-    <select name="marca" class="form-control">
+    <select name="marca" class="form-control" required>
         <option type="text" value="{{$inventario->marca ?? ''}}">
             @if($inventario->marca ?? '')
             {{$inventario->marca}}
@@ -58,7 +58,7 @@
 <!-- Cantidad Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('cantidad', 'Cantidad en unidades:') !!}
-    {!! Form::number('cantidad', null, ['class' => 'form-control', 'min' => 1, 'pattern'=>'^[1-9]\d*$']) !!}
+    {!! Form::number('cantidad', null, ['class' => 'form-control', 'required', 'title' => 'La cantidad debe estar expresada en números', 'pattern'=>'^[1-9]\d*$']) !!}
 </div>
 
 <!-- Estado Instrumental Field -->
