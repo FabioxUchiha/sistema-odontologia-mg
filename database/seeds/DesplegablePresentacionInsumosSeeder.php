@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\DesplegablePresentacionInsumos;
 use Illuminate\Database\Seeder;
 
 class DesplegablePresentacionInsumosSeeder extends Seeder
