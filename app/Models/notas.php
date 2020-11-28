@@ -19,12 +19,12 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  */
 class notas extends Model
 {
-    use SoftDeletes;
+    // use SoftDeletes;
 
     public $table = 'notas';
 
 
-    protected $dates = ['deleted_at'];
+    // protected $dates = ['deleted_at'];
 
 
 
