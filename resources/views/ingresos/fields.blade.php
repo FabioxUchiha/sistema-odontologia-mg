@@ -70,7 +70,7 @@
 <!-- Precio Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('precio', 'Precio en pesos colombianos:') !!}
-    {!! Form::number('precio', null, ['class' => 'form-control', 'required', 'pattern'=>'^[1-9]+', 'title'=>'El valor debe contener numeros mayores a 50 pesos', 'placeholder' => 'Ingrese el valor sin puntos ni comas']) !!}
+    {!! Form::number('precio', null, ['class' => 'form-control', 'min' => 1, 'required', 'pattern'=>'^[1-9]\d*$', 'placeholder' => 'Ingrese el valor sin puntos ni comas']) !!}
 </div>
 
 <!-- Detalle Field -->
