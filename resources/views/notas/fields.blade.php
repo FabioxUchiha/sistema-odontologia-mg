@@ -51,7 +51,7 @@
 <!-- Telefono Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('telefono', 'Teléfono:') !!}
-    {!! Form::number('telefono', null, ['class' => 'form-control', 'pattern'=>'[0-9]{7,10}']) !!}
+    {!! Form::number('telefono', null, ['class' => 'form-control', 'required', 'pattern'=>'[0-9]{7,10}']) !!}
 </div>
 
 <!-- Procedimiento Field -->

@@ -14,10 +14,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  */
 class DesplegableCategoriaInstrumental extends Model
 {
-    use SoftDeletes;
+    // use SoftDeletes;
 
     public $table = 'desplegable_categoria_instrumentals';
-    
+
 
     protected $dates = ['deleted_at'];
 
@@ -46,5 +46,5 @@ class DesplegableCategoriaInstrumental extends Model
         'nombre' => 'required'
     ];
 
-    
+
 }

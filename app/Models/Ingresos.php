@@ -18,7 +18,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  */
 class Ingresos extends Model
 {
-    use SoftDeletes;
+    // use SoftDeletes;
 
     public $table = 'ingresos';
 

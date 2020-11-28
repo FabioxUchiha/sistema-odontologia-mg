@@ -18,7 +18,7 @@ class CreateDesplegableCategoriaInstrumentalsTable extends Migration
             $table->increments('id');
             $table->string('nombre');
             $table->timestamps();
-            $table->softDeletes();
+            // $table->softDeletes();
         });
     }
 

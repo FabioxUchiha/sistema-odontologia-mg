@@ -14,10 +14,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  */
 class DesplegableServicioIngreso extends Model
 {
-    use SoftDeletes;
+    // use SoftDeletes;
 
     public $table = 'desplegable_servicio_ingresos';
-    
+
 
     protected $dates = ['deleted_at'];
 
@@ -46,5 +46,5 @@ class DesplegableServicioIngreso extends Model
         'nombre' => 'required'
     ];
 
-    
+
 }

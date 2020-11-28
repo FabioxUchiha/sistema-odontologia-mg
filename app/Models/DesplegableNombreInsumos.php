@@ -14,10 +14,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  */
 class DesplegableNombreInsumos extends Model
 {
-    use SoftDeletes;
+    // use SoftDeletes;
 
     public $table = 'desplegable_nombre_insumos';
-    
+
 
     protected $dates = ['deleted_at'];
 
@@ -46,5 +46,5 @@ class DesplegableNombreInsumos extends Model
         'nombre' => 'required'
     ];
 
-    
+
 }

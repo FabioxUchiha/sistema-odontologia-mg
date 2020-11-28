@@ -24,7 +24,7 @@ class CreateInsumosTable extends Migration
             $table->string('presentacion')->nullable();
             $table->string('lote')->nullable();
             $table->timestamps();
-            $table->softDeletes();
+            // $table->softDeletes();
         });
     }
 

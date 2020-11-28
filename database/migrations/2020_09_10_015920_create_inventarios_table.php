@@ -22,7 +22,7 @@ class CreateInventariosTable extends Migration
             $table->integer('cantidad');
             $table->string('estado_instrumental')->nullable();
             $table->timestamps();
-            $table->softDeletes();
+            // $table->softDeletes();
         });
     }
 

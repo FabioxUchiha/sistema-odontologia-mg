@@ -22,7 +22,7 @@ class CreateIngresosTable extends Migration
             $table->string('tipo');
             $table->bigInteger('precio');
             $table->timestamps();
-            $table->softDeletes();
+            // $table->softDeletes();
         });
     }
 
