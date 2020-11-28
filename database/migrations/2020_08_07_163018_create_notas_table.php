@@ -23,7 +23,7 @@ class CreateNotasTable extends Migration
             $table->string('procedimiento')->nullable();
             $table->string('observaciones')->nullable();
             $table->timestamps();
-            
+            $table->softDeletes();
         });
     }
 
