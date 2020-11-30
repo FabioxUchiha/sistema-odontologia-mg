@@ -76,11 +76,15 @@ class DesplegableNombreInsumosSeeder extends Seeder
 		DesplegableNombreInsumos::create(['nombre' => 'IONÓMEROS'],);
 		DesplegableNombreInsumos::create(['nombre' => 'JERINGA LUER DESCARTABLE'],);
 		DesplegableNombreInsumos::create(['nombre' => 'LENTULOS X 4 '],);
+		DesplegableNombreInsumos::create(['nombre' => 'LIDOCAÍNA 300 MG'],);
+		DesplegableNombreInsumos::create(['nombre' => 'LIDOCAÍNA CON EPINEFRINA 500 MG'],);
 		DesplegableNombreInsumos::create(['nombre' => 'LIMAS Y ESCAREADORES X 6'],);
 		DesplegableNombreInsumos::create(['nombre' => 'LIMAS PARA ENDODONCIA MECANIZADA C/U'],);
 		DesplegableNombreInsumos::create(['nombre' => 'LIMAS HEDSTRÖEM'],);
 		DesplegableNombreInsumos::create(['nombre' => 'MATRIZ ACETATO P/ ÁNGULOS'],);
 		DesplegableNombreInsumos::create(['nombre' => 'MATRIZ CIRCULAR'],);
+		DesplegableNombreInsumos::create(['nombre' => 'MEPIVACAÍNA 3 MG/LB'],);
+		DesplegableNombreInsumos::create(['nombre' => 'MEPIVACAÍNA CON LEVONORDEFRÍN 3 MG/LB'],);
 		DesplegableNombreInsumos::create(['nombre' => 'PAPEL DE ARTICULAR '],);
 		DesplegableNombreInsumos::create(['nombre' => 'PARAMONOCLOROFENOLALCANFORADO'],);
 		DesplegableNombreInsumos::create(['nombre' => 'PASTA DE LIMPIEZA'],);

@@ -14,6 +14,7 @@ class DesplegablePresentacionInsumosSeeder extends Seeder
     {
         // semillas o seeder para las presentaciones de los insumos
         DesplegablePresentacionInsumos::create(['nombre' => 'AMPOLLAS'],);
+        DesplegablePresentacionInsumos::create(['nombre' => 'CAJA'],);
         DesplegablePresentacionInsumos::create(['nombre' => 'CAPSULA'],);
         DesplegablePresentacionInsumos::create(['nombre' => 'CREMA'],);
         DesplegablePresentacionInsumos::create(['nombre' => 'GEL'],);
