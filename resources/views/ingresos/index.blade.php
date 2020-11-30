@@ -52,7 +52,7 @@
             @endforeach
         </div>
             <button type="button" class="btn btn-danger">
-                Ingresos hoy <span class="badge badge-light">{{ $total }}</span>
+                Ingresos hoy <span class="badge badge-light">$ {{ $total }}</span>
             </button>
         </div>
         <br>
